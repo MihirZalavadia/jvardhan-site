@@ -1,6 +1,6 @@
 # J.Vardhan Luxe Events — V0 Website
 
-Day/Dusk two-theme site for J.Vardhan Luxe Events (Junagadh, Saurashtra). Static HTML/CSS/JS — no build step, hosted on GitHub Pages.
+Day/Dusk two-theme site for J.Vardhan Luxe Events (Gujarat, India). Static HTML/CSS/JS — no build step, hosted on GitHub Pages.
 
 ## Structure
 
