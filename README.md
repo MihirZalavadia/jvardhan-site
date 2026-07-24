@@ -19,15 +19,17 @@ Day/Dusk two-theme site for J.Vardhan Luxe Events (Gujarat, India). Static HTML/
 
 Open `venue-partnership-deck.html` directly, or use the **Open Web Deck** button in the site's Presentations section. The deck is proof-safe and preserves `[VERIFY]` / `[VERIFIED COPY HERE]` placeholders.
 
-Generated Gamma decks:
+Generated Gamma trust decks (current, validated):
 
-- Venue partnership: https://gamma.app/docs/9ws64c6b9m5v5as
-- Customer experience: https://gamma.app/docs/ouj4t478mytrptp
+- Venue partnership (13 cards): https://gamma.app/docs/e8l4s66mb99wnsn
+- Customer experience (15 cards): https://gamma.app/docs/vffu0vihvejfh9n
 
 Downloaded PPTX files for website sharing:
 
-- `assets/decks/JVARDHAN-LUXE-EVENTS-B2B-venue-partnership.pptx`
-- `assets/decks/JVARDHAN-LUXE-EVENTS-customer-experience.pptx`
+- `assets/decks/JVARDHAN-B2B-VENUE-TRUST-DECK.pptx`
+- `assets/decks/JVARDHAN-CUSTOMER-TRUST-DECK.pptx`
+
+Deck source inputs: `../outputs/gamma/b2b-venue-trust-deck-input.md`, `../outputs/gamma/customer-trust-deck-input.md`, shared design rules in `../outputs/gamma/trust-deck-design-instructions.md`.
 
 ## Embedding the Gamma decks
 
