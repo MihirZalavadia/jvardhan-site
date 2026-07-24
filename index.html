@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>J.Vardhan Luxe Events — Weddings &amp; Event Production, Gujarat</title>
   <meta name="description" content="Traditional floral design, mandap craft, lighting and end-to-end event production across Gujarat, India — J.Vardhan Luxe Events. Promised. Planned. Delivered.">
-  <link rel="icon" type="image/png" href="assets/lion-gold.png">
+  <link rel="icon" type="image/png" href="assets/lion-guardian.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
@@ -53,7 +53,7 @@
       html { scroll-behavior: auto; }
     }
 
-    .lion { background-image: url("assets/lion-gold.png"); background-size: contain; background-repeat: no-repeat; background-position: center; display: inline-block; }
+    .lion { background-image: url("assets/lion-guardian.png"); background-size: contain; background-repeat: no-repeat; background-position: center; display: inline-block; }
 
     .label {
       font-family: var(--font-label);
@@ -77,7 +77,7 @@
       transition: background .4s ease;
     }
     .brand { display: flex; align-items: center; gap: .65rem; text-decoration: none; }
-    .brand .lion { width: 30px; height: 26px; }
+    .brand .lion { width: 28px; height: 28px; }
     .wordmark {
       font-family: var(--font-label); font-stretch: 122%; font-weight: 800;
       letter-spacing: .13em; font-size: .95rem; color: var(--heading); white-space: nowrap;
@@ -106,7 +106,7 @@
 
     /* ---------- hero ---------- */
     .hero { text-align: center; padding: clamp(4rem, 10vw, 7.5rem) 1.5rem clamp(4rem, 8vw, 6rem); }
-    .hero .lion { width: clamp(120px, 18vw, 176px); height: clamp(103px, 15.5vw, 151px); animation: rise .9s ease both; }
+    .hero .lion { width: clamp(150px, 20vw, 210px); height: clamp(150px, 20vw, 210px); background-image: url("assets/lion-floral.png"); animation: rise .9s ease both; }
     .hero .label { display: block; margin: 1.6rem 0 1rem; animation: rise .9s .1s ease both; }
     .hero h1 { font-size: clamp(2.1rem, 5.4vw, 3.9rem); line-height: 1.12; max-width: 17ch; margin: 0 auto; animation: rise .9s .2s ease both; }
     .hero h1 em { font-style: italic; color: var(--accent-deep); }
@@ -168,7 +168,7 @@
     .tile figcaption .label { font-size: .58rem; }
     .tile figcaption strong { display: block; font-family: var(--font-display); font-weight: 450; color: var(--heading); font-size: 1.02rem; margin-top: .2rem; }
 
-    /* ---------- decks (Gamma embeds) ---------- */
+    /* ---------- decks ---------- */
     .deck-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.1rem; }
     .deck-card { background: var(--surface); border: 1px solid var(--line); border-radius: 3px; padding: 1.6rem; }
     .deck-card h3 { font-size: 1.1rem; margin: .5rem 0 .6rem; }
@@ -178,6 +178,19 @@
       font-family: var(--font-label); font-size: .62rem; letter-spacing: .16em; text-transform: uppercase; color: var(--muted);
     }
     .embed-slot iframe { width: 100%; aspect-ratio: 16 / 9; border: 0; border-radius: 3px; }
+    .embed-slot:has(iframe) { border: 0; padding: 0; }
+    .deck-actions { display: flex; gap: .7rem; flex-wrap: wrap; margin: .9rem 0 1.1rem; }
+
+    /* ---------- brand review ---------- */
+    .logo-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 1.1rem; margin-bottom: 1.6rem; }
+    .logo-card { background: var(--surface); border: 1px solid var(--line); border-radius: 3px; overflow: hidden; }
+    .logo-stage { height: 185px; display: flex; align-items: center; justify-content: center; background: linear-gradient(105deg, #F9F6EF 50%, #013C3C 50%); }
+    .logo-stage img { max-height: 145px; max-width: 70%; }
+    .logo-card figcaption { padding: .95rem 1.1rem 1.05rem; }
+    .logo-card figcaption strong { display: block; font-family: var(--font-display); font-weight: 450; color: var(--heading); font-size: 1.02rem; margin: .2rem 0 .3rem; }
+    .logo-card figcaption p { font-size: .82rem; color: var(--muted); }
+    .change-note { background: var(--surface); border: 1px solid var(--line); border-left: 3px solid var(--accent); border-radius: 3px; padding: 1.4rem 1.6rem; }
+    .change-note p { font-size: .9rem; color: var(--muted); margin-top: .4rem; }
 
     /* ---------- venue band: always Dusk-skinned ---------- */
     .band {
@@ -218,6 +231,7 @@
     <a href="#portfolio">Portfolio</a>
     <a href="#decks">Decks</a>
     <a href="#venues">Venues</a>
+    <a href="#review">Review</a>
     <div class="toggle" role="group" aria-label="Theme">
       <button type="button" id="btnDay" aria-pressed="true">Day</button>
       <button type="button" id="btnDusk" aria-pressed="false">Dusk</button>
@@ -241,19 +255,19 @@
   <div class="shell">
     <div class="sec-head reveal">
       <span class="label">The House</span>
-      <h2>Flowers we grow. Structures we own. Craft we deliver ourselves.</h2>
-      <p>Every celebration is carried in-house — from bloom to mandap to the last light switched off.</p>
+      <h2>Flowers, structures, lighting and planning under one disciplined process.</h2>
+      <p>Every celebration is planned around a clear scope, site rules and guest flow.</p>
     </div>
     <div class="pillars">
       <div class="pillar reveal">
         <span class="label">Floral</span>
-        <h3>Our Own Flowers</h3>
-        <p>Fresh floral design and supply, grown and sourced by the family — garlands, installations, mandap florals.</p>
+        <h3>Floral Design</h3>
+        <p>Fresh floral design and supply planning for garlands, installations, mandap florals and guest-facing details.</p>
       </div>
       <div class="pillar reveal">
         <span class="label">Structural</span>
         <h3>Mandaps &amp; Gateways</h3>
-        <p>Custom mandaps, entrance gates, stages and backdrops from an owned inventory, built by our own crews.</p>
+        <p>Custom mandaps, entrance gates, stages and backdrops specified for each venue and checked against site rules.</p>
       </div>
       <div class="pillar reveal">
         <span class="label">Production</span>
@@ -292,24 +306,35 @@
   <div class="shell">
     <div class="sec-head reveal">
       <span class="label">Presentations</span>
-      <h2>Our decks, embedded from Gamma.</h2>
-      <p>Generate each deck in Gamma with the brand prompts, then paste its embed code into the marked slot below.</p>
+      <h2>Pitch decks for venues and families.</h2>
+      <p>Open the venue partnership profile or the customer experience deck, and download either presentation for offline review.</p>
     </div>
     <div class="deck-grid">
       <div class="deck-card reveal">
         <span class="label">For Venues</span>
         <h3>Venue Partnership Profile</h3>
-        <p>The 12-slide partnership deck for resorts, hotels and party plots.</p>
-        <!-- GAMMA-EMBED-VENUE:START — replace the div below with Gamma's iframe embed code (Share → Embed) -->
-        <div class="embed-slot">Gamma embed slot — venue deck</div>
+        <p>The long-form B2B partnership deck for resorts, hotels, banquet teams, farmhouses and party plots.</p>
+        <div class="deck-actions">
+          <a class="btn btn-gold" href="venue-partnership-deck.html">Open Web Deck</a>
+          <a class="btn btn-ghost" href="https://gamma.app/docs/9ws64c6b9m5v5as" rel="noopener">Open Gamma</a>
+          <a class="btn btn-ghost" href="assets/decks/JVARDHAN-LUXE-EVENTS-B2B-venue-partnership.pptx">Download PPTX</a>
+          <a class="btn btn-ghost" href="#venues">Venue Partnership</a>
+        </div>
+        <!-- GAMMA-EMBED-VENUE:START -->
+        <div class="embed-slot"><iframe src="https://gamma.app/embed/9ws64c6b9m5v5as" allow="fullscreen" title="Venue Partnership Deck — Gamma" loading="lazy"></iframe></div>
         <!-- GAMMA-EMBED-VENUE:END -->
       </div>
       <div class="deck-card reveal">
         <span class="label">For Couples</span>
         <h3>Wedding Experience Deck</h3>
-        <p>The 14-slide keepsake deck for couples and families.</p>
-        <!-- GAMMA-EMBED-WEDDING:START — replace the div below with Gamma's iframe embed code (Share → Embed) -->
-        <div class="embed-slot">Gamma embed slot — wedding deck</div>
+        <p>The 19-slide customer experience profile for couples, families and serious celebration enquiries.</p>
+        <div class="deck-actions">
+          <a class="btn btn-gold" href="https://gamma.app/docs/ouj4t478mytrptp" rel="noopener">Open Gamma</a>
+          <a class="btn btn-ghost" href="assets/decks/JVARDHAN-LUXE-EVENTS-customer-experience.pptx">Download PPTX</a>
+          <a class="btn btn-ghost" href="#contact">Book Consultation</a>
+        </div>
+        <!-- GAMMA-EMBED-WEDDING:START -->
+        <div class="embed-slot"><iframe src="https://gamma.app/embed/ouj4t478mytrptp" allow="fullscreen" title="Wedding Experience Deck — Gamma" loading="lazy"></iframe></div>
         <!-- GAMMA-EMBED-WEDDING:END -->
       </div>
     </div>
@@ -325,11 +350,47 @@
       <a class="btn btn-gold" href="#contact">Explore Partnership Models</a>
     </div>
     <ul class="reveal">
-      <li>Owned inventory and flowers — fewer vendors on your property</li>
+      <li>Defined decor scope - fewer unknowns on your property</li>
       <li>Disciplined setup and clear timelines between bookings</li>
       <li>One coordination point for your team and your client</li>
       <li>Event content that showcases your venue</li>
     </ul>
+  </div>
+</section>
+
+<section id="review">
+  <div class="shell">
+    <div class="sec-head reveal">
+      <span class="label">Draft 1 — For Family Review</span>
+      <h2>Nothing here is final. This is the canvas.</h2>
+      <p>Every element on this page — the lion, the colours, the fonts, the words — is a proposal. Tell us what to keep, what to change, what to drop.</p>
+    </div>
+    <div class="logo-grid">
+      <figure class="logo-card reveal">
+        <div class="logo-stage"><img src="assets/lion-gold.png" alt="Walking lion draft mark"></div>
+        <figcaption><span class="label">Current Draft</span><strong>Walking Lion</strong>
+          <p>The original V0 mark. Elegant, but its thin lines fade at small sizes.</p></figcaption>
+      </figure>
+      <figure class="logo-card reveal">
+        <div class="logo-stage"><img src="assets/lion-floral.png" alt="Floral-mane lion emblem"></div>
+        <figcaption><span class="label">Option A</span><strong>Floral Emblem</strong>
+          <p>The family's flowers woven into the lion's mane. Master emblem for covers, signage and invitations — now on the homepage above.</p></figcaption>
+      </figure>
+      <figure class="logo-card reveal">
+        <div class="logo-stage"><img src="assets/lion-guardian-v1.png" alt="Seated guardian lion, flowing mane"></div>
+        <figcaption><span class="label">Option B</span><strong>Guardian — Flowing Mane</strong>
+          <p>Solid, calm, strong at any size. Mane style still being refined toward the Gir lion's shorter ruff.</p></figcaption>
+      </figure>
+      <figure class="logo-card reveal">
+        <div class="logo-stage"><img src="assets/lion-guardian.png" alt="Seated guardian lion, short mane"></div>
+        <figcaption><span class="label">Option C</span><strong>Guardian — Short Mane</strong>
+          <p>The cleanest at tiny sizes — favicon, stamp and seal candidate. Now used in the header and browser tab.</p></figcaption>
+      </figure>
+    </div>
+    <div class="change-note reveal">
+      <span class="label">What can still change</span>
+      <p>Lion style and pose &middot; gold and green shades &middot; fonts &middot; tagline &middot; brand name (J.Vardhan / Mali Mukesh) &middot; Day &amp; Dusk themes &middot; section order and wording &middot; photography style &middot; deck design. Nothing is locked until the family locks it.</p>
+    </div>
   </div>
 </section>
 

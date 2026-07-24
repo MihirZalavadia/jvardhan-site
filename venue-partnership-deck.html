@@ -1,0 +1,1201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>J.Vardhan Venue Partnership Deck</title>
+  <meta name="description" content="Venue, resort and hotel partnership profile for J.Vardhan Luxe Events.">
+  <link rel="icon" type="image/png" href="assets/lion-gold.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ivory: #F9F6EF;
+      --surface: #FFFFFF;
+      --teal: #0A5356;
+      --teal-deep: #013C3C;
+      --teal-bright: #024E4E;
+      --olive: #3C4628;
+      --muted-olive: #6E7754;
+      --gold: #CFAA6D;
+      --gold-deep: #B08D52;
+      --ink: #123532;
+      --muted: #62716C;
+      --line: rgba(1, 60, 60, .18);
+      --soft-gold: rgba(207, 170, 109, .2);
+      --font-display: "Fraunces", Georgia, serif;
+      --font-sans: "Inter", "Segoe UI", system-ui, sans-serif;
+      --font-label: "Archivo", Arial, sans-serif;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background:
+        linear-gradient(90deg, rgba(1, 60, 60, .045) 1px, transparent 1px),
+        linear-gradient(180deg, rgba(1, 60, 60, .035) 1px, transparent 1px),
+        var(--ivory);
+      background-size: 32px 32px;
+      color: var(--ink);
+      font-family: var(--font-sans);
+    }
+
+    a { color: inherit; }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 1rem;
+      align-items: center;
+      padding: .72rem clamp(1rem, 3vw, 2rem);
+      background: rgba(249, 246, 239, .88);
+      border-bottom: 1px solid var(--line);
+      backdrop-filter: blur(14px);
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: .65rem;
+      min-width: 0;
+      text-decoration: none;
+    }
+
+    .brand img {
+      width: 34px;
+      height: 30px;
+      object-fit: contain;
+      flex: 0 0 auto;
+    }
+
+    .wordmark {
+      min-width: 0;
+      color: var(--teal);
+      font-family: var(--font-label);
+      font-size: .88rem;
+      font-stretch: 122%;
+      font-weight: 800;
+      letter-spacing: .14em;
+      line-height: 1.05;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .wordmark small {
+      display: block;
+      margin-top: .18rem;
+      color: var(--gold-deep);
+      font-size: .48rem;
+      font-weight: 700;
+      letter-spacing: .48em;
+    }
+
+    .actions {
+      display: flex;
+      gap: .5rem;
+      align-items: center;
+      justify-content: flex-end;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      border: 1px solid var(--line);
+      border-radius: 3px;
+      background: rgba(255, 255, 255, .72);
+      color: var(--teal);
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 38px;
+      padding: .62rem .85rem;
+      font-family: var(--font-label);
+      font-size: .65rem;
+      font-weight: 800;
+      letter-spacing: .14em;
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+
+    .btn.primary {
+      border-color: transparent;
+      background: var(--gold);
+      color: #073332;
+    }
+
+    .btn.icon {
+      width: 40px;
+      padding: 0;
+      font-size: 1rem;
+      letter-spacing: 0;
+    }
+
+    .deck-shell {
+      display: grid;
+      grid-template-columns: 228px minmax(0, 1fr);
+      gap: clamp(1rem, 2.4vw, 2rem);
+      max-width: 1500px;
+      margin: 0 auto;
+      padding: clamp(1rem, 2.6vw, 2rem);
+    }
+
+    .rail {
+      position: sticky;
+      top: 76px;
+      height: calc(100vh - 96px);
+      overflow: auto;
+      padding-right: .35rem;
+    }
+
+    .rail-list {
+      display: grid;
+      gap: .45rem;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .rail a {
+      display: grid;
+      grid-template-columns: 2.4rem minmax(0, 1fr);
+      gap: .6rem;
+      align-items: baseline;
+      min-height: 44px;
+      padding: .65rem .7rem;
+      border: 1px solid transparent;
+      border-radius: 4px;
+      color: var(--muted);
+      font-size: .78rem;
+      line-height: 1.25;
+      text-decoration: none;
+    }
+
+    .rail a:hover,
+    .rail a:focus-visible,
+    .rail a.active {
+      border-color: var(--soft-gold);
+      background: rgba(255, 255, 255, .72);
+      color: var(--teal);
+      outline: 0;
+    }
+
+    .rail-num {
+      color: var(--gold-deep);
+      font-family: var(--font-label);
+      font-size: .62rem;
+      font-weight: 800;
+      letter-spacing: .12em;
+    }
+
+    .slides {
+      display: grid;
+      gap: clamp(1rem, 2vw, 1.5rem);
+    }
+
+    .slide {
+      position: relative;
+      display: grid;
+      min-height: min(72vh, 760px);
+      aspect-ratio: 16 / 9;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      background: var(--surface);
+      box-shadow: 0 18px 60px rgba(1, 60, 60, .1);
+      isolation: isolate;
+    }
+
+    .slide.dark {
+      border-color: rgba(207, 170, 109, .34);
+      background:
+        radial-gradient(circle at 86% 14%, rgba(207, 170, 109, .18), transparent 28%),
+        linear-gradient(135deg, var(--teal-deep), var(--teal-bright));
+      color: #E8E3D5;
+    }
+
+    .slide.olive {
+      border-color: rgba(207, 170, 109, .34);
+      background:
+        radial-gradient(circle at 82% 20%, rgba(207, 170, 109, .2), transparent 26%),
+        linear-gradient(135deg, var(--olive), #1F2B1A);
+      color: #E8E3D5;
+    }
+
+    .slide.split {
+      grid-template-columns: minmax(0, 1.05fr) minmax(280px, .95fr);
+    }
+
+    .slide-content {
+      position: relative;
+      z-index: 2;
+      display: grid;
+      align-content: center;
+      gap: 1.05rem;
+      padding: clamp(2rem, 5vw, 4.4rem);
+    }
+
+    .slide.split .slide-content {
+      padding-right: clamp(1.5rem, 3vw, 3rem);
+    }
+
+    .visual {
+      position: relative;
+      min-height: 100%;
+      border-left: 1px solid rgba(207, 170, 109, .24);
+      background:
+        linear-gradient(140deg, rgba(249, 246, 239, .08), transparent),
+        linear-gradient(160deg, #102E2D, #7D6C43);
+    }
+
+    .visual.light {
+      border-left-color: var(--line);
+      background:
+        linear-gradient(140deg, rgba(207, 170, 109, .18), transparent),
+        linear-gradient(160deg, #F8F0E3, #C7B17A 48%, #6F7A5A);
+    }
+
+    .visual::before,
+    .visual::after {
+      content: "";
+      position: absolute;
+      inset: 12%;
+      border: 1px solid rgba(255, 255, 255, .38);
+    }
+
+    .visual.light::before,
+    .visual.light::after {
+      border-color: rgba(1, 60, 60, .14);
+    }
+
+    .visual::after {
+      inset: 20%;
+      border-color: rgba(207, 170, 109, .5);
+    }
+
+    .logo-sample {
+      display: grid;
+      place-items: center;
+      padding: clamp(1.5rem, 4vw, 3rem);
+      background: #fff;
+    }
+
+    .logo-sample img {
+      width: min(92%, 620px);
+      max-height: 75%;
+      object-fit: contain;
+    }
+
+    .eyebrow {
+      color: var(--gold-deep);
+      font-family: var(--font-label);
+      font-size: clamp(.58rem, 1vw, .72rem);
+      font-stretch: 112%;
+      font-weight: 800;
+      letter-spacing: .2em;
+      line-height: 1.2;
+      text-transform: uppercase;
+    }
+
+    .dark .eyebrow,
+    .olive .eyebrow {
+      color: var(--gold);
+    }
+
+    h1,
+    h2 {
+      margin: 0;
+      color: var(--teal);
+      font-family: var(--font-display);
+      font-weight: 430;
+      letter-spacing: 0;
+      line-height: .98;
+      text-wrap: balance;
+    }
+
+    h1 {
+      max-width: 10.5ch;
+      font-size: clamp(3rem, 8vw, 7.3rem);
+    }
+
+    h2 {
+      max-width: 13ch;
+      font-size: clamp(2.1rem, 5.4vw, 5rem);
+    }
+
+    .dark h1,
+    .dark h2,
+    .olive h1,
+    .olive h2 {
+      color: #fff;
+    }
+
+    .subhead {
+      max-width: 56ch;
+      margin: 0;
+      color: var(--muted);
+      font-size: clamp(1rem, 1.55vw, 1.35rem);
+      line-height: 1.55;
+    }
+
+    .dark .subhead,
+    .olive .subhead {
+      color: #CFD9D4;
+    }
+
+    .kicker {
+      color: var(--muted);
+      font-family: var(--font-label);
+      font-size: clamp(.65rem, 1vw, .78rem);
+      font-weight: 760;
+      letter-spacing: .14em;
+      line-height: 1.6;
+      text-transform: uppercase;
+    }
+
+    .dark .kicker,
+    .olive .kicker {
+      color: #D7C391;
+    }
+
+    .hairline {
+      width: min(140px, 28vw);
+      height: 1px;
+      background: var(--gold);
+    }
+
+    .body-list,
+    .verify-list {
+      display: grid;
+      gap: .7rem;
+      margin: .2rem 0 0;
+      padding: 0;
+      list-style: none;
+      max-width: 64ch;
+    }
+
+    .body-list li,
+    .verify-list li {
+      position: relative;
+      padding-left: 1.25rem;
+      color: var(--ink);
+      font-size: clamp(.95rem, 1.32vw, 1.18rem);
+      line-height: 1.44;
+    }
+
+    .body-list li::before,
+    .verify-list li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: .72em;
+      width: .45rem;
+      height: 1px;
+      background: var(--gold-deep);
+    }
+
+    .dark .body-list li,
+    .dark .verify-list li,
+    .olive .body-list li,
+    .olive .verify-list li {
+      color: #E8E3D5;
+    }
+
+    .verify-list li {
+      color: var(--teal);
+      font-family: var(--font-label);
+      font-size: clamp(.78rem, 1vw, .94rem);
+      font-weight: 760;
+      letter-spacing: .04em;
+    }
+
+    .dark .verify-list li,
+    .olive .verify-list li {
+      color: #F1E7D3;
+    }
+
+    .chip-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .65rem;
+      max-width: 64ch;
+    }
+
+    .chip {
+      border: 1px solid var(--soft-gold);
+      border-radius: 999px;
+      padding: .52rem .78rem;
+      background: rgba(255, 255, 255, .5);
+      color: var(--teal);
+      font-family: var(--font-label);
+      font-size: clamp(.62rem, .88vw, .78rem);
+      font-weight: 800;
+      letter-spacing: .09em;
+      text-transform: uppercase;
+    }
+
+    .dark .chip,
+    .olive .chip {
+      background: rgba(255, 255, 255, .06);
+      color: #F3EBD9;
+    }
+
+    .model-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: .9rem;
+      margin-top: .3rem;
+    }
+
+    .model {
+      border: 1px solid var(--line);
+      border-radius: 5px;
+      padding: 1.1rem;
+      background: rgba(255, 255, 255, .64);
+    }
+
+    .model.recommended {
+      border-color: var(--gold);
+      box-shadow: inset 0 0 0 1px rgba(207, 170, 109, .22);
+    }
+
+    .model strong {
+      display: block;
+      margin-bottom: .55rem;
+      color: var(--teal);
+      font-family: var(--font-display);
+      font-size: clamp(1.1rem, 1.5vw, 1.45rem);
+      font-weight: 450;
+      line-height: 1.1;
+    }
+
+    .model span {
+      display: block;
+      color: var(--muted);
+      font-size: clamp(.82rem, 1vw, .94rem);
+      line-height: 1.45;
+    }
+
+    .dark .model,
+    .olive .model {
+      border-color: rgba(207, 170, 109, .32);
+      background: rgba(255, 255, 255, .06);
+    }
+
+    .dark .model strong,
+    .olive .model strong {
+      color: #fff;
+    }
+
+    .dark .model span,
+    .olive .model span {
+      color: #C7D2CC;
+    }
+
+    .big-number {
+      display: flex;
+      gap: 1.2rem;
+      align-items: flex-end;
+      margin-bottom: .6rem;
+    }
+
+    .big-number b {
+      color: var(--gold);
+      font-family: var(--font-display);
+      font-size: clamp(4.5rem, 12vw, 11rem);
+      font-weight: 360;
+      letter-spacing: 0;
+      line-height: .75;
+    }
+
+    .big-number span {
+      color: var(--muted);
+      font-family: var(--font-label);
+      font-size: clamp(.7rem, 1vw, .82rem);
+      font-weight: 800;
+      letter-spacing: .18em;
+      line-height: 1.45;
+      text-transform: uppercase;
+    }
+
+    .dark .big-number span,
+    .olive .big-number span {
+      color: #D7C391;
+    }
+
+    .footer-mark {
+      position: absolute;
+      right: clamp(1rem, 3vw, 2rem);
+      bottom: clamp(1rem, 3vw, 2rem);
+      color: var(--muted);
+      font-family: var(--font-label);
+      font-size: .62rem;
+      font-weight: 800;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+    }
+
+    .dark .footer-mark,
+    .olive .footer-mark {
+      color: rgba(232, 227, 213, .58);
+    }
+
+    .slide-logo {
+      position: absolute;
+      top: clamp(1rem, 2vw, 1.6rem);
+      right: clamp(1rem, 2vw, 1.6rem);
+      width: clamp(36px, 5vw, 64px);
+      height: clamp(32px, 4.4vw, 56px);
+      object-fit: contain;
+      opacity: .95;
+    }
+
+    .cover-logo {
+      width: clamp(80px, 11vw, 130px);
+      height: auto;
+      object-fit: contain;
+    }
+
+    @media (max-width: 980px) {
+      .deck-shell {
+        display: block;
+      }
+
+      .rail {
+        position: relative;
+        top: auto;
+        height: auto;
+        margin-bottom: 1rem;
+        overflow: visible;
+      }
+
+      .rail-list {
+        display: flex;
+        overflow-x: auto;
+        padding-bottom: .3rem;
+      }
+
+      .rail a {
+        min-width: 210px;
+      }
+    }
+
+    @media (max-width: 720px) {
+      .topbar {
+        grid-template-columns: 1fr;
+      }
+
+      .actions {
+        justify-content: flex-start;
+      }
+
+      .slide,
+      .slide.split {
+        display: block;
+        min-height: auto;
+        aspect-ratio: auto;
+      }
+
+      .visual,
+      .logo-sample {
+        min-height: 320px;
+        border-left: 0;
+        border-top: 1px solid var(--line);
+      }
+
+      .model-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .slide-content {
+        min-height: 520px;
+      }
+    }
+
+    @media print {
+      body {
+        background: #fff;
+      }
+
+      .topbar,
+      .rail {
+        display: none;
+      }
+
+      .deck-shell {
+        display: block;
+        max-width: none;
+        padding: 0;
+      }
+
+      .slides {
+        display: block;
+      }
+
+      .slide {
+        width: 100vw;
+        min-height: 56.25vw;
+        page-break-after: always;
+        break-after: page;
+        border: 0;
+        border-radius: 0;
+        box-shadow: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="index.html">
+      <img src="assets/lion-gold.png" alt="">
+      <span class="wordmark">J.VARDHAN<small>LUXE EVENTS</small></span>
+    </a>
+    <div class="actions">
+      <a class="btn" href="index.html#decks">Site</a>
+      <a class="btn" href="https://gamma.app/docs/9ws64c6b9m5v5as" rel="noopener">Gamma</a>
+      <a class="btn" href="assets/decks/JVARDHAN-LUXE-EVENTS-B2B-venue-partnership.pptx">PPTX</a>
+      <button class="btn icon" type="button" data-prev aria-label="Previous slide">&#8592;</button>
+      <button class="btn icon" type="button" data-next aria-label="Next slide">&#8594;</button>
+      <button class="btn primary" type="button" onclick="window.print()">PDF</button>
+    </div>
+  </header>
+
+  <main class="deck-shell">
+    <nav class="rail" aria-label="Deck slides">
+      <ol class="rail-list">
+        <li><a href="#s1"><span class="rail-num">01</span><span>Cover</span></a></li>
+        <li><a href="#s2"><span class="rail-num">02</span><span>Why This Exists</span></a></li>
+        <li><a href="#s3"><span class="rail-num">03</span><span>Owner Problem</span></a></li>
+        <li><a href="#s4"><span class="rail-num">04</span><span>Promise</span></a></li>
+        <li><a href="#s5"><span class="rail-num">05</span><span>Proof Guardrail</span></a></li>
+        <li><a href="#s6"><span class="rail-num">06</span><span>Credibility Story</span></a></li>
+        <li><a href="#s7"><span class="rail-num">07</span><span>Region</span></a></li>
+        <li><a href="#s8"><span class="rail-num">08</span><span>Venue Value</span></a></li>
+        <li><a href="#s9"><span class="rail-num">09</span><span>Design Scope</span></a></li>
+        <li><a href="#s10"><span class="rail-num">10</span><span>Flower Advantage</span></a></li>
+        <li><a href="#s11"><span class="rail-num">11</span><span>Inventory</span></a></li>
+        <li><a href="#s12"><span class="rail-num">12</span><span>Setup Proof</span></a></li>
+        <li><a href="#s13"><span class="rail-num">13</span><span>Hotel Proof</span></a></li>
+        <li><a href="#s14"><span class="rail-num">14</span><span>Cultural Scale</span></a></li>
+        <li><a href="#s15"><span class="rail-num">15</span><span>Premium Properties</span></a></li>
+        <li><a href="#s16"><span class="rail-num">16</span><span>Cultural Fluency</span></a></li>
+        <li><a href="#s17"><span class="rail-num">17</span><span>Venue Protection</span></a></li>
+        <li><a href="#s18"><span class="rail-num">18</span><span>Safety Claims</span></a></li>
+        <li><a href="#s19"><span class="rail-num">19</span><span>Operating Model</span></a></li>
+        <li><a href="#s20"><span class="rail-num">20</span><span>Revenue Support</span></a></li>
+        <li><a href="#s21"><span class="rail-num">21</span><span>Marketing</span></a></li>
+        <li><a href="#s22"><span class="rail-num">22</span><span>Approved Vendor</span></a></li>
+        <li><a href="#s23"><span class="rail-num">23</span><span>Preferred Partner</span></a></li>
+        <li><a href="#s24"><span class="rail-num">24</span><span>Co-Branded Packages</span></a></li>
+        <li><a href="#s25"><span class="rail-num">25</span><span>Pilot</span></a></li>
+        <li><a href="#s26"><span class="rail-num">26</span><span>Outreach</span></a></li>
+        <li><a href="#s27"><span class="rail-num">27</span><span>Logo Sample</span></a></li>
+        <li><a href="#s28"><span class="rail-num">28</span><span>Logo Direction</span></a></li>
+        <li><a href="#s29"><span class="rail-num">29</span><span>Venue Needs</span></a></li>
+        <li><a href="#s30"><span class="rail-num">30</span><span>Next Step</span></a></li>
+      </ol>
+    </nav>
+
+    <section class="slides" aria-label="Venue partnership presentation">
+      <article class="slide dark split" id="s1">
+        <div class="slide-content">
+          <img class="cover-logo" src="assets/lion-gold.png" alt="">
+          <p class="eyebrow">Resort, Hotel & Venue Partnership Profile</p>
+          <h1>J.Vardhan Luxe Events</h1>
+          <div class="hairline"></div>
+          <p class="subhead">Wedding Design | Floral Styling | Mandap & Event Production</p>
+          <p class="kicker">Working brand only. Legacy connection: Mali Mukesh Wedding Planning & Decoration.</p>
+        </div>
+        <div class="visual" aria-hidden="true"></div>
+        <span class="footer-mark">01 / 30</span>
+      </article>
+
+      <article class="slide" id="s2">
+        <img class="slide-logo" src="assets/lion-gold.png" alt="">
+        <div class="slide-content">
+          <p class="eyebrow">Why this deck exists</p>
+          <h2>Premium venues do not need another decorator list.</h2>
+          <p class="subhead">They need a reliable production partner who helps them sell celebrations faster, protect their property, and deliver repeatable guest experience.</p>
+          <p class="kicker">This draft converts the long pitch PDF into a sharper venue-owner presentation.</p>
+        </div>
+        <span class="footer-mark">02 / 30</span>
+      </article>
+
+      <article class="slide split" id="s3">
+        <div class="slide-content">
+          <p class="eyebrow">The venue owner's problem</p>
+          <h2>Decor decisions create operational pressure.</h2>
+          <ul class="body-list">
+            <li>Families ask for decor before they commit.</li>
+            <li>Unvetted vendors create coordination pressure.</li>
+            <li>Setup and teardown delays affect the next booking.</li>
+            <li>Property damage risk sits with the venue team.</li>
+            <li>The venue's visual promise depends on outside execution.</li>
+          </ul>
+        </div>
+        <div class="visual light" aria-hidden="true"></div>
+        <span class="footer-mark">03 / 30</span>
+      </article>
+
+      <article class="slide olive" id="s4">
+        <div class="slide-content">
+          <p class="eyebrow">The partnership promise</p>
+          <h2>We become the decor and production layer that understands your venue rules.</h2>
+          <p class="subhead">We prepare site-specific options for mandaps, entrances, receptions, pathways, florals, lighting, and guest flow.</p>
+          <p class="subhead">Your team stays focused on hospitality, F&B, rooms, and service.</p>
+        </div>
+        <span class="footer-mark">04 / 30</span>
+      </article>
+
+      <article class="slide dark" id="s5">
+        <div class="slide-content">
+          <p class="eyebrow">Proof must be earned</p>
+          <h2>Strong claims stay marked until verified.</h2>
+          <p class="subhead">The source PDF mentions strong proof points, but every one needs verification before it is published.</p>
+          <ul class="verify-list">
+            <li>[VERIFY: years in business]</li>
+            <li>[VERIFY: origin as early / first real-flower shop in Junagadh]</li>
+            <li>[VERIFY: venue and hotel work]</li>
+            <li>[VERIFY: major private, cultural, and community events]</li>
+          </ul>
+        </div>
+        <span class="footer-mark">05 / 30</span>
+      </article>
+
+      <article class="slide" id="s6">
+        <div class="slide-content">
+          <p class="eyebrow">Working credibility story</p>
+          <h2>From local flowers into full event production.</h2>
+          <ul class="body-list">
+            <li>From a local floral business into full event production.</li>
+            <li>From flowers and garlands into mandaps, stages, entrances, lighting, and execution planning.</li>
+            <li>From Junagadh and Bhavnath into a wider Saurashtra and Gujarat opportunity.</li>
+          </ul>
+          <p class="kicker">Keep this story humble until dates and proof are confirmed.</p>
+        </div>
+        <span class="footer-mark">06 / 30</span>
+      </article>
+
+      <article class="slide split" id="s7">
+        <div class="slide-content">
+          <p class="eyebrow">Geographic base and expansion</p>
+          <h2>Saurashtra base, Gujarat opportunity.</h2>
+          <p class="kicker">Current and mentioned operating region</p>
+          <div class="chip-grid">
+            <span class="chip">Junagadh</span>
+            <span class="chip">Bhavnath</span>
+            <span class="chip">Sasan Gir</span>
+            <span class="chip">Chorwad</span>
+            <span class="chip">Wider Saurashtra</span>
+          </div>
+          <p class="kicker">Future business focus: Surat and premium Gujarat venue markets. Do not imply coverage beyond evidence.</p>
+        </div>
+        <div class="visual light" aria-hidden="true"></div>
+        <span class="footer-mark">07 / 30</span>
+      </article>
+
+      <article class="slide olive" id="s8">
+        <div class="slide-content">
+          <p class="eyebrow">Venue value in one line</p>
+          <h2>Better response. Cleaner coordination. Less friction.</h2>
+          <div class="chip-grid">
+            <span class="chip">Better decor response</span>
+            <span class="chip">Cleaner coordination</span>
+            <span class="chip">Faster setup planning</span>
+            <span class="chip">Stronger guest-facing presentation</span>
+            <span class="chip">More sales content</span>
+            <span class="chip">Less operational friction</span>
+          </div>
+        </div>
+        <span class="footer-mark">08 / 30</span>
+      </article>
+
+      <article class="slide split" id="s9">
+        <div class="slide-content">
+          <p class="eyebrow">What we can design around</p>
+          <h2>Every major guest-facing moment.</h2>
+          <ul class="body-list">
+            <li>Mandaps and ceremony structures</li>
+            <li>Entrance gates and toran-style arrivals</li>
+            <li>Reception stages and lighting</li>
+            <li>Floral walls, garlands, pathways, and centerpieces</li>
+            <li>Traditional, modern, and luxury decor worlds</li>
+            <li>Inventory-led packages after verification</li>
+          </ul>
+        </div>
+        <div class="visual light" aria-hidden="true"></div>
+        <span class="footer-mark">09 / 30</span>
+      </article>
+
+      <article class="slide" id="s10">
+        <div class="slide-content">
+          <p class="eyebrow">Flower advantage</p>
+          <h2>If proven, flowers become an operational advantage.</h2>
+          <ul class="verify-list">
+            <li>[VERIFY: direct farm access or flower farm ownership]</li>
+            <li>[VERIFY: flower varieties and seasonality]</li>
+            <li>[VERIFY: storage, freshness, sourcing, and backup suppliers]</li>
+          </ul>
+          <p class="subhead">If proven, this becomes a practical advantage: freshness, speed, customization, availability, and cost control.</p>
+        </div>
+        <span class="footer-mark">10 / 30</span>
+      </article>
+
+      <article class="slide" id="s11">
+        <div class="slide-content">
+          <p class="eyebrow">Inventory advantage pending verification</p>
+          <h2>Documented inventory turns beauty into repeatability.</h2>
+          <ul class="verify-list">
+            <li>[VERIFY: owned mandap structures]</li>
+            <li>[VERIFY: stages, backdrops, gates, lighting, props, seating, floral structures]</li>
+            <li>[VERIFY: quantities, condition, transport needs, setup times]</li>
+          </ul>
+          <p class="subhead">Once documented, inventory turns the pitch from "beautiful decor" into "repeatable production capability."</p>
+        </div>
+        <span class="footer-mark">11 / 30</span>
+      </article>
+
+      <article class="slide dark split" id="s12">
+        <div class="slide-content">
+          <p class="eyebrow">Case proof placeholder</p>
+          <h2>Compressed setup claim stays locked.</h2>
+          <p class="subhead">Source PDF mentions a major Chorwad private function and a compressed setup timeline.</p>
+          <ul class="verify-list">
+            <li>[VERIFIED COPY HERE: event, role, timeline, scope, permission status]</li>
+          </ul>
+          <p class="kicker">Use only if evidence confirms exact role, client permission, date, and documented setup window.</p>
+        </div>
+        <div class="visual" aria-hidden="true"></div>
+        <span class="footer-mark">12 / 30</span>
+      </article>
+
+      <article class="slide dark split" id="s13">
+        <div class="slide-content">
+          <p class="eyebrow">Case proof placeholder</p>
+          <h2>Hotel relationship needs written clarity.</h2>
+          <p class="subhead">Source PDF mentions Ashopalav Hotel, Bhavnath.</p>
+          <ul class="verify-list">
+            <li>[VERIFIED COPY HERE: relationship type, scope, dates, permission status]</li>
+          </ul>
+          <p class="kicker">Do not use "exclusive" unless a written agreement confirms it.</p>
+        </div>
+        <div class="visual" aria-hidden="true"></div>
+        <span class="footer-mark">13 / 30</span>
+      </article>
+
+      <article class="slide dark split" id="s14">
+        <div class="slide-content">
+          <p class="eyebrow">Case proof placeholder</p>
+          <h2>Cultural event scale needs exact role.</h2>
+          <p class="subhead">Source PDF mentions Mahashivratri at Bhavnath and Kirtidan Gadhvi Dayro at Ashopalav Hotel.</p>
+          <ul class="verify-list">
+            <li>[VERIFIED COPY HERE: event, role, scope, audience scale, date, permission status]</li>
+          </ul>
+          <p class="kicker">Do not imply main planner status if the business was a decorator, supplier, or subcontractor.</p>
+        </div>
+        <div class="visual" aria-hidden="true"></div>
+        <span class="footer-mark">14 / 30</span>
+      </article>
+
+      <article class="slide dark split" id="s15">
+        <div class="slide-content">
+          <p class="eyebrow">Case proof placeholder</p>
+          <h2>Premium property names need permission.</h2>
+          <p class="subhead">Source PDF mentions Bellevue Sarovar Premiere and The Fern Gir Forest Resort.</p>
+          <ul class="verify-list">
+            <li>[VERIFIED COPY HERE: property, role, scope, date, permission status]</li>
+          </ul>
+          <p class="kicker">Use property names only with permission or clear publishable evidence.</p>
+        </div>
+        <div class="visual" aria-hidden="true"></div>
+        <span class="footer-mark">15 / 30</span>
+      </article>
+
+      <article class="slide" id="s16">
+        <div class="slide-content">
+          <p class="eyebrow">Cultural fluency</p>
+          <h2>Planning around family customs and flow.</h2>
+          <p class="subhead">The PDF highlights Jain community event experience.</p>
+          <ul class="verify-list">
+            <li>[VERIFIED COPY HERE: event types, protocols handled, permission status]</li>
+          </ul>
+          <p class="subhead">Safe claim direction: careful planning around family customs, rituals, timing, spatial flow, and hospitality expectations.</p>
+        </div>
+        <span class="footer-mark">16 / 30</span>
+      </article>
+
+      <article class="slide olive" id="s17">
+        <div class="slide-content">
+          <p class="eyebrow">Venue protection starts before design</p>
+          <h2>The site plan comes before the aesthetic plan.</h2>
+          <ul class="body-list">
+            <li>Site walk before proposal.</li>
+            <li>Rules checklist before client commitment.</li>
+            <li>Load-in and load-out plan before event week.</li>
+            <li>Surface protection where needed.</li>
+            <li>Escalation contact for venue operations.</li>
+            <li>Post-event debrief and content handover.</li>
+          </ul>
+        </div>
+        <span class="footer-mark">17 / 30</span>
+      </article>
+
+      <article class="slide" id="s18">
+        <div class="slide-content">
+          <p class="eyebrow">Safety and welfare claims</p>
+          <h2>Use process language until proof is supplied.</h2>
+          <p class="subhead">Source PDF mentions labor medical policies, weather preparation, fire-retardant materials, and disaster resilience.</p>
+          <ul class="verify-list">
+            <li>[VERIFY: labor insurance / welfare policy]</li>
+            <li>[VERIFY: event insurance]</li>
+            <li>[VERIFY: material safety and fire treatment]</li>
+            <li>[VERIFY: weather and wind planning]</li>
+          </ul>
+          <p class="kicker">Never use "zero-damage guarantee."</p>
+        </div>
+        <span class="footer-mark">18 / 30</span>
+      </article>
+
+      <article class="slide split" id="s19">
+        <div class="slide-content">
+          <p class="eyebrow">Operational model</p>
+          <h2>One planning contact, one site rule file.</h2>
+          <ul class="body-list">
+            <li>One planning contact.</li>
+            <li>One site rule file.</li>
+            <li>One setup timeline.</li>
+            <li>One decor scope.</li>
+            <li>One post-event review.</li>
+          </ul>
+          <p class="subhead">The venue should feel less coordination pressure, not more.</p>
+        </div>
+        <div class="visual light" aria-hidden="true"></div>
+        <span class="footer-mark">19 / 30</span>
+      </article>
+
+      <article class="slide" id="s20">
+        <div class="slide-content">
+          <p class="eyebrow">Revenue support for venues</p>
+          <h2>Decor helps enquiries become bookings.</h2>
+          <ul class="body-list">
+            <li>Decor can help a venue close enquiries faster.</li>
+            <li>Strong visual references help families imagine the event.</li>
+            <li>Repeatable packages create faster quoting.</li>
+            <li>Documented event photos become future sales collateral.</li>
+          </ul>
+          <p class="subhead">The business case is conversion support, not decoration alone.</p>
+        </div>
+        <span class="footer-mark">20 / 30</span>
+      </article>
+
+      <article class="slide split" id="s21">
+        <div class="slide-content">
+          <p class="eyebrow">Marketing collaboration</p>
+          <h2>Each approved event can work harder for both brands.</h2>
+          <ul class="body-list">
+            <li>Venue-tagged image sets.</li>
+            <li>Setup and reveal reels.</li>
+            <li>Before / after venue transformations.</li>
+            <li>Seasonal decor lookbooks.</li>
+            <li>Permission-safe case studies.</li>
+          </ul>
+        </div>
+        <div class="visual light" aria-hidden="true"></div>
+        <span class="footer-mark">21 / 30</span>
+      </article>
+
+      <article class="slide" id="s22">
+        <div class="slide-content">
+          <p class="eyebrow">Partnership model 1</p>
+          <h2>Approved Vendor</h2>
+          <ul class="body-list">
+            <li>Best for first relationship stage.</li>
+            <li>Shared venue rules.</li>
+            <li>Defined service categories.</li>
+            <li>Referral process.</li>
+            <li>Event-by-event review.</li>
+          </ul>
+        </div>
+        <span class="footer-mark">22 / 30</span>
+      </article>
+
+      <article class="slide" id="s23">
+        <div class="slide-content">
+          <p class="eyebrow">Partnership model 2</p>
+          <h2>Preferred Decor Partner</h2>
+          <ul class="body-list">
+            <li>Best once trust is proven.</li>
+            <li>Site-specific decor menus.</li>
+            <li>Priority planning support.</li>
+            <li>Co-created visual references.</li>
+            <li>Quarterly review with venue leadership.</li>
+          </ul>
+        </div>
+        <span class="footer-mark">23 / 30</span>
+      </article>
+
+      <article class="slide" id="s24">
+        <div class="slide-content">
+          <p class="eyebrow">Partnership model 3</p>
+          <h2>Co-Branded Packages</h2>
+          <ul class="body-list">
+            <li>Best for high-intent wedding enquiries.</li>
+            <li>Venue plus decor concept.</li>
+            <li>Indicative inclusions.</li>
+            <li>Photo references.</li>
+            <li>Clear inquiry path.</li>
+            <li>No pricing unless approved.</li>
+          </ul>
+        </div>
+        <span class="footer-mark">24 / 30</span>
+      </article>
+
+      <article class="slide olive" id="s25">
+        <div class="slide-content">
+          <p class="eyebrow">Recommended pilot</p>
+          <div class="big-number"><b>3</b><span>Event pilot<br>before commitment</span></div>
+          <div class="model-grid">
+            <div class="model"><strong>Event 1</strong><span>Document rules, flow, setup, and content needs.</span></div>
+            <div class="model recommended"><strong>Event 2</strong><span>Refine package language and visual references.</span></div>
+            <div class="model"><strong>Event 3</strong><span>Measure response speed, setup quality, guest experience, and venue-team feedback.</span></div>
+          </div>
+          <p class="subhead">Then decide the partnership model.</p>
+        </div>
+        <span class="footer-mark">25 / 30</span>
+      </article>
+
+      <article class="slide" id="s26">
+        <div class="slide-content">
+          <p class="eyebrow">Outreach path</p>
+          <h2>Offer a site walk, not a vague meeting.</h2>
+          <ul class="body-list">
+            <li>Target General Managers, Directors of Sales, banquet heads, and owners.</li>
+            <li>Send a concise digital deck.</li>
+            <li>Follow with a printed premium deck for priority venues.</li>
+            <li>Offer a site walk.</li>
+            <li>Invite serious prospects to inspect a live setup when permission allows.</li>
+          </ul>
+        </div>
+        <span class="footer-mark">26 / 30</span>
+      </article>
+
+      <article class="slide split" id="s27">
+        <div class="slide-content">
+          <p class="eyebrow">Brand identity sample</p>
+          <h2>Logo shown as a concept system only.</h2>
+          <ul class="body-list">
+            <li>Master stacked lockup</li>
+            <li>Seal / avatar</li>
+            <li>Horizontal nav lockup</li>
+            <li>Favicon</li>
+          </ul>
+          <p class="kicker">Final mark requires vector redraw and trademark search.</p>
+        </div>
+        <div class="logo-sample">
+          <img src="assets/logo-family-sample-v2.png" alt="J.Vardhan logo concept system">
+        </div>
+        <span class="footer-mark">27 / 30</span>
+      </article>
+
+      <article class="slide dark" id="s28">
+        <div class="slide-content">
+          <p class="eyebrow">Logo direction for Gamma</p>
+          <h2>Gold Asiatic lion, not generic heraldry.</h2>
+          <ul class="body-list">
+            <li>Short sparse Gir lion mane with visible ears.</li>
+            <li>Gold #CFAA6D mark.</li>
+            <li>Teal #0A5356 wordmark.</li>
+            <li>Ivory #F9F6EF and dark teal #013C3C slides.</li>
+            <li>No crowns, shields, sparkles, foil, script fonts, or black-and-gold cliche.</li>
+          </ul>
+        </div>
+        <span class="footer-mark">28 / 30</span>
+      </article>
+
+      <article class="slide" id="s29">
+        <div class="slide-content">
+          <p class="eyebrow">What we need from the venue</p>
+          <h2>The first inputs are operational.</h2>
+          <ul class="body-list">
+            <li>Spaces to prioritize.</li>
+            <li>Rules and restrictions.</li>
+            <li>Event calendar.</li>
+            <li>Photo and video permissions.</li>
+            <li>Decision-maker for approvals.</li>
+            <li>Three pilot event opportunities.</li>
+          </ul>
+        </div>
+        <span class="footer-mark">29 / 30</span>
+      </article>
+
+      <article class="slide dark split" id="s30">
+        <div class="slide-content">
+          <img class="cover-logo" src="assets/lion-gold.png" alt="">
+          <p class="eyebrow">Next step</p>
+          <h2>Book a venue walk-through.</h2>
+          <ul class="body-list">
+            <li>Share upcoming wedding or event dates.</li>
+            <li>Choose the first pilot event.</li>
+            <li>We will return with a venue-specific decor and production plan.</li>
+          </ul>
+          <p class="kicker">Contact: [PHONE / WHATSAPP / EMAIL HERE]</p>
+        </div>
+        <div class="visual" aria-hidden="true"></div>
+        <span class="footer-mark">30 / 30</span>
+      </article>
+    </section>
+  </main>
+
+  <script>
+    (function () {
+      var slides = Array.prototype.slice.call(document.querySelectorAll('.slide'));
+      var links = Array.prototype.slice.call(document.querySelectorAll('.rail a'));
+      var current = 0;
+
+      function setActive(index) {
+        current = Math.max(0, Math.min(slides.length - 1, index));
+        links.forEach(function (link, i) {
+          link.classList.toggle('active', i === current);
+        });
+      }
+
+      function go(delta) {
+        var target = slides[Math.max(0, Math.min(slides.length - 1, current + delta))];
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }
+
+      document.querySelector('[data-prev]').addEventListener('click', function () { go(-1); });
+      document.querySelector('[data-next]').addEventListener('click', function () { go(1); });
+      window.addEventListener('keydown', function (event) {
+        if (event.key === 'ArrowLeft') { go(-1); }
+        if (event.key === 'ArrowRight') { go(1); }
+      });
+
+      links.forEach(function (link, i) {
+        link.addEventListener('click', function () { setActive(i); });
+      });
+
+      if ('IntersectionObserver' in window) {
+        var observer = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              setActive(slides.indexOf(entry.target));
+            }
+          });
+        }, { rootMargin: '-45% 0px -45% 0px', threshold: 0 });
+        slides.forEach(function (slide) { observer.observe(slide); });
+      } else {
+        setActive(0);
+      }
+    })();
+  </script>
+</body>
+</html>
