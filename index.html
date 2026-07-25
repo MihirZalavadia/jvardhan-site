@@ -3,358 +3,141 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>J.Vardhan Luxe Events — Wedding &amp; Event Production for Venues and Families, Gujarat</title>
-  <meta name="description" content="A family production house for weddings and events across Gujarat — and a single, disciplined partner for the venues that host them. Promised. Planned. Delivered.">
+  <title>J.Vardhan — Luxe Weddings &amp; Events | Wedding Production, Gujarat</title>
+  <meta name="description" content="A family house of flowers, mandaps, lighting and end-to-end wedding production across Gujarat — and a disciplined partner for the venues that host them.">
+  <link rel="canonical" href="https://mihirzalavadia.github.io/jvardhan-site/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="J.Vardhan — Luxe Weddings &amp; Events">
+  <meta property="og:description" content="Celebrations built like heirlooms. Flowers, mandaps, lighting and planning — one family, one house. Gujarat, India.">
+  <meta property="og:image" content="https://mihirzalavadia.github.io/jvardhan-site/assets/photos/mandap-mandap-chandeliers.jpg">
+  <meta property="og:url" content="https://mihirzalavadia.github.io/jvardhan-site/">
+  <meta name="twitter:card" content="summary_large_image">
   <link rel="icon" type="image/png" href="assets/lion-guardian.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://api.fontshare.com/v2/css?f[]=boska@400,401,500,501,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=Inter:wght@400;500;600&family=Pinyon+Script&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="design-system.css">
+  <link rel="preload" as="image" href="assets/photos/mandap-mandap-chandeliers.jpg">
+  <script src="ds.js" defer></script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "J.Vardhan - Luxe Weddings & Events",
+    "description": "Wedding and event production house: floral design, mandaps, lighting and end-to-end planning across Gujarat, India.",
+    "url": "https://mihirzalavadia.github.io/jvardhan-site/",
+    "image": "https://mihirzalavadia.github.io/jvardhan-site/assets/lion-floral.png",
+    "areaServed": "Gujarat, India",
+    "slogan": "Promised. Planned. Delivered."
+  }
+  </script>
   <style>
-    :root {
-      --bg: #F9F6EF;
-      --bg-css: #F9F6EF;
-      --surface: #FFFFFF;
-      --text: #0A3F3B;
-      --heading: #0A5356;
-      --muted: #4E6E69;
-      --accent: #CFAA6D;
-      --accent-deep: #B08D52;
-      --line: rgba(1, 60, 60, .16);
-      --shadow: 0 10px 30px rgba(1, 60, 60, .08);
-      --font-display: "Fraunces", Georgia, serif;
-      --font-sans: "Inter", "Segoe UI", system-ui, sans-serif;
-      --font-label: "Archivo", Arial, sans-serif;
-    }
-    :root[data-theme="dusk"] {
-      --bg-css: linear-gradient(135deg, #013C3C 0%, #024E4E 100%);
-      --bg: #013C3C;
-      --surface: rgba(255, 255, 255, .05);
-      --text: #E8E3D5;
-      --heading: #FFFFFF;
-      --muted: #A9C3BD;
-      --accent: #CFAA6D;
-      --accent-deep: #E0C08A;
-      --line: rgba(207, 170, 109, .28);
-      --shadow: 0 10px 30px rgba(0, 0, 0, .25);
-    }
-
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
-    body {
-      background: var(--bg-css);
-      background-attachment: fixed;
-      color: var(--text);
-      font-family: var(--font-sans);
-      line-height: 1.7;
-      transition: color .4s ease;
-    }
-    @media (prefers-reduced-motion: reduce) {
-      *, *::before, *::after { animation: none !important; transition: none !important; }
-      html { scroll-behavior: auto; }
-    }
-
-    .lion { background-image: url("assets/lion-guardian.png"); background-size: contain; background-repeat: no-repeat; background-position: center; display: inline-block; }
-
-    .label {
-      font-family: var(--font-label);
-      font-stretch: 110%;
-      font-size: .7rem;
-      font-weight: 700;
-      letter-spacing: .22em;
-      text-transform: uppercase;
-      color: var(--accent-deep);
-    }
-    h1, h2, h3 { font-family: var(--font-display); font-weight: 420; color: var(--heading); text-wrap: balance; }
-
-    /* ---------- nav ---------- */
-    nav {
-      position: sticky; top: 0; z-index: 50;
-      display: flex; align-items: center; justify-content: space-between; gap: 1rem;
-      padding: .8rem clamp(1rem, 5vw, 3rem);
-      background: color-mix(in srgb, var(--bg) 82%, transparent);
-      backdrop-filter: blur(10px);
-      border-bottom: 1px solid var(--line);
-      transition: background .4s ease;
-    }
-    .brand { display: flex; align-items: center; gap: .65rem; text-decoration: none; }
-    .brand .lion { width: 28px; height: 28px; }
-    .wordmark {
-      font-family: var(--font-label); font-stretch: 122%; font-weight: 800;
-      letter-spacing: .13em; font-size: .95rem; color: var(--heading); white-space: nowrap;
-    }
-    .wordmark small { display: block; font-size: .48rem; font-weight: 700; letter-spacing: .5em; color: var(--accent-deep); margin-top: .1rem; }
-    .nav-links { display: flex; align-items: center; gap: 1.4rem; }
-    .nav-links a {
-      font-family: var(--font-label); font-stretch: 108%; font-size: .66rem; font-weight: 700;
-      letter-spacing: .16em; text-transform: uppercase;
-      color: var(--muted); text-decoration: none; transition: color .25s;
-    }
-    .nav-links a:hover, .nav-links a:focus-visible { color: var(--accent-deep); }
-    @media (max-width: 900px) { .nav-links a { display: none; } }
-
-    .toggle {
-      display: flex; align-items: center; border: 1px solid var(--line); border-radius: 999px;
-      overflow: hidden; background: var(--surface); padding: 0;
-    }
-    .toggle button {
-      font-family: var(--font-label); font-size: .62rem; font-weight: 700; letter-spacing: .16em;
-      text-transform: uppercase; border: 0; background: transparent; color: var(--muted);
-      padding: .45rem .9rem; cursor: pointer; transition: background .3s, color .3s;
-    }
-    .toggle button[aria-pressed="true"] { background: var(--heading); color: var(--bg); }
-    .toggle button:focus-visible, a:focus-visible, .chip:focus-visible, button:focus-visible,
-    input:focus-visible, select:focus-visible, textarea:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
-
-    /* ---------- hero ---------- */
-    .hero { text-align: center; padding: clamp(3.6rem, 9vw, 6.5rem) 1.5rem clamp(3.4rem, 7vw, 5rem); }
-    .hero .lion { width: clamp(140px, 18vw, 190px); height: clamp(140px, 18vw, 190px); background-image: url("assets/lion-floral.png"); animation: rise .9s ease both; }
-    .hero .label { display: block; margin: 1.5rem 0 1rem; animation: rise .9s .1s ease both; }
-    .hero h1 { font-size: clamp(2.1rem, 5.2vw, 3.7rem); line-height: 1.12; max-width: 18ch; margin: 0 auto; animation: rise .9s .2s ease both; }
-    .hero h1 em { font-style: italic; color: var(--accent-deep); }
-    .rule { width: 72px; height: 2px; background: var(--accent); margin: 1.7rem auto; animation: draw 1.1s .5s ease both; }
-    .hero p { max-width: 56ch; margin: 0 auto 2.3rem; color: var(--muted); animation: rise .9s .35s ease both; }
-    .cta-row { display: flex; gap: .9rem; justify-content: center; flex-wrap: wrap; animation: rise .9s .45s ease both; }
-    .btn {
-      font-family: var(--font-label); font-stretch: 108%; font-size: .7rem; font-weight: 700; letter-spacing: .18em;
-      text-transform: uppercase; text-decoration: none; padding: .95rem 1.7rem; border-radius: 2px;
-      border: 0; cursor: pointer;
-      transition: transform .25s, box-shadow .25s, background .25s, color .25s;
-    }
-    .btn:hover { transform: translateY(-2px); box-shadow: var(--shadow); }
-    .btn-gold { background: var(--accent); color: #063230; }
-    .btn-gold:hover { background: var(--accent-deep); }
-    .btn-ghost { border: 1px solid var(--line); color: var(--heading); background: transparent; }
-    @keyframes rise { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: none; } }
-    @keyframes draw { from { width: 0; } to { width: 72px; } }
-
-    /* ---------- venue strip ---------- */
-    .venue-strip {
-      border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);
-      padding: 1.3rem clamp(1.2rem, 6vw, 4rem); text-align: center;
-      display: flex; flex-direction: column; gap: .3rem;
-    }
-    .venue-strip p { font-size: .85rem; color: var(--muted); }
-
-    /* ---------- shared section shell ---------- */
-    section { padding: clamp(3rem, 6.5vw, 5.2rem) clamp(1.2rem, 6vw, 4rem); }
-    .shell { max-width: 1080px; margin: 0 auto; }
-    .sec-head { max-width: 680px; margin-bottom: 2.4rem; }
-    .sec-head h2 { font-size: clamp(1.5rem, 3vw, 2.2rem); margin: .7rem 0 .8rem; }
-    .sec-head p { color: var(--muted); }
-    .reveal { opacity: 0; transform: translateY(22px); transition: opacity .7s ease, transform .7s ease; }
-    .reveal.in { opacity: 1; transform: none; }
-
-    /* ---------- pillars ---------- */
-    .pillars { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 1.1rem; }
-    .pillar { background: var(--surface); border: 1px solid var(--line); padding: 1.7rem 1.5rem; border-radius: 3px; }
-    .pillar h3 { font-size: 1.15rem; margin: .55rem 0 .45rem; }
-    .pillar p { font-size: .88rem; color: var(--muted); }
-
-    /* ---------- the standard ---------- */
-    .standard { background: linear-gradient(135deg, #013C3C, #024E4E); color: #E8E3D5; border-top: 1px solid rgba(207,170,109,.3); border-bottom: 1px solid rgba(207,170,109,.3); }
-    .standard .sec-head h2 { color: #fff; }
-    .standard .sec-head p { color: #A9C3BD; }
-    .standard .label { color: #CFAA6D; }
-    .std-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 1rem; }
-    .std-card { border: 1px solid rgba(207,170,109,.3); border-radius: 3px; padding: 1.5rem 1.3rem; background: rgba(255,255,255,.04); }
-    .std-card::before { content: ""; display: block; width: 26px; height: 2px; background: #CFAA6D; margin-bottom: 1rem; }
-    .std-card h3 { color: #fff; font-size: 1.05rem; margin-bottom: .4rem; }
-    .std-card p { font-size: .85rem; color: #A9C3BD; }
-
-    /* ---------- methodology ---------- */
+    .hero-home { position: relative; text-align: center; overflow: hidden; padding: clamp(3.2rem, 8vw, 5.6rem) 1.5rem clamp(2.6rem, 6vw, 4rem); }
+    .hero-home .lion-emblem { width: clamp(130px, 16vw, 175px); margin-inline: auto; }
+    .hero-home h1 { max-width: 17ch; margin: 1rem auto 0; }
+    .hero-strip { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.1rem; max-width: 1080px; margin: 0 auto; padding: 0 clamp(1.2rem, 6vw, 4rem) 1rem; }
+    .hero-strip .arch-img { aspect-ratio: 3 / 4; }
+    .venue-strip { border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); padding: 1.3rem clamp(1.2rem, 6vw, 4rem); text-align: center; }
+    .venue-strip p { font-size: .85rem; color: var(--muted); margin-top: .2rem; }
+    .pillars, .cat-grid, .case-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.1rem; }
     .method { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; counter-reset: step; }
-    .step { background: var(--surface); border: 1px solid var(--line); border-radius: 3px; padding: 1.6rem 1.4rem; position: relative; counter-increment: step; }
-    .step::before {
-      content: "0" counter(step); font-family: var(--font-display); font-size: 2rem;
-      color: var(--accent); display: block; margin-bottom: .6rem; font-variant-numeric: tabular-nums;
-    }
-    .step h3 { font-family: var(--font-label); font-stretch: 115%; font-weight: 800; font-size: .82rem; letter-spacing: .2em; text-transform: uppercase; color: var(--heading); margin-bottom: .45rem; }
+    .step { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 1.6rem 1.4rem; counter-increment: step; }
+    .step::before { content: "0" counter(step); font-family: var(--font-display); font-size: 2rem; color: var(--accent); display: block; margin-bottom: .6rem; font-variant-numeric: tabular-nums; }
+    .step h3 { font-family: var(--font-label); font-stretch: 115%; font-weight: 800; font-size: .82rem; letter-spacing: .2em; text-transform: uppercase; margin-bottom: .45rem; }
     .step p { font-size: .86rem; color: var(--muted); }
-
-    /* ---------- case studies ---------- */
-    .case-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.1rem; }
-    .case { background: var(--surface); border: 1px solid var(--line); border-radius: 3px; overflow: hidden; }
-    .case .ph { height: 190px; position: relative; }
-    .case .ph::after {
-      content: "verified photography coming"; position: absolute; inset: auto .8rem .6rem auto;
-      font-family: var(--font-label); font-size: .55rem; letter-spacing: .14em; text-transform: uppercase;
-      color: rgba(255, 255, 255, .75);
-    }
-    .ph-1 { background: linear-gradient(150deg, #C98A2E, #E9A23B 55%, #8A5A1D); }
-    .ph-2 { background: linear-gradient(150deg, #01393A, #0A5356 60%, #CFAA6D); }
-    .ph-3 { background: linear-gradient(150deg, #7E3F2E, #B4653F 55%, #E0C08A); }
-    .case-body { padding: 1.2rem 1.3rem 1.3rem; }
-    .case-body strong { display: block; font-family: var(--font-display); font-weight: 450; color: var(--heading); font-size: 1.1rem; margin: .2rem 0 .8rem; }
-    .spec { display: grid; gap: .35rem; font-size: .8rem; }
-    .spec div { display: grid; grid-template-columns: 92px 1fr; gap: .6rem; }
-    .spec dt { font-family: var(--font-label); font-size: .6rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--accent-deep); padding-top: .15rem; }
-    .spec dd { color: var(--muted); }
-
-    /* ---------- services index ---------- */
-    .svc-list { columns: 2; column-gap: 3rem; max-width: 880px; }
-    @media (max-width: 700px) { .svc-list { columns: 1; } }
-    .svc-list li {
-      list-style: none; break-inside: avoid; display: flex; gap: .9rem; align-items: baseline;
-      padding: .75rem 0; border-bottom: 1px solid var(--line); font-size: .95rem; color: var(--text);
-    }
-    .svc-list li span { font-family: var(--font-label); font-size: .62rem; font-weight: 700; letter-spacing: .1em; color: var(--accent-deep); font-variant-numeric: tabular-nums; }
-    .svc-list li em { font-style: normal; font-size: .72rem; color: var(--accent-deep); font-family: var(--font-label); letter-spacing: .06em; }
-
-    /* ---------- people band ---------- */
-    .people { text-align: center; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
-    .people h2 { font-size: clamp(1.4rem, 2.6vw, 1.9rem); margin: .7rem 0 .8rem; }
-    .people p { max-width: 56ch; margin: 0 auto; color: var(--muted); }
-
-    /* ---------- decks ---------- */
+    .std-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 1rem; }
+    .std-card { border: 1px solid rgba(207,170,109,.3); border-radius: var(--radius); padding: 1.5rem 1.3rem; background: rgba(255,255,255,.04); }
+    .std-card::before { content: ""; display: block; width: 26px; height: 2px; background: #CFAA6D; margin-bottom: 1rem; }
+    .std-card h3 { font-size: 1.05rem; margin-bottom: .4rem; }
+    .std-card p { font-size: .85rem; }
+    .case .frame-img { aspect-ratio: 16 / 11; }
+    .case figcaption { padding: 1rem 1.2rem 1.2rem; background: var(--surface); border: 1px solid var(--line); border-top: 0; border-radius: 0 0 var(--radius) var(--radius); }
+    .case figcaption strong { display: block; font-family: var(--font-display); font-weight: 500; color: var(--heading); font-size: 1.08rem; margin: .15rem 0 .2rem; }
+    .case .frame-img { border-radius: var(--radius) var(--radius) 0 0; }
     .deck-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.1rem; }
-    .deck-card { background: var(--surface); border: 1px solid var(--line); border-radius: 3px; padding: 1.6rem; }
+    .deck-card { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 1.6rem; }
     .deck-card h3 { font-size: 1.1rem; margin: .5rem 0 .6rem; }
     .deck-card p { font-size: .88rem; color: var(--muted); margin-bottom: 1.1rem; }
-    .embed-slot { border: 1px dashed var(--line); border-radius: 3px; text-align: center; }
-    .embed-slot iframe { width: 100%; aspect-ratio: 16 / 9; border: 0; border-radius: 3px; display: block; }
-    .embed-slot:has(iframe) { border: 0; padding: 0; }
-    .deck-actions { display: flex; gap: .7rem; flex-wrap: wrap; margin: .9rem 0 1.1rem; }
-
-    /* ---------- FAQ ---------- */
-    .faq { max-width: 780px; }
-    .faq details { border-bottom: 1px solid var(--line); }
-    .faq summary {
-      cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 1rem;
-      padding: 1.1rem 0; font-family: var(--font-display); font-size: 1.05rem; color: var(--heading);
-    }
-    .faq summary::-webkit-details-marker { display: none; }
-    .faq summary::after { content: "+"; font-family: var(--font-label); color: var(--accent-deep); font-size: 1.1rem; transition: transform .3s; }
-    .faq details[open] summary::after { transform: rotate(45deg); }
-    .faq details p { padding: 0 0 1.2rem; font-size: .9rem; color: var(--muted); max-width: 64ch; }
-
-    /* ---------- enquiry ---------- */
-    .enquiry { background: linear-gradient(135deg, #013C3C, #024E4E); color: #E8E3D5; border-top: 1px solid rgba(207,170,109,.3); }
-    .enquiry .sec-head h2 { color: #fff; }
-    .enquiry .sec-head p { color: #A9C3BD; }
-    .enquiry .label { color: #CFAA6D; }
-    .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; max-width: 760px; }
-    @media (max-width: 640px) { .form-grid { grid-template-columns: 1fr; } }
-    .field { display: flex; flex-direction: column; gap: .35rem; }
-    .field.wide { grid-column: 1 / -1; }
-    .field label { font-family: var(--font-label); font-size: .62rem; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; color: #CFAA6D; }
-    .field input, .field select, .field textarea {
-      background: rgba(255,255,255,.06); border: 1px solid rgba(207,170,109,.35); border-radius: 2px;
-      padding: .8rem .9rem; color: #F3EFE3; font-family: var(--font-sans); font-size: .92rem;
-    }
-    .field select option { color: #0A3F3B; }
-    .field textarea { min-height: 96px; resize: vertical; }
-    .form-note { font-size: .78rem; color: #7FA39C; margin-top: 1rem; max-width: 60ch; }
-
-    /* ---------- brand review ---------- */
-    .logo-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 1.1rem; margin-bottom: 1.6rem; }
-    .logo-card { background: var(--surface); border: 1px solid var(--line); border-radius: 3px; overflow: hidden; }
-    .logo-stage { height: 185px; display: flex; align-items: center; justify-content: center; background: linear-gradient(105deg, #F9F6EF 50%, #013C3C 50%); }
-    .logo-stage img { max-height: 145px; max-width: 70%; }
-    .logo-card figcaption { padding: .95rem 1.1rem 1.05rem; }
-    .logo-card figcaption strong { display: block; font-family: var(--font-display); font-weight: 450; color: var(--heading); font-size: 1.02rem; margin: .2rem 0 .3rem; }
-    .logo-card figcaption p { font-size: .82rem; color: var(--muted); }
-    .change-note { background: var(--surface); border: 1px solid var(--line); border-left: 3px solid var(--accent); border-radius: 3px; padding: 1.4rem 1.6rem; }
-    .change-note p { font-size: .9rem; color: var(--muted); margin-top: .4rem; }
-
-    /* ---------- footer ---------- */
-    footer { position: relative; overflow: hidden; background: #013232; color: #A9C3BD; padding: 3.5rem clamp(1.2rem, 6vw, 4rem) 2.5rem; }
-    footer .ghost { position: absolute; right: -40px; bottom: -30px; width: 310px; height: 310px; opacity: .07; pointer-events: none; }
-    footer .wordmark { color: #fff; }
-    .foot-row { display: flex; justify-content: space-between; align-items: center; gap: 1.5rem; flex-wrap: wrap; max-width: 1080px; margin: 0 auto 1.8rem; }
-    .foot-tag { font-family: var(--font-label); font-stretch: 110%; font-size: .68rem; font-weight: 700; letter-spacing: .34em; text-transform: uppercase; color: #CFAA6D; max-width: 1080px; margin: 0 auto 1.6rem; }
-    .foot-cta { display: flex; gap: .8rem; flex-wrap: wrap; }
-    .foot-note { max-width: 1080px; margin: 0 auto; font-size: .72rem; letter-spacing: .04em; color: #6F8F89; border-top: 1px solid rgba(207, 170, 109, .18); padding-top: 1.4rem; }
-    .foot-note a { color: #CFAA6D; text-decoration: none; }
-
-    /* ---------- floating WhatsApp ---------- */
-    .float-wa {
-      position: fixed; right: 1.2rem; bottom: 1.2rem; z-index: 60;
-      display: flex; align-items: center; gap: .5rem;
-      background: var(--accent); color: #063230; text-decoration: none;
-      font-family: var(--font-label); font-size: .68rem; font-weight: 800; letter-spacing: .14em; text-transform: uppercase;
-      padding: .8rem 1.2rem; border-radius: 999px; box-shadow: 0 8px 24px rgba(1,50,50,.35);
-      transition: transform .25s, background .25s;
-    }
-    .float-wa::before { content: ""; width: 9px; height: 9px; border-radius: 50%; background: #063230; }
-    .float-wa:hover { transform: translateY(-3px); background: var(--accent-deep); }
+    .deck-actions { display: flex; gap: .7rem; flex-wrap: wrap; margin-bottom: 1.1rem; }
+    .embed-slot iframe { width: 100%; aspect-ratio: 16 / 9; border: 0; border-radius: var(--radius); display: block; }
   </style>
 </head>
 <body>
+<div id="loader" aria-hidden="true">
+  <div class="loader-inner">
+    <svg viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="60" cy="60" r="10"/><circle cx="84" cy="60" r="13"/><circle cx="77" cy="77" r="13"/><circle cx="60" cy="84" r="13"/><circle cx="43" cy="77" r="13"/><circle cx="36" cy="60" r="13"/><circle cx="43" cy="43" r="13"/><circle cx="60" cy="36" r="13"/><circle cx="77" cy="43" r="13"/></svg>
+    <div class="wordmark">J.VARDHAN<small>LUXE WEDDINGS &amp; EVENTS</small></div>
+    <div class="loader-bar"></div>
+  </div>
+</div>
 
-<nav>
-  <a class="brand" href="#top" aria-label="J.Vardhan Luxe Events home">
-    <span class="lion" aria-hidden="true"></span>
-    <span class="wordmark">J.VARDHAN<small>LUXE EVENTS</small></span>
-  </a>
+<nav class="site-nav">
+  <a class="brand" href="index.html" aria-label="J.Vardhan home"><span class="lion-icon"></span><span class="wordmark">J.VARDHAN<small>LUXE WEDDINGS &amp; EVENTS</small></span></a>
   <div class="nav-links">
-    <a href="#standard">The Standard</a>
-    <a href="#work">Work</a>
-    <a href="#services">Services</a>
-    <a href="#decks">Decks</a>
-    <a href="#faq">FAQ</a>
-    <a href="#review">Review</a>
-    <div class="toggle" role="group" aria-label="Theme">
-      <button type="button" id="btnDay" aria-pressed="true">Day</button>
-      <button type="button" id="btnDusk" aria-pressed="false">Dusk</button>
-    </div>
+    <a class="nav-link active" href="index.html">Home</a>
+    <a class="nav-link" href="weddings.html">Weddings</a>
+    <a class="nav-link" href="venues.html">Venues</a>
+    <a class="nav-link" href="portfolio.html">Portfolio</a>
+    <a class="nav-link" href="story.html">Story</a>
+    <a class="nav-link" href="contact.html">Contact</a>
+    <div class="toggle" role="group" aria-label="Theme"><button type="button" id="btnDay" aria-pressed="true">Day</button><button type="button" id="btnDusk" aria-pressed="false">Dusk</button></div>
   </div>
 </nav>
 
-<header class="hero" id="top">
-  <span class="lion" role="img" aria-label="J.Vardhan gold lion mark"></span>
-  <span class="label">Wedding &amp; Event Production &middot; Gujarat, India</span>
-  <h1>Celebrations built like <em>heirlooms.</em></h1>
-  <div class="rule" aria-hidden="true"></div>
-  <p>A family production house for weddings and events — and a single, disciplined partner for the venues that host them. Flowers, mandaps, lighting and planning under one roof.</p>
-  <div class="cta-row">
-    <a class="btn btn-gold" href="#enquiry" data-audience="venue">Partner Your Venue</a>
-    <a class="btn btn-ghost" href="#enquiry" data-audience="family">Planning a Celebration</a>
+<header class="hero-home">
+  <canvas id="petals" aria-hidden="true"></canvas>
+  <div style="position:relative;z-index:2;">
+    <img class="lion-emblem rise" src="assets/lion-floral.png" alt="J.Vardhan floral-mane lion emblem">
+    <p class="script-accent rise d1" style="margin-top:.8rem;">with love, from Gujarat</p>
+    <h1 class="display-1 rise d2">Celebrations built like <em>heirlooms.</em></h1>
+    <div class="gold-rule rise d3" style="margin:1.5rem auto;"></div>
+    <p class="rise d3" style="max-width:56ch;margin:0 auto 2.2rem;color:var(--muted);">Flowers, mandaps, lighting and planning — one family, one house. A production partner venues trust and families remember.</p>
+    <div class="rise d4" style="display:flex;gap:.9rem;justify-content:center;flex-wrap:wrap;">
+      <a class="btn btn-gold" href="venues.html">Partner Your Venue</a>
+      <a class="btn btn-ghost" href="weddings.html">Planning a Celebration</a>
+    </div>
   </div>
 </header>
 
+<div class="hero-strip">
+  <div class="arch-img img-hover cr"><img src="assets/photos/mandap-mandap-chandeliers.jpg" alt="Floral wedding mandap hung with chandeliers"></div>
+  <div class="arch-img img-hover cr"><img src="assets/photos/rituals-varmala-exchange.jpg" alt="Varmala exchange at a vibrant wedding" loading="lazy"></div>
+  <div class="arch-img img-hover cr duotone-dusk"><img src="assets/photos/evening-bride-string-lights.jpg" alt="Bride beneath strings of warm evening lights" loading="lazy"></div>
+</div>
+
 <div class="venue-strip reveal">
-  <span class="label">Venues We Produce At</span>
+  <span class="eyebrow">Venues We Produce At</span>
   <p>Partner venues announced soon — introductions underway across Saurashtra and Gujarat.</p>
 </div>
 
 <section id="house">
   <div class="shell">
-    <div class="sec-head reveal">
-      <span class="label">The House</span>
-      <h2>Flowers we source. Structures we own. Craft we deliver ourselves.</h2>
-      <p>Every celebration is carried in-house — from bloom to mandap to the last light switched off.</p>
+    <div class="lockup reveal">
+      <span class="eyebrow">The House</span>
+      <h2 class="display-2">Flowers we source. Structures we own. Craft we deliver ourselves.</h2>
+      <div class="gold-rule"></div>
     </div>
-    <div class="pillars">
-      <div class="pillar reveal">
-        <span class="label">Floral</span>
-        <h3>Fresh Flowers, Our Hands</h3>
-        <p>Floral design and supply handled by the family — garlands, installations, mandap florals, pathway petals.</p>
-      </div>
-      <div class="pillar reveal">
-        <span class="label">Structural</span>
-        <h3>Mandaps &amp; Gateways</h3>
-        <p>Custom mandaps, entrance gates, stages and backdrops from an owned inventory, built by our own crews.</p>
-      </div>
-      <div class="pillar reveal">
-        <span class="label">Production</span>
-        <h3>Lighting &amp; Planning</h3>
-        <p>Lighting, coordination and full event production — one team, one point of contact, start to finish.</p>
-      </div>
+    <div class="pillars" style="margin-top:2.2rem;">
+      <div class="card reveal"><span class="motif draw"><svg viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="2.5" style="color:var(--accent);width:44px;height:44px;"><circle cx="60" cy="60" r="10"/><circle cx="84" cy="60" r="13"/><circle cx="77" cy="77" r="13"/><circle cx="60" cy="84" r="13"/><circle cx="43" cy="77" r="13"/><circle cx="36" cy="60" r="13"/><circle cx="43" cy="43" r="13"/><circle cx="60" cy="36" r="13"/><circle cx="77" cy="43" r="13"/></svg></span><h3>Fresh Flowers, Our Hands</h3><p>Floral design and supply handled by the family — garlands, installations, mandap florals, pathway petals.</p></div>
+      <div class="card reveal"><span class="motif draw"><svg viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="color:var(--accent);width:44px;height:44px;"><path d="M20 100 V55"/><path d="M100 100 V55"/><path d="M20 55 Q22 25 60 22 Q98 25 100 55"/><path d="M40 44 l6 10 l6 -10"/><path d="M68 44 l6 10 l6 -10"/></svg></span><h3>Mandaps &amp; Gateways</h3><p>Custom mandaps, entrance gates, stages and backdrops from an owned inventory, built by our own crews.</p></div>
+      <div class="card reveal"><span class="motif draw"><svg viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" style="color:var(--accent);width:44px;height:44px;"><path d="M28 68 Q60 90 92 68"/><path d="M36 82 H84"/><path d="M60 62 C52 50 56 36 60 26 C64 36 68 50 60 62 Z"/></svg></span><h3>Lighting &amp; Planning</h3><p>Lighting, coordination and full event production — one team, one point of contact, start to finish.</p></div>
     </div>
   </div>
 </section>
 
-<section class="standard" id="standard">
+<section class="band-dusk" id="standard">
   <div class="shell">
-    <div class="sec-head reveal">
-      <span class="label">The J.Vardhan Standard</span>
-      <h2>What every venue can hold us to.</h2>
+    <div class="lockup reveal">
+      <span class="eyebrow">The J.Vardhan Standard</span>
+      <h2 class="display-2">What every venue can hold us to.</h2>
+      <div class="gold-rule"></div>
       <p>Not promises made in a meeting — working rules we bring to every property, every event.</p>
     </div>
-    <div class="std-grid">
+    <div class="std-grid" style="margin-top:2rem;">
       <div class="std-card reveal"><h3>Venue rules first</h3><p>Your property's guidelines, safety requirements and vendor policies lead every plan we make.</p></div>
       <div class="std-card reveal"><h3>Non-invasive build</h3><p>Setup methods that protect floors, lawns and fixtures — nothing nailed, drilled or dragged.</p></div>
-      <div class="std-card reveal"><h3>Agreed windows</h3><p>Setup and dismantle timings fixed in writing before the event — your next booking stays safe.</p></div>
+      <div class="std-card reveal"><h3>Agreed windows</h3><p>Setup and dismantle timings fixed in writing — your next booking stays safe.</p></div>
       <div class="std-card reveal"><h3>A named supervisor</h3><p>One accountable person on-site, known to your team by name, reachable through the event.</p></div>
       <div class="std-card reveal"><h3>Clean handover</h3><p>The space returns to you complete, clean and inspection-ready after every function.</p></div>
     </div>
@@ -363,12 +146,12 @@
 
 <section id="method">
   <div class="shell">
-    <div class="sec-head reveal">
-      <span class="label">How We Work</span>
-      <h2>Walk. Design. Build. Handover.</h2>
-      <p>Four phases, the same discipline every time — for a single wedding or a season-long venue partnership.</p>
+    <div class="lockup reveal">
+      <span class="eyebrow">How We Work</span>
+      <h2 class="display-2">Walk. Design. Build. <em>Handover.</em></h2>
+      <div class="gold-rule"></div>
     </div>
-    <div class="method">
+    <div class="method" style="margin-top:2rem;">
       <div class="step reveal"><h3>Walk</h3><p>We walk your property or venue with you — spaces, access, power, rules, possibilities.</p></div>
       <div class="step reveal"><h3>Design</h3><p>A written proposal with designs, scope and timings. Nothing vague, nothing verbal.</p></div>
       <div class="step reveal"><h3>Build</h3><p>Our own crew executes to the agreed window, supervised and accountable.</p></div>
@@ -379,314 +162,99 @@
 
 <section id="work">
   <div class="shell">
-    <div class="sec-head reveal">
-      <span class="label">Selected Work</span>
-      <h2>Case studies, venue by venue.</h2>
-      <p>The format below is how we document every production. Verified photography and venue names are being prepared for publication.</p>
+    <div class="lockup reveal">
+      <span class="eyebrow">Selected Work</span>
+      <h2 class="display-2">Moments from the craft.</h2>
+      <div class="gold-rule"></div>
+      <p>Licensed reference photography stands in while our verified event photography is prepared. <a href="portfolio.html" class="nav-link" style="font-size:.66rem;">View the full portfolio</a></p>
     </div>
-    <div class="case-grid">
-      <figure class="case reveal">
-        <div class="ph ph-1"></div>
-        <div class="case-body">
-          <span class="label">Wedding</span><strong>Marigold Mandap &amp; Pheras</strong>
-          <dl class="spec">
-            <div><dt>Venue</dt><dd>To be announced</dd></div>
-            <div><dt>Scope</dt><dd>Mandap, florals, pathway, lighting</dd></div>
-            <div><dt>Functions</dt><dd>Pheras &middot; reception</dd></div>
-            <div><dt>Setup</dt><dd>Agreed overnight window</dd></div>
-          </dl>
-        </div>
-      </figure>
-      <figure class="case reveal">
-        <div class="ph ph-2"></div>
-        <div class="case-body">
-          <span class="label">Reception</span><strong>Evening Stage &amp; Lighting</strong>
-          <dl class="spec">
-            <div><dt>Venue</dt><dd>To be announced</dd></div>
-            <div><dt>Scope</dt><dd>Stage, backdrop, ambient lighting</dd></div>
-            <div><dt>Functions</dt><dd>Reception &middot; dinner</dd></div>
-            <div><dt>Setup</dt><dd>Same-day, pre-guest arrival</dd></div>
-          </dl>
-        </div>
-      </figure>
-      <figure class="case reveal">
-        <div class="ph ph-3"></div>
-        <div class="case-body">
-          <span class="label">Cultural</span><strong>Entrance Gateway &amp; Grounds</strong>
-          <dl class="spec">
-            <div><dt>Venue</dt><dd>To be announced</dd></div>
-            <div><dt>Scope</dt><dd>Gateway, torans, grounds d&eacute;cor</dd></div>
-            <div><dt>Functions</dt><dd>Community celebration</dd></div>
-            <div><dt>Setup</dt><dd>Multi-day, phased build</dd></div>
-          </dl>
-        </div>
-      </figure>
+    <div class="case-grid" style="margin-top:2rem;">
+      <figure class="case reveal"><div class="frame-img img-hover cr"><img src="assets/photos/stage-stage-floral-arch.jpg" alt="Wedding stage with floral arch" loading="lazy"></div><figcaption><span class="eyebrow" style="font-size:.58rem;">Stages</span><strong>Reception &amp; Stagecraft</strong></figcaption></figure>
+      <figure class="case reveal"><div class="frame-img img-hover cr"><img src="assets/photos/florals-garland-marigold-closeup.jpg" alt="Marigold garlands close-up" loading="lazy"></div><figcaption><span class="eyebrow" style="font-size:.58rem;">Florals</span><strong>Garlands &amp; Floral Craft</strong></figcaption></figure>
+      <figure class="case reveal"><div class="frame-img img-hover cr duotone-dusk"><img src="assets/photos/evening-diya-row.jpg" alt="Row of lit diyas at dusk" loading="lazy"></div><figcaption><span class="eyebrow" style="font-size:.58rem;">Evening</span><strong>Lighting &amp; Dusk Rituals</strong></figcaption></figure>
     </div>
   </div>
 </section>
 
 <section id="services">
   <div class="shell">
-    <div class="sec-head reveal">
-      <span class="label">Services</span>
-      <h2>Named work, not vague promises.</h2>
-      <p>Twelve disciplines, one house. Ask for any line alone, or the whole book.</p>
+    <div class="lockup reveal">
+      <span class="eyebrow">Complete Services</span>
+      <h2 class="display-2">Fifty services. Seven disciplines. One house.</h2>
+      <div class="gold-rule"></div>
+      <p>From venue selection to the last send-off — the full master checklist, carried end to end.</p>
     </div>
-    <ul class="svc-list reveal">
-      <li><span>01</span>Floral architecture &amp; installations</li>
-      <li><span>02</span>Fresh-flower sourcing &amp; supply <em>— family trade</em></li>
-      <li><span>03</span>Ceremonial garlands &amp; haar</li>
-      <li><span>04</span>Mandap design &amp; engineering</li>
-      <li><span>05</span>Entrance gateways &amp; torans</li>
-      <li><span>06</span>Stages, backdrops &amp; receptions</li>
-      <li><span>07</span>Ambient &amp; event lighting</li>
-      <li><span>08</span>Pathway &amp; grounds d&eacute;cor</li>
-      <li><span>09</span>Event planning &amp; coordination</li>
-      <li><span>10</span>Venue styling partnerships</li>
-      <li><span>11</span>Guest experience details</li>
-      <li><span>12</span>Setup, on-day management &amp; dismantle</li>
-    </ul>
+    <div class="cat-grid" style="margin-top:2rem;">
+      <div class="card reveal"><h3>Venue, Stay &amp; F&amp;B</h3><p>Venue &amp; hotel bookings · menu tasting · catering coordination · wedding-night room décor</p></div>
+      <div class="card reveal"><h3>Design, Décor &amp; Technical</h3><p>Theme design · décor execution · flower work · lights &amp; sound · power backup · LED &amp; VJ</p></div>
+      <div class="card reveal"><h3>Entertainment &amp; Artists</h3><p>DJ · artists &amp; celebrities · band &amp; dhol · choreographers · emcees · sangeet SFX</p></div>
+      <div class="card reveal"><h3>Rituals &amp; Traditions</h3><p>Entry concepts · varmala effects · baraat &amp; doli · safa · pandit &amp; pooja samagri · bride-groom shadowing</p></div>
+      <div class="card reveal"><h3>Logistics &amp; Security</h3><p>Travel &amp; transport · pickups · valet &amp; VIP handling · security · licenses &amp; NOCs</p></div>
+      <div class="card reveal"><h3>Hospitality &amp; Gifting</h3><p>RSVP &amp; guest management · invitations · favours &amp; hampers · room welcome placements</p></div>
+      <div class="card reveal"><h3>Media &amp; Planning</h3><p>Photo &amp; film · pre-wedding shoots · fireworks &amp; petal showers · send-offs · run-sheet execution</p></div>
+    </div>
   </div>
-</section>
-
-<section class="people reveal" id="people">
-  <span class="label">The People</span>
-  <h2>Family-led. Personally accountable.</h2>
-  <p>The family answers for every event with its own name. Full founder and team profiles are being prepared for publication.</p>
 </section>
 
 <section id="decks">
   <div class="shell">
-    <div class="sec-head reveal">
-      <span class="label">Presentations</span>
-      <h2>Pitch decks for venues and families.</h2>
-      <p>Open the venue partnership profile or the wedding experience deck, and download either presentation for offline review.</p>
+    <div class="lockup reveal">
+      <span class="eyebrow">Presentations</span>
+      <h2 class="display-2">Our decks, ready to share.</h2>
+      <div class="gold-rule"></div>
     </div>
-    <div class="deck-grid">
+    <div class="deck-grid" style="margin-top:2rem;">
       <div class="deck-card reveal">
-        <span class="label">For Venues</span>
+        <span class="eyebrow" style="font-size:.6rem;">For Venues</span>
         <h3>Venue Partnership Profile</h3>
-        <p>The 13-card trust-first partnership profile for resorts, hotels, banquet teams, farmhouses and party plots — responsibility to your property at its core.</p>
         <div class="deck-actions">
-          <a class="btn btn-gold" href="https://gamma.app/docs/e8l4s66mb99wnsn" rel="noopener">Open Gamma</a>
+          <a class="btn btn-gold" href="https://gamma.app/docs/e8l4s66mb99wnsn" target="_blank" rel="noopener">Open Gamma</a>
           <a class="btn btn-ghost" href="assets/decks/JVARDHAN-B2B-VENUE-TRUST-DECK.pptx">Download PPTX</a>
-          <a class="btn btn-ghost" href="venue-partnership-deck.html">Long-Form Web Deck</a>
         </div>
-        <!-- GAMMA-EMBED-VENUE:START -->
-        <div class="embed-slot"><iframe src="https://gamma.app/embed/e8l4s66mb99wnsn" allow="fullscreen" title="Venue Partnership Trust Deck — Gamma" loading="lazy"></iframe></div>
-        <!-- GAMMA-EMBED-VENUE:END -->
+        <div class="embed-slot"><iframe src="https://gamma.app/embed/e8l4s66mb99wnsn" allow="fullscreen" title="Venue Partnership Trust Deck" loading="lazy"></iframe></div>
       </div>
       <div class="deck-card reveal">
-        <span class="label">For Couples</span>
+        <span class="eyebrow" style="font-size:.6rem;">For Couples</span>
         <h3>Wedding Experience Deck</h3>
-        <p>The 15-card wedding experience deck for couples and families — one family caring for yours, from first flower to last light.</p>
         <div class="deck-actions">
-          <a class="btn btn-gold" href="https://gamma.app/docs/vffu0vihvejfh9n" rel="noopener">Open Gamma</a>
+          <a class="btn btn-gold" href="https://gamma.app/docs/vffu0vihvejfh9n" target="_blank" rel="noopener">Open Gamma</a>
           <a class="btn btn-ghost" href="assets/decks/JVARDHAN-CUSTOMER-TRUST-DECK.pptx">Download PPTX</a>
-          <a class="btn btn-ghost" href="#enquiry">Book Consultation</a>
         </div>
-        <!-- GAMMA-EMBED-WEDDING:START -->
-        <div class="embed-slot"><iframe src="https://gamma.app/embed/vffu0vihvejfh9n" allow="fullscreen" title="Wedding Experience Trust Deck — Gamma" loading="lazy"></iframe></div>
-        <!-- GAMMA-EMBED-WEDDING:END -->
+        <div class="embed-slot"><iframe src="https://gamma.app/embed/vffu0vihvejfh9n" allow="fullscreen" title="Wedding Experience Trust Deck" loading="lazy"></iframe></div>
       </div>
     </div>
   </div>
 </section>
 
-<section id="faq">
-  <div class="shell">
-    <div class="sec-head reveal">
-      <span class="label">For Venue Managers</span>
-      <h2>The questions every property asks.</h2>
+<section class="band-dusk">
+  <div class="shell" style="text-align:center;">
+    <div class="lockup center reveal">
+      <span class="eyebrow">Next Step</span>
+      <h2 class="display-2">One message starts it.</h2>
+      <div class="gold-rule"></div>
+      <p>Venue owners: invite us to walk your property. Families: tell us your dates.</p>
     </div>
-    <div class="faq reveal">
-      <details>
-        <summary>How do setup and dismantle windows work?</summary>
-        <p>Timings are agreed in writing before the event — including access hours, load-in routes and the dismantle deadline. Protecting your next booking is part of our plan, not an afterthought.</p>
-      </details>
-      <details>
-        <summary>How do you protect our property?</summary>
-        <p>Non-invasive methods only: weighted bases instead of drilling or staking, protected flooring on load-in routes, and a walk-through with your team before and after every build.</p>
-      </details>
-      <details>
-        <summary>Who coordinates with our team during an event?</summary>
-        <p>One named supervisor, introduced to your team in advance, on-site and reachable for the full event. Your staff never has to chase a crowd of workers for answers.</p>
-      </details>
-      <details>
-        <summary>What partnership models do you offer?</summary>
-        <p>Preferred décor partner, approved vendor listing, co-branded wedding packages, or seasonal partnerships — and every relationship can begin with a low-risk three-event pilot before any long-term commitment.</p>
-      </details>
-      <details>
-        <summary>What about insurance and liability?</summary>
-        <p>Responsibility and coverage details are set out transparently in the written agreement for each partnership — we'd rather show you the paperwork in a meeting than make claims on a website.</p>
-      </details>
-      <details>
-        <summary>What does a partnership cost the venue?</summary>
-        <p>Commercial terms depend on the model you choose and are discussed openly after a site visit. No venue pays to be walked through, and the pilot is structured to be low-risk by design.</p>
-      </details>
+    <div class="reveal" style="display:flex;gap:.9rem;justify-content:center;flex-wrap:wrap;margin-top:1.6rem;">
+      <a class="btn btn-gold" href="contact.html">Book a Venue Walkthrough</a>
+      <a class="btn btn-ghost" href="contact.html">Request a Consultation</a>
     </div>
   </div>
 </section>
 
-<section class="enquiry" id="enquiry">
-  <div class="shell">
-    <div class="sec-head reveal">
-      <span class="label">Next Step</span>
-      <h2>Book a venue walkthrough.</h2>
-      <p>Venue owners: invite us to walk your property. Families: tell us your dates. Either way, one message starts it.</p>
-    </div>
-    <form class="form-grid reveal" id="enquiryForm">
-      <div class="field">
-        <label for="fAudience">I am a</label>
-        <select id="fAudience">
-          <option value="venue">Venue owner / manager</option>
-          <option value="family">Family planning a celebration</option>
-        </select>
-      </div>
-      <div class="field">
-        <label for="fName">Name</label>
-        <input id="fName" type="text" autocomplete="name">
-      </div>
-      <div class="field">
-        <label for="fCity">City / location</label>
-        <input id="fCity" type="text">
-      </div>
-      <div class="field">
-        <label for="fType" id="fTypeLabel">Venue type</label>
-        <select id="fType">
-          <option>Resort / hotel</option>
-          <option>Party plot / lawn</option>
-          <option>Banquet hall</option>
-          <option>Farmhouse</option>
-          <option>Wedding at a booked venue</option>
-          <option>Home / other</option>
-        </select>
-      </div>
-      <div class="field wide">
-        <label for="fMsg">Tell us a little more</label>
-        <textarea id="fMsg" placeholder="Dates, capacity, functions, or what you'd like to explore…"></textarea>
-      </div>
-      <div class="field wide">
-        <button class="btn btn-gold" type="submit" id="fSubmit">Book a Venue Walkthrough</button>
-        <p class="form-note">Submitting opens WhatsApp with your message pre-filled. Our WhatsApp number goes live shortly — until then, the message text is shown for you to copy.</p>
-      </div>
-    </form>
-  </div>
-</section>
-
-<section id="review">
-  <div class="shell">
-    <div class="sec-head reveal">
-      <span class="label">Draft — For Family Review</span>
-      <h2>Nothing here is final. This is the canvas.</h2>
-      <p>Every element on this page — the lion, the colours, the fonts, the words — is a proposal. Tell us what to keep, what to change, what to drop.</p>
-    </div>
-    <div class="logo-grid">
-      <figure class="logo-card reveal">
-        <div class="logo-stage"><img src="assets/lion-gold.png" alt="Walking lion draft mark"></div>
-        <figcaption><span class="label">Current Draft</span><strong>Walking Lion</strong>
-          <p>The original V0 mark. Elegant, but its thin lines fade at small sizes.</p></figcaption>
-      </figure>
-      <figure class="logo-card reveal">
-        <div class="logo-stage"><img src="assets/lion-floral.png" alt="Floral-mane lion emblem"></div>
-        <figcaption><span class="label">Option A</span><strong>Floral Emblem</strong>
-          <p>The family's flowers woven into the lion's mane. Master emblem for covers, signage and invitations — now on the homepage above.</p></figcaption>
-      </figure>
-      <figure class="logo-card reveal">
-        <div class="logo-stage"><img src="assets/lion-guardian-v1.png" alt="Seated guardian lion, flowing mane"></div>
-        <figcaption><span class="label">Option B</span><strong>Guardian — Flowing Mane</strong>
-          <p>Solid, calm, strong at any size. Mane style still being refined toward the Gir lion's shorter ruff.</p></figcaption>
-      </figure>
-      <figure class="logo-card reveal">
-        <div class="logo-stage"><img src="assets/lion-guardian.png" alt="Seated guardian lion, short mane"></div>
-        <figcaption><span class="label">Option C</span><strong>Guardian — Short Mane</strong>
-          <p>The cleanest at tiny sizes — favicon, stamp and seal candidate. Now used in the header and browser tab.</p></figcaption>
-      </figure>
-    </div>
-    <div class="change-note reveal">
-      <span class="label">What can still change</span>
-      <p>Lion style and pose &middot; gold and green shades &middot; fonts &middot; tagline &middot; brand name (J.Vardhan / Mali Mukesh) &middot; Day &amp; Dusk themes &middot; section order and wording &middot; photography style &middot; deck design. Nothing is locked until the family locks it.</p>
-    </div>
-  </div>
-</section>
-
-<footer id="contact">
-  <span class="lion ghost" aria-hidden="true"></span>
+<footer class="site-footer">
+  <img class="ghost" src="assets/lion-guardian.png" alt="" aria-hidden="true">
   <div class="foot-row">
-    <span class="wordmark">J.VARDHAN<small>LUXE EVENTS</small></span>
-    <div class="foot-cta">
-      <a class="btn btn-gold" href="https://wa.me/910000000000" rel="noopener">WhatsApp Us</a>
-      <a class="btn btn-ghost" href="tel:+910000000000" style="color:#E8E3D5;">Call Us</a>
-      <a class="btn btn-ghost" href="connect.html" style="color:#E8E3D5;">Digital Card</a>
+    <span class="wordmark">J.VARDHAN<small>LUXE WEDDINGS &amp; EVENTS</small></span>
+    <div class="foot-links">
+      <a href="connect.html">Digital Card</a>
+      <a href="style-preview.html">Design Review</a>
+      <a href="https://wa.me/910000000000" rel="noopener">WhatsApp</a>
     </div>
   </div>
   <p class="foot-tag">Promised. Planned. Delivered.</p>
-  <p class="foot-note">V1 draft — sample copy pending claim verification; brand name architecture provisional; contact numbers are placeholders. Venue partners: <a href="connect.html">save our contact card</a>.</p>
+  <p class="foot-note">&copy; 2026 J.Vardhan — Luxe Weddings &amp; Events · Gujarat, India · Draft site: copy pending claim verification; contact numbers are placeholders · Photography: licensed via Pexels &amp; Unsplash (<a href="assets/photos/photos-credits.md">credits</a>), swapped for our own work as it is shot.</p>
 </footer>
 
 <a class="float-wa" href="https://wa.me/910000000000" rel="noopener" aria-label="Chat on WhatsApp">WhatsApp</a>
-
-<script>
-  (function () {
-    var root = document.documentElement;
-    var day = document.getElementById('btnDay');
-    var dusk = document.getElementById('btnDusk');
-    function setTheme(t) {
-      if (t === 'dusk') { root.setAttribute('data-theme', 'dusk'); } else { root.removeAttribute('data-theme'); }
-      day.setAttribute('aria-pressed', String(t !== 'dusk'));
-      dusk.setAttribute('aria-pressed', String(t === 'dusk'));
-      try { localStorage.setItem('jv-theme', t); } catch (e) {}
-    }
-    day.addEventListener('click', function () { setTheme('day'); });
-    dusk.addEventListener('click', function () { setTheme('dusk'); });
-    var saved = null;
-    try { saved = localStorage.getItem('jv-theme'); } catch (e) {}
-    if (saved) { setTheme(saved); }
-    else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) { setTheme('dusk'); }
-
-    // hero CTAs pre-select the enquiry audience
-    var audienceSel = document.getElementById('fAudience');
-    var typeSel = document.getElementById('fType');
-    var typeLabel = document.getElementById('fTypeLabel');
-    var submitBtn = document.getElementById('fSubmit');
-    function syncAudience() {
-      var isVenue = audienceSel.value === 'venue';
-      typeLabel.textContent = isVenue ? 'Venue type' : 'Celebration type';
-      submitBtn.textContent = isVenue ? 'Book a Venue Walkthrough' : 'Request a Consultation';
-    }
-    document.querySelectorAll('[data-audience]').forEach(function (a) {
-      a.addEventListener('click', function () {
-        audienceSel.value = a.getAttribute('data-audience');
-        syncAudience();
-      });
-    });
-    audienceSel.addEventListener('change', syncAudience);
-    syncAudience();
-
-    // enquiry -> WhatsApp message
-    document.getElementById('enquiryForm').addEventListener('submit', function (e) {
-      e.preventDefault();
-      var msg = 'Namaste J.Vardhan Luxe Events,%0A%0A' +
-        'I am a: ' + (audienceSel.value === 'venue' ? 'Venue owner/manager' : 'Family planning a celebration') + '%0A' +
-        'Name: ' + encodeURIComponent(document.getElementById('fName').value || '-') + '%0A' +
-        'City: ' + encodeURIComponent(document.getElementById('fCity').value || '-') + '%0A' +
-        'Type: ' + encodeURIComponent(typeSel.value) + '%0A' +
-        'Details: ' + encodeURIComponent(document.getElementById('fMsg').value || '-');
-      window.open('https://wa.me/910000000000?text=' + msg, '_blank', 'noopener');
-    });
-
-    // scroll reveals
-    var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    var els = document.querySelectorAll('.reveal');
-    if (reduce || !('IntersectionObserver' in window)) {
-      els.forEach(function (el) { el.classList.add('in'); });
-    } else {
-      var io = new IntersectionObserver(function (entries) {
-        entries.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
-      }, { threshold: 0.12 });
-      els.forEach(function (el) { io.observe(el); });
-    }
-  })();
-</script>
 </body>
 </html>

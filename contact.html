@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact — J.Vardhan Luxe Weddings &amp; Events, Gujarat</title>
+  <meta name="description" content="Book a venue walkthrough or request a wedding consultation — J.Vardhan Luxe Weddings &amp; Events, Gujarat. One message starts it.">
+  <link rel="canonical" href="https://mihirzalavadia.github.io/jvardhan-site/contact.html">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Contact — J.Vardhan Luxe Weddings &amp; Events">
+  <meta property="og:description" content="Venue owners: invite us to walk your property. Families: tell us your dates.">
+  <meta property="og:image" content="https://mihirzalavadia.github.io/jvardhan-site/assets/lion-floral.png">
+  <meta property="og:url" content="https://mihirzalavadia.github.io/jvardhan-site/contact.html">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" type="image/png" href="assets/lion-guardian.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://api.fontshare.com/v2/css?f[]=boska@400,401,500,501,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=Inter:wght@400;500;600&family=Pinyon+Script&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="design-system.css">
+  <script src="ds.js" defer></script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "J.Vardhan - Luxe Weddings & Events",
+    "url": "https://mihirzalavadia.github.io/jvardhan-site/",
+    "image": "https://mihirzalavadia.github.io/jvardhan-site/assets/lion-floral.png",
+    "areaServed": "Gujarat, India",
+    "slogan": "Promised. Planned. Delivered."
+  }
+  </script>
+  <style>
+    .contact-grid { display: grid; grid-template-columns: 1.15fr .85fr; gap: 2.4rem; align-items: start; }
+    @media (max-width: 860px) { .contact-grid { grid-template-columns: 1fr; } }
+    .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    @media (max-width: 620px) { .form-grid { grid-template-columns: 1fr; } }
+    .field.wide { grid-column: 1 / -1; }
+    .form-note { font-size: .78rem; color: #7FA39C; margin-top: 1rem; max-width: 56ch; }
+    .quick-cards { display: grid; gap: 1rem; }
+    .quick-cards .card h3 { margin-top: 0; }
+    .quick-cards .card .btn { margin-top: .8rem; }
+  </style>
+</head>
+<body>
+<div id="loader" aria-hidden="true">
+  <div class="loader-inner">
+    <svg viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="60" cy="60" r="10"/><circle cx="84" cy="60" r="13"/><circle cx="77" cy="77" r="13"/><circle cx="60" cy="84" r="13"/><circle cx="43" cy="77" r="13"/><circle cx="36" cy="60" r="13"/><circle cx="43" cy="43" r="13"/><circle cx="60" cy="36" r="13"/><circle cx="77" cy="43" r="13"/></svg>
+    <div class="wordmark">J.VARDHAN<small>LUXE WEDDINGS &amp; EVENTS</small></div>
+    <div class="loader-bar"></div>
+  </div>
+</div>
+
+<nav class="site-nav">
+  <a class="brand" href="index.html" aria-label="J.Vardhan home"><span class="lion-icon"></span><span class="wordmark">J.VARDHAN<small>LUXE WEDDINGS &amp; EVENTS</small></span></a>
+  <div class="nav-links">
+    <a class="nav-link" href="index.html">Home</a>
+    <a class="nav-link" href="weddings.html">Weddings</a>
+    <a class="nav-link" href="venues.html">Venues</a>
+    <a class="nav-link" href="portfolio.html">Portfolio</a>
+    <a class="nav-link" href="story.html">Story</a>
+    <a class="nav-link active" href="contact.html">Contact</a>
+    <div class="toggle" role="group" aria-label="Theme"><button type="button" id="btnDay" aria-pressed="true">Day</button><button type="button" id="btnDusk" aria-pressed="false">Dusk</button></div>
+  </div>
+</nav>
+
+<section class="band-dusk" style="padding-bottom:clamp(3rem,6.5vw,5.4rem);">
+  <div class="shell contact-grid">
+    <div>
+      <div class="lockup reveal">
+        <span class="eyebrow">Next Step</span>
+        <h1 class="display-2">One message starts it.</h1>
+        <div class="gold-rule"></div>
+        <p>Venue owners: invite us to walk your property. Families: tell us your dates. The form opens WhatsApp with everything pre-filled.</p>
+      </div>
+      <form class="form-grid reveal" id="enquiryForm" style="margin-top:1.6rem;">
+        <div class="field">
+          <label for="fAudience">I am a</label>
+          <select id="fAudience">
+            <option value="venue">Venue owner / manager</option>
+            <option value="family">Family planning a celebration</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="fName">Name</label>
+          <input id="fName" type="text" autocomplete="name">
+        </div>
+        <div class="field">
+          <label for="fCity">City / location</label>
+          <input id="fCity" type="text">
+        </div>
+        <div class="field">
+          <label for="fType" id="fTypeLabel">Venue type</label>
+          <select id="fType">
+            <option>Resort / hotel</option>
+            <option>Party plot / lawn</option>
+            <option>Banquet hall</option>
+            <option>Farmhouse</option>
+            <option>Wedding at a booked venue</option>
+            <option>Home / other</option>
+          </select>
+        </div>
+        <div class="field wide">
+          <label for="fMsg">Tell us a little more</label>
+          <textarea id="fMsg" placeholder="Dates, capacity, functions, or what you'd like to explore…"></textarea>
+        </div>
+        <div class="field wide">
+          <button class="btn btn-gold" type="submit" id="fSubmit">Book a Venue Walkthrough</button>
+          <p class="form-note">Our WhatsApp number goes live shortly — until then the pre-filled message opens against a placeholder number.</p>
+        </div>
+      </form>
+    </div>
+    <div class="quick-cards reveal">
+      <div class="card" style="background:rgba(255,255,255,.05);border-color:rgba(207,170,109,.3);">
+        <span class="eyebrow" style="font-size:.6rem;">Direct</span>
+        <h3 style="color:#fff;">WhatsApp &amp; Call</h3>
+        <p>The fastest way to reach the family.</p>
+        <a class="btn btn-gold" href="https://wa.me/910000000000" rel="noopener">WhatsApp Us</a>
+      </div>
+      <div class="card" style="background:rgba(255,255,255,.05);border-color:rgba(207,170,109,.3);">
+        <span class="eyebrow" style="font-size:.6rem;">For Meetings</span>
+        <h3 style="color:#fff;">Digital Card</h3>
+        <p>Save our contact, download the decks — one link.</p>
+        <a class="btn btn-ghost" href="connect.html" style="color:#E8E3D5;">Open the Card</a>
+      </div>
+      <div class="card" style="background:rgba(255,255,255,.05);border-color:rgba(207,170,109,.3);">
+        <span class="eyebrow" style="font-size:.6rem;">Where We Work</span>
+        <h3 style="color:#fff;">Gujarat, India</h3>
+        <p>Producing weddings and events across Saurashtra and greater Gujarat.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <img class="ghost" src="assets/lion-guardian.png" alt="" aria-hidden="true">
+  <div class="foot-row">
+    <span class="wordmark">J.VARDHAN<small>LUXE WEDDINGS &amp; EVENTS</small></span>
+    <div class="foot-links">
+      <a href="connect.html">Digital Card</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="https://wa.me/910000000000" rel="noopener">WhatsApp</a>
+    </div>
+  </div>
+  <p class="foot-tag">Promised. Planned. Delivered.</p>
+  <p class="foot-note">&copy; 2026 J.Vardhan — Luxe Weddings &amp; Events · Gujarat, India · Draft site: copy pending claim verification; contact numbers are placeholders.</p>
+</footer>
+
+<a class="float-wa" href="https://wa.me/910000000000" rel="noopener" aria-label="Chat on WhatsApp">WhatsApp</a>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    var audienceSel = document.getElementById('fAudience');
+    var typeLabel = document.getElementById('fTypeLabel');
+    var submitBtn = document.getElementById('fSubmit');
+    function syncAudience() {
+      var isVenue = audienceSel.value === 'venue';
+      typeLabel.textContent = isVenue ? 'Venue type' : 'Celebration type';
+      submitBtn.textContent = isVenue ? 'Book a Venue Walkthrough' : 'Request a Consultation';
+    }
+    audienceSel.addEventListener('change', syncAudience);
+    syncAudience();
+    document.getElementById('enquiryForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+      var msg = 'Namaste J.Vardhan Luxe Weddings %26 Events,%0A%0A' +
+        'I am a: ' + (audienceSel.value === 'venue' ? 'Venue owner/manager' : 'Family planning a celebration') + '%0A' +
+        'Name: ' + encodeURIComponent(document.getElementById('fName').value || '-') + '%0A' +
+        'City: ' + encodeURIComponent(document.getElementById('fCity').value || '-') + '%0A' +
+        'Type: ' + encodeURIComponent(document.getElementById('fType').value) + '%0A' +
+        'Details: ' + encodeURIComponent(document.getElementById('fMsg').value || '-');
+      window.open('https://wa.me/910000000000?text=' + msg, '_blank', 'noopener');
+    });
+  });
+</script>
+</body>
+</html>

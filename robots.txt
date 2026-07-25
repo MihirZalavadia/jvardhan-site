@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /style-preview.html
+
+Sitemap: https://mihirzalavadia.github.io/jvardhan-site/sitemap.xml

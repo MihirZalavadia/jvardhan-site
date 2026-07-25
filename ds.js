@@ -23,6 +23,44 @@
   });
 
   document.addEventListener('DOMContentLoaded', function () {
+    /* ----- Branded loader (full on first visit, quick on navigation) ----- */
+    var loader = document.getElementById('loader');
+    if (loader) {
+      var seen = false;
+      try { seen = sessionStorage.getItem('jv-seen') === '1'; } catch (e) {}
+      var wait = (reduce || seen) ? 150 : 1150;
+      if (!reduce && !seen) {
+        loader.querySelectorAll('svg path, svg circle').forEach(function (s) {
+          try {
+            var len = s.getTotalLength();
+            s.style.strokeDasharray = len;
+            s.style.strokeDashoffset = len;
+            s.style.transition = 'stroke-dashoffset 1s cubic-bezier(.22,.8,.3,1)';
+            requestAnimationFrame(function () { s.style.strokeDashoffset = 0; });
+          } catch (e) {}
+        });
+      }
+      setTimeout(function () {
+        loader.classList.add('done');
+        try { sessionStorage.setItem('jv-seen', '1'); } catch (e) {}
+        setTimeout(function () { if (loader.parentNode) { loader.remove(); } }, 650);
+      }, wait);
+    }
+
+    /* ----- soft page-fade on internal navigation ----- */
+    if (!reduce) {
+      document.addEventListener('click', function (ev) {
+        var a = ev.target.closest ? ev.target.closest('a[href]') : null;
+        if (!a) { return; }
+        var href = a.getAttribute('href');
+        if (!href || href.charAt(0) === '#' || a.target === '_blank' || ev.metaKey || ev.ctrlKey || ev.shiftKey) { return; }
+        if (!/\.html(#.*)?$/.test(href) || /^https?:\/\//.test(href)) { return; }
+        ev.preventDefault();
+        document.body.classList.add('leaving');
+        setTimeout(function () { window.location.href = href; }, 230);
+      });
+    }
+
     /* ----- Veil Lift ----- */
     var veil = document.getElementById('veil');
     if (veil) {
