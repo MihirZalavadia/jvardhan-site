@@ -105,14 +105,15 @@
     if (loader) {
       var seen = false;
       try { seen = sessionStorage.getItem('jv-seen') === '1'; } catch (e) {}
-      var wait = (reduce || seen) ? 150 : 1150;
-      if (!reduce && !seen) {
-        loader.querySelectorAll('svg path, svg circle').forEach(function (s) {
+      var wait = reduce ? 150 : (seen ? 780 : 1250);
+      if (!reduce) {
+        var drawDur = seen ? 560 : 1000;
+        loader.querySelectorAll('svg path, svg circle').forEach(function (s, i) {
           try {
             var len = s.getTotalLength();
             s.style.strokeDasharray = len;
             s.style.strokeDashoffset = len;
-            s.style.transition = 'stroke-dashoffset 1s cubic-bezier(.22,.8,.3,1)';
+            s.style.transition = 'stroke-dashoffset ' + drawDur + 'ms cubic-bezier(.22,.8,.3,1) ' + (i * 28) + 'ms';
             requestAnimationFrame(function () { s.style.strokeDashoffset = 0; });
           } catch (e) {}
         });

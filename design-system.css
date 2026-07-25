@@ -332,6 +332,18 @@ body.leaving { opacity: 0; }
 .band-dusk .mandap-art, [data-theme="dusk"] .mandap-art { opacity: .22; }
 @keyframes jvGrow { from { transform: scale(.93); } to { transform: scale(1); } }
 
+/* ---------- ambient video bands ---------- */
+.video-band { position: relative; overflow: hidden; padding: 0; min-height: min(70vh, 560px); display: grid; align-items: end; background-size: cover; background-position: center; }
+.video-band video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.video-band .vb-overlay { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(1, 60, 60, .12) 25%, rgba(1, 50, 50, .78)); }
+.video-band .vb-content { position: relative; z-index: 2; width: 100%; max-width: 1080px; margin: 0 auto; padding: 2.6rem clamp(1.2rem, 6vw, 4rem); }
+.video-band h2 { color: #fff; }
+.video-band .eyebrow { color: #CFAA6D; }
+.video-band p { color: #D9E4E0; max-width: 52ch; }
+.video-cell { position: relative; overflow: hidden; }
+.video-cell video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+@media (prefers-reduced-motion: reduce) { .video-band video, .video-cell video { display: none; } }
+
 /* ---------- desktop snap scrolling (page-turn feel) ---------- */
 @media (min-width: 900px) {
   html.snap { scroll-snap-type: y proximity; }
