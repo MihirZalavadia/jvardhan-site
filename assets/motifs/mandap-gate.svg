@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 320" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+  <!-- pillars -->
+  <path d="M60 290 V120"/>
+  <path d="M74 290 V130"/>
+  <path d="M340 290 V120"/>
+  <path d="M326 290 V130"/>
+  <path d="M50 120 H84"/>
+  <path d="M316 120 H350"/>
+  <path d="M54 110 H80"/>
+  <path d="M320 110 H346"/>
+  <!-- arches -->
+  <path d="M60 118 Q200 22 340 118"/>
+  <path d="M74 130 Q200 44 326 130"/>
+  <!-- dome + kalash -->
+  <path d="M182 38 Q200 14 218 38"/>
+  <path d="M193 12 Q200 2 207 12"/>
+  <circle cx="200" cy="9" r="2.6"/>
+  <!-- hanging garlands -->
+  <path d="M120 106 V150"/><circle cx="120" cy="157" r="4"/>
+  <path d="M160 88 V142"/><circle cx="160" cy="149" r="4"/>
+  <path d="M200 82 V150"/><circle cx="200" cy="157" r="4"/>
+  <path d="M240 88 V142"/><circle cx="240" cy="149" r="4"/>
+  <path d="M280 106 V150"/><circle cx="280" cy="157" r="4"/>
+  <!-- toran pennants along inner arch -->
+  <path d="M104 116 l7 11 l7 -11"/>
+  <path d="M136 100 l7 11 l7 -11"/>
+  <path d="M170 92 l7 11 l7 -11"/>
+  <path d="M206 92 l7 11 l7 -11"/>
+  <path d="M240 100 l7 11 l7 -11"/>
+  <path d="M272 116 l7 11 l7 -11"/>
+  <!-- pillar planters -->
+  <path d="M48 290 Q67 302 86 290"/>
+  <path d="M314 290 Q333 302 352 290"/>
+  <circle cx="67" cy="278" r="6"/>
+  <circle cx="333" cy="278" r="6"/>
+  <!-- steps -->
+  <path d="M40 292 H360"/>
+  <path d="M52 302 H348"/>
+  <path d="M64 312 H336"/>
+</svg>

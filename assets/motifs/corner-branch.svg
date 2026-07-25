@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 220" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+  <!-- main branch from corner -->
+  <path d="M6 6 C58 18 92 48 118 92 C138 126 148 162 150 204"/>
+  <!-- twigs -->
+  <path d="M56 24 C76 18 94 22 106 34"/>
+  <path d="M92 56 C112 48 128 52 138 64"/>
+  <path d="M122 100 C140 94 154 100 160 112"/>
+  <path d="M140 146 C156 142 168 148 172 160"/>
+  <!-- leaves -->
+  <path d="M40 18 C34 28 36 38 44 42 C50 34 48 24 40 18"/>
+  <path d="M78 40 C72 50 74 60 82 64 C88 56 86 46 78 40"/>
+  <path d="M108 78 C102 88 104 98 112 102 C118 94 116 84 108 78"/>
+  <path d="M136 128 C130 138 132 148 140 152 C146 144 144 134 136 128"/>
+  <!-- blossoms -->
+  <circle cx="112" cy="30" r="5"/>
+  <circle cx="104" cy="40" r="4"/><circle cx="120" cy="38" r="4"/><circle cx="112" cy="20" r="4"/>
+  <circle cx="144" cy="62" r="5"/>
+  <circle cx="136" cy="72" r="4"/><circle cx="152" cy="70" r="4"/><circle cx="144" cy="52" r="4"/>
+  <circle cx="166" cy="110" r="5"/>
+  <circle cx="158" cy="120" r="4"/><circle cx="174" cy="118" r="4"/><circle cx="166" cy="100" r="4"/>
+  <!-- buds -->
+  <path d="M176 158 C172 150 174 142 178 138 C182 142 184 150 180 158"/>
+  <path d="M152 196 C148 188 150 180 154 176 C158 180 160 188 156 196"/>
+</svg>

@@ -296,3 +296,45 @@ section { padding: clamp(3rem, 6.5vw, 5.4rem) clamp(1.2rem, 6vw, 4rem); }
 /* page-fade transitions */
 body { opacity: 1; transition: opacity .25s ease, color .4s ease; }
 body.leaving { opacity: 0; }
+
+/* ---------- hamburger nav (mobile) ---------- */
+.nav-burger { display: none; flex-direction: column; gap: 5px; background: none; border: 0; cursor: pointer; padding: .55rem; position: relative; z-index: 80; }
+.nav-burger span { width: 24px; height: 2px; background: var(--accent-deep); border-radius: 2px; transition: transform .3s var(--ease-drape), opacity .3s; }
+@media (max-width: 900px) {
+  .nav-burger { display: flex; }
+  .nav-links {
+    position: fixed; inset: 0; z-index: 70;
+    background: linear-gradient(135deg, #013C3C, #024E4E);
+    flex-direction: column; justify-content: center; align-items: center; gap: 1.7rem;
+    transform: translateX(103%); transition: transform .45s var(--ease-drape);
+    overflow: visible;
+  }
+  .nav-links .nav-link { font-size: .95rem; color: #E8E3D5; }
+  .nav-links .nav-link.active { color: #CFAA6D; }
+  .site-nav.open .nav-links { transform: none; }
+  .site-nav.open .nav-burger span:nth-child(1) { transform: translateY(7px) rotate(45deg); background: #CFAA6D; }
+  .site-nav.open .nav-burger span:nth-child(2) { opacity: 0; }
+  .site-nav.open .nav-burger span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); background: #CFAA6D; }
+}
+
+/* ---------- flowering corner vines ---------- */
+.corner-vine { position: fixed; z-index: -1; width: min(190px, 18vw); color: var(--accent); opacity: .5; pointer-events: none; }
+.corner-vine svg { width: 100%; height: auto; display: block; }
+.corner-vine.tl { top: 0; left: 0; }
+.corner-vine.tr { top: 0; right: 0; transform: scaleX(-1); }
+.corner-vine.bl { bottom: 0; left: 0; transform: scaleY(-1); }
+.corner-vine.br { bottom: 0; right: 0; transform: scale(-1); }
+@media (max-width: 1100px) { .corner-vine { display: none; } }
+
+/* ---------- mandap gate drawing (hero art) ---------- */
+.mandap-art { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; pointer-events: none; z-index: 0; color: var(--accent); opacity: .32; }
+.mandap-art svg { width: min(640px, 86vw); height: auto; animation: jvGrow 3s var(--ease-drape) both; }
+.band-dusk .mandap-art, [data-theme="dusk"] .mandap-art { opacity: .22; }
+@keyframes jvGrow { from { transform: scale(.93); } to { transform: scale(1); } }
+
+/* ---------- desktop snap scrolling (page-turn feel) ---------- */
+@media (min-width: 900px) {
+  html.snap { scroll-snap-type: y proximity; }
+  html.snap section, html.snap header.snap-s { scroll-snap-align: start; scroll-snap-stop: normal; }
+  html.snap section { min-height: 86svh; display: grid; align-content: center; }
+}

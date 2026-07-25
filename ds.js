@@ -22,6 +22,83 @@
     if (dusk) { dusk.addEventListener('click', function () { setTheme('dusk'); }); }
   });
 
+  /* ===== ornaments & navigation layer ===== */
+  document.addEventListener('DOMContentLoaded', function () {
+    function slowDraw(el, dur, stagger) {
+      var shapes = el.querySelectorAll('path, circle, line');
+      shapes.forEach(function (s, i) {
+        try {
+          var len = s.getTotalLength();
+          s.style.strokeDasharray = len;
+          s.style.strokeDashoffset = len;
+          s.style.transition = 'stroke-dashoffset ' + dur + 'ms cubic-bezier(.22,.8,.3,1) ' + (i * stagger) + 'ms';
+          requestAnimationFrame(function () { requestAnimationFrame(function () { s.style.strokeDashoffset = 0; }); });
+        } catch (e) {}
+      });
+    }
+
+    /* hamburger menu (injected — no per-page markup needed) */
+    var nav = document.querySelector('.site-nav');
+    var links = nav ? nav.querySelector('.nav-links') : null;
+    if (nav && links) {
+      var burger = document.createElement('button');
+      burger.className = 'nav-burger';
+      burger.setAttribute('aria-label', 'Menu');
+      burger.setAttribute('aria-expanded', 'false');
+      burger.innerHTML = '<span></span><span></span><span></span>';
+      nav.appendChild(burger);
+      burger.addEventListener('click', function () {
+        var open = nav.classList.toggle('open');
+        burger.setAttribute('aria-expanded', String(open));
+      });
+      links.addEventListener('click', function (ev) {
+        if (ev.target.closest && ev.target.closest('a')) { nav.classList.remove('open'); burger.setAttribute('aria-expanded', 'false'); }
+      });
+    }
+
+    /* flowering corner vines (desktop) */
+    if (window.matchMedia && window.matchMedia('(min-width: 1100px)').matches) {
+      fetch('assets/motifs/corner-branch.svg').then(function (r) { return r.ok ? r.text() : null; }).then(function (svg) {
+        if (!svg) { return; }
+        ['tl', 'tr', 'bl', 'br'].forEach(function (pos, i) {
+          var d = document.createElement('div');
+          d.className = 'corner-vine ' + pos;
+          d.setAttribute('aria-hidden', 'true');
+          d.innerHTML = svg;
+          document.body.appendChild(d);
+          if (!reduce) { setTimeout(function () { slowDraw(d, 1800, 70); }, 600 + i * 250); }
+        });
+      }).catch(function () {});
+    }
+
+    /* mandap gate — slow drawing hero art on selected pages */
+    var path = window.location.pathname;
+    if (/(\/$|index\.html$|weddings\.html$|story\.html$|contact\.html$)/.test(path)) {
+      var isHome = /(\/$|index\.html$)/.test(path);
+      var host = isHome ? (document.querySelector('header') || document.querySelector('section')) : document.querySelector('section');
+      if (host) {
+        fetch('assets/motifs/mandap-gate.svg').then(function (r) { return r.ok ? r.text() : null; }).then(function (svg) {
+          if (!svg) { return; }
+          var art = document.createElement('div');
+          art.className = 'mandap-art';
+          art.setAttribute('aria-hidden', 'true');
+          art.innerHTML = svg;
+          var cs = window.getComputedStyle(host);
+          if (cs.position === 'static') { host.style.position = 'relative'; }
+          host.insertBefore(art, host.firstChild);
+          if (!reduce) { slowDraw(art, 2600, 110); }
+        }).catch(function () {});
+      }
+    }
+
+    /* desktop snap scrolling on the homepage */
+    if (/(\/$|index\.html$)/.test(path)) {
+      document.documentElement.classList.add('snap');
+      var hero = document.querySelector('header');
+      if (hero) { hero.classList.add('snap-s'); }
+    }
+  });
+
   document.addEventListener('DOMContentLoaded', function () {
     /* ----- Branded loader (full on first visit, quick on navigation) ----- */
     var loader = document.getElementById('loader');
