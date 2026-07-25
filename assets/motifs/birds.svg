@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 100" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+  <g id="jv-bird">
+    <path d="M30 60 C38 42 62 40 70 52 C72 62 60 72 45 70 C34 68 29 64 30 60 Z"/>
+    <path d="M70 52 L82 47 L71 58"/>
+    <path d="M30 60 L13 66"/>
+    <path d="M31 58 L15 56"/>
+    <path d="M44 52 C50 48 58 48 62 52"/>
+    <circle cx="63" cy="49" r="1.6"/>
+    <path d="M50 70 V79"/>
+    <path d="M58 69 V78"/>
+  </g>
+  <use href="#jv-bird" transform="translate(200 0) scale(-1 1)"/>
+</svg>
