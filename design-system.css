@@ -344,9 +344,8 @@ body.leaving { opacity: 0; }
 .video-cell video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
 @media (prefers-reduced-motion: reduce) { .video-band video, .video-cell video { display: none; } }
 
-/* ---------- desktop snap scrolling (page-turn feel) ---------- */
+/* ---------- desktop snap scrolling (hard page-turn mode via ds.js) ---------- */
 @media (min-width: 900px) {
-  html.snap { scroll-snap-type: y proximity; }
-  html.snap section, html.snap header.snap-s { scroll-snap-align: start; scroll-snap-stop: normal; }
-  html.snap section { min-height: 86svh; display: grid; align-content: center; }
+  html.snap section { min-height: 92svh; display: grid; align-content: center; }
+  html.snap header.snap-s { min-height: 96svh; display: grid; align-content: center; }
 }

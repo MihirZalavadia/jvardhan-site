@@ -91,11 +91,46 @@
       }
     }
 
-    /* desktop snap scrolling on the homepage */
-    if (/(\/$|index\.html$)/.test(path)) {
+    /* desktop HARD snap scrolling on the homepage: one wheel gesture = one section */
+    if (/(\/$|index\.html$)/.test(path) && !reduce &&
+        window.matchMedia && window.matchMedia('(min-width: 900px) and (pointer: fine)').matches) {
       document.documentElement.classList.add('snap');
       var hero = document.querySelector('header');
       if (hero) { hero.classList.add('snap-s'); }
+
+      var targets = [];
+      ['header', '.hero-strip', 'section', 'footer'].forEach(function (sel) {
+        document.querySelectorAll(sel).forEach(function (el) { if (targets.indexOf(el) === -1) { targets.push(el); } });
+      });
+      targets.sort(function (a, b) { return a.offsetTop - b.offsetTop; });
+
+      var locked = false;
+      function currentIndex() {
+        var y = window.scrollY + 10;
+        var idx = 0;
+        for (var i = 0; i < targets.length; i++) { if (targets[i].offsetTop <= y) { idx = i; } }
+        return idx;
+      }
+      window.addEventListener('wheel', function (e) {
+        e.preventDefault();
+        if (locked) { return; }
+        var dir = e.deltaY > 0 ? 1 : -1;
+        if (Math.abs(e.deltaY) < 6) { return; }
+        var idx = currentIndex();
+        var el = targets[idx];
+        var rect = el.getBoundingClientRect();
+        locked = true;
+        /* tall section: page within it before moving on */
+        if (dir > 0 && rect.bottom > window.innerHeight + 48) {
+          window.scrollBy({ top: Math.min(window.innerHeight * 0.85, rect.bottom - window.innerHeight), behavior: 'smooth' });
+        } else if (dir < 0 && rect.top < -48 && window.scrollY > el.offsetTop + 8) {
+          window.scrollBy({ top: -window.innerHeight * 0.85, behavior: 'smooth' });
+        } else {
+          var next = Math.min(Math.max(idx + dir, 0), targets.length - 1);
+          targets[next].scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+        setTimeout(function () { locked = false; }, 820);
+      }, { passive: false });
     }
   });
 
