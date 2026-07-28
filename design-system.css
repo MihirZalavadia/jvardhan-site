@@ -346,6 +346,50 @@ body.leaving { opacity: 0; }
 .band-dusk .mandap-art, [data-theme="dusk"] .mandap-art { opacity: .22; }
 @keyframes jvGrow { from { transform: scale(.93); } to { transform: scale(1); } }
 
+/* ---------- SHOWCASE LAYER: cinematic heroes, mosaic, chapters ---------- */
+.hero-full { position: relative; min-height: 92svh; display: flex; align-items: flex-end; overflow: hidden; padding: 0; }
+.hero-full > img.bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+html.anim .hero-full > img.bg { animation: jvKen 12s ease-out both; }
+@keyframes jvKen { from { transform: scale(1.07); } to { transform: scale(1); } }
+.hero-full .scrim { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(1,50,50,.28) 0%, rgba(1,42,40,.05) 42%, rgba(1,42,40,.84) 100%); }
+.hero-full .hf-content { position: relative; z-index: 2; width: 100%; max-width: 1080px; margin: 0 auto; padding: 0 clamp(1.2rem, 6vw, 4rem) clamp(2.2rem, 5vw, 3.4rem); }
+.hero-full h1 { color: #fff; font-size: clamp(2.6rem, 7vw, 5rem); line-height: 1.05; max-width: 15ch; }
+.hero-full .eyebrow { color: #CFAA6D; }
+.hero-full p { color: #DCE6E2; max-width: 54ch; }
+.hero-full .script-accent { color: #E0C08A; }
+
+.mosaic { display: grid; grid-template-columns: repeat(4, 1fr); grid-auto-rows: 215px; grid-auto-flow: dense; gap: .8rem; }
+@media (max-width: 900px) { .mosaic { grid-template-columns: repeat(2, 1fr); grid-auto-rows: 165px; } }
+.mosaic .mt { position: relative; overflow: hidden; border-radius: var(--radius); cursor: zoom-in; }
+.mosaic .mt img { width: 100%; height: 100%; object-fit: cover; transition: transform .6s var(--ease-drape); }
+.mosaic .mt:hover img { transform: scale(1.05); }
+.mosaic .mt .cap {
+  position: absolute; inset: auto 0 0 0; padding: 1.6rem .9rem .7rem;
+  background: linear-gradient(180deg, transparent, rgba(1, 40, 40, .78));
+  color: #F3EFE3; font-family: var(--font-label); font-size: .62rem; font-weight: 700;
+  letter-spacing: .14em; text-transform: uppercase; opacity: 0; transition: opacity .3s;
+}
+.mosaic .mt:hover .cap { opacity: 1; }
+.m-w2 { grid-column: span 2; } .m-t2 { grid-row: span 2; }
+.mosaic .mt.hide { display: none; }
+
+.chapter { position: relative; min-height: 80svh; display: flex; align-items: flex-end; overflow: hidden; padding: 0; }
+.chapter > img.bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.chapter .scrim { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(1,45,42,.04) 34%, rgba(1,38,36,.82)); }
+.chapter .ch-content { position: relative; z-index: 2; width: 100%; max-width: 1080px; margin: 0 auto; padding: 0 clamp(1.2rem, 6vw, 4rem) clamp(2rem, 4.5vw, 3rem); }
+.chapter .num { font-family: var(--font-display); font-size: 1.3rem; color: #CFAA6D; font-variant-numeric: tabular-nums; }
+.chapter h3 { color: #fff; font-size: clamp(1.8rem, 4vw, 2.8rem); margin: .3rem 0 .5rem; }
+.chapter p { color: #D9E4E0; max-width: 52ch; }
+
+.lightbox { position: fixed; inset: 0; z-index: 120; background: rgba(1, 28, 28, .95); display: none; align-items: center; justify-content: center; padding: 1.6rem; }
+.lightbox.open { display: flex; }
+.lightbox img { max-width: 94vw; max-height: 88vh; border-radius: var(--radius); }
+.lightbox .lb-close {
+  position: absolute; top: 1rem; right: 1rem; background: #CFAA6D; border: 0; color: #063230;
+  font-family: var(--font-label); font-size: .68rem; font-weight: 800; letter-spacing: .12em; text-transform: uppercase;
+  padding: .7rem 1.15rem; border-radius: 999px; cursor: pointer;
+}
+
 /* ---------- ambient video bands ---------- */
 .video-band { position: relative; overflow: hidden; padding: 0; min-height: min(70vh, 560px); display: grid; align-items: end; background-size: cover; background-position: center; }
 .video-band video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }

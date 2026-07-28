@@ -95,6 +95,25 @@
       }
     }
 
+    /* lightbox for mosaic galleries */
+    if (document.querySelector('.mosaic')) {
+      var lb = document.createElement('div');
+      lb.className = 'lightbox';
+      lb.innerHTML = '<img alt=""><button class="lb-close" type="button">Close</button>';
+      document.body.appendChild(lb);
+      var lbImg = lb.querySelector('img');
+      document.addEventListener('click', function (ev) {
+        var tile = ev.target.closest ? ev.target.closest('.mosaic .mt') : null;
+        if (tile) {
+          var im = tile.querySelector('img');
+          if (im) { lbImg.src = im.src; lbImg.alt = im.alt || ''; lb.classList.add('open'); }
+          return;
+        }
+        if (ev.target.closest && (ev.target.closest('.lb-close') || (ev.target === lb))) { lb.classList.remove('open'); lbImg.src = ''; }
+      });
+      document.addEventListener('keydown', function (ev) { if (ev.key === 'Escape') { lb.classList.remove('open'); } });
+    }
+
     /* faint side motifs — fill section whitespace on every page (desktop) */
     if (window.matchMedia && window.matchMedia('(min-width: 900px)').matches) {
       var MOTIF_CYCLE = ['marigold', 'mogra', 'veil', 'birds', 'toran', 'diya'];
@@ -114,7 +133,7 @@
         }, { threshold: 0.2 });
       }
       document.querySelectorAll('section').forEach(function (sec, i) {
-        if (sec.classList.contains('video-band') || sec.querySelector('.side-motif')) { return; }
+        if (sec.classList.contains('video-band') || sec.classList.contains('chapter') || sec.classList.contains('hero-full') || sec.querySelector('.side-motif')) { return; }
         getMotif(MOTIF_CYCLE[i % MOTIF_CYCLE.length]).then(function (svg) {
           if (!svg) { return; }
           var d = document.createElement('div');

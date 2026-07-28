@@ -17,8 +17,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://api.fontshare.com/v2/css?f[]=boska@400,401,500,501,700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=Inter:wght@400;500;600&family=Pinyon+Script&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="design-system.css?v=5">
-  <script src="ds.js?v=5" defer></script>
+  <link rel="stylesheet" href="design-system.css?v=6">
+  <script src="ds.js?v=6" defer></script>
   <style>
     .chips { display: flex; gap: .55rem; flex-wrap: wrap; margin: 1.6rem 0; }
     .chip { font-family: var(--font-label); font-size: .64rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; padding: .5rem 1rem; border-radius: 999px; cursor: pointer; border: 1px solid var(--line); background: transparent; color: var(--muted); transition: all .25s; }
@@ -67,20 +67,32 @@
       <button class="chip" aria-pressed="false" data-f="stage">Stages</button>
       <button class="chip" aria-pressed="false" data-f="wedding">Weddings</button>
     </div>
-    <div class="pf-grid">
-      <figure class="pf reveal" data-t="wedding"><div class="arch-img img-hover cr"><img src="assets/real/real-wedding-photo-08.jpg" alt="Grand entrance gateway with elephant statues and drapes" loading="lazy"></div><figcaption class="caption">Wedding · the grand gateway</figcaption></figure>
-      <figure class="pf reveal" data-t="haldi"><div class="arch-img img-hover cr"><img src="assets/real/real-haldi-10.jpg" alt="Marigold haldi stage under palms" loading="lazy"></div><figcaption class="caption">Haldi · marigold stage</figcaption></figure>
-      <figure class="pf reveal" data-t="sangeet"><div class="arch-img img-hover cr duotone-dusk"><img src="assets/real/real-sangeet-night-decore-07.jpg" alt="Silver sangeet corridor with floral aisles" loading="lazy"></div><figcaption class="caption">Sangeet · the silver walk</figcaption></figure>
-      <figure class="pf reveal" data-t="stage"><div class="arch-img img-hover cr duotone-dusk"><img src="assets/real/real-stage-decore-02.jpg" alt="Evening lounge with mirror-ball greenery backdrop" loading="lazy"></div><figcaption class="caption">Stage · evening lounge</figcaption></figure>
-      <figure class="pf reveal" data-t="haldi"><div class="arch-img img-hover cr"><img src="assets/real/real-haldi-18.jpg" alt="Haldi ceremony moment" loading="lazy"></div><figcaption class="caption">Haldi · the morning</figcaption></figure>
-      <figure class="pf reveal" data-t="haldi"><div class="arch-img img-hover cr"><img src="assets/real/real-haldi-20.jpg" alt="Haldi decor detail" loading="lazy"></div><figcaption class="caption">Haldi · details</figcaption></figure>
-      <figure class="pf reveal" data-t="haldi"><div class="arch-img img-hover cr"><img src="assets/real/real-haldi-05.jpg" alt="Haldi celebration setup" loading="lazy"></div><figcaption class="caption">Haldi · the setup</figcaption></figure>
-      <figure class="pf reveal" data-t="sangeet"><div class="arch-img img-hover cr duotone-dusk"><img src="assets/real/real-sangeet-night-decore-12.jpg" alt="Sangeet night decor" loading="lazy"></div><figcaption class="caption">Sangeet · night decor</figcaption></figure>
-      <figure class="pf reveal" data-t="sangeet"><div class="arch-img img-hover cr duotone-dusk"><img src="assets/real/real-sangeet-night-decore-20.jpg" alt="Sangeet celebration styling" loading="lazy"></div><figcaption class="caption">Sangeet · celebration</figcaption></figure>
-      <figure class="pf reveal" data-t="stage"><div class="arch-img img-hover cr"><img src="assets/real/real-stage-decore-05.jpg" alt="Stage decor styling" loading="lazy"></div><figcaption class="caption">Stage · styling</figcaption></figure>
-      <figure class="pf reveal" data-t="wedding"><div class="arch-img img-hover cr"><img src="assets/real/real-wedding-photo-15.jpg" alt="Wedding celebration moment" loading="lazy"></div><figcaption class="caption">Wedding · the celebration</figcaption></figure>
-      <figure class="pf reveal" data-t="wedding"><div class="arch-img img-hover cr"><img src="assets/real/real-wedding-photo-30.jpg" alt="Wedding decor styling" loading="lazy"></div><figcaption class="caption">Wedding · the styling</figcaption></figure>
+    <div class="mosaic">
+      <div class="mt m-w2 m-t2" data-t="wedding"><img src="assets/real/real-wedding-photo-08.jpg" alt="Grand entrance gateway with elephant statues" loading="lazy"><span class="cap">Wedding · the grand gateway</span></div>
+      <div class="mt" data-t="haldi"><img src="assets/real/real-haldi-10.jpg" alt="Marigold haldi stage" loading="lazy"><span class="cap">Haldi · marigold stage</span></div>
+      <div class="mt" data-t="sangeet"><img src="assets/real/real-sangeet-night-decore-07.jpg" alt="Silver sangeet corridor" loading="lazy"><span class="cap">Sangeet · the silver walk</span></div>
+      <div class="mt m-t2" data-t="stage"><img src="assets/real/real-stage-decore-02.jpg" alt="Evening lounge backdrop" loading="lazy"><span class="cap">Stage · evening lounge</span></div>
+      <div class="mt" data-t="haldi"><img src="assets/real/real-haldi-18.jpg" alt="Haldi ceremony moment" loading="lazy"><span class="cap">Haldi · the morning</span></div>
+      <div class="mt" data-t="haldi"><img src="assets/real/real-haldi-20.jpg" alt="Haldi decor detail" loading="lazy"><span class="cap">Haldi · details</span></div>
+      <div class="mt m-w2" data-t="sangeet"><img src="assets/real/real-sangeet-night-decore-12.jpg" alt="Sangeet night decor" loading="lazy"><span class="cap">Sangeet · night decor</span></div>
+      <div class="mt" data-t="haldi"><img src="assets/real/real-haldi-05.jpg" alt="Haldi celebration setup" loading="lazy"><span class="cap">Haldi · the setup</span></div>
+      <div class="mt" data-t="wedding"><img src="assets/real/real-wedding-photo-15.jpg" alt="Wedding celebration moment" loading="lazy"><span class="cap">Wedding · the celebration</span></div>
+      <div class="mt" data-t="stage"><img src="assets/real/real-stage-decore-05.jpg" alt="Stage decor styling" loading="lazy"><span class="cap">Stage · styling</span></div>
+      <div class="mt m-t2" data-t="wedding"><img src="assets/real/real-wedding-photo-30.jpg" alt="Wedding decor styling" loading="lazy"><span class="cap">Wedding · the styling</span></div>
+      <div class="mt" data-t="sangeet"><img src="assets/real/real-sangeet-night-decore-20.jpg" alt="Sangeet celebration styling" loading="lazy"><span class="cap">Sangeet · celebration</span></div>
+      <div class="mt" data-t="haldi"><img src="assets/real/real-haldi-01.jpg" alt="Haldi decor" loading="lazy"><span class="cap">Haldi</span></div>
+      <div class="mt" data-t="haldi"><img src="assets/real/real-haldi-03.jpg" alt="Haldi styling" loading="lazy"><span class="cap">Haldi</span></div>
+      <div class="mt m-w2" data-t="wedding"><img src="assets/real/real-wedding-photo-03.jpg" alt="Wedding decor" loading="lazy"><span class="cap">Wedding</span></div>
+      <div class="mt" data-t="sangeet"><img src="assets/real/real-sangeet-night-decore-03.jpg" alt="Sangeet decor" loading="lazy"><span class="cap">Sangeet</span></div>
+      <div class="mt" data-t="stage"><img src="assets/real/real-stage-decore-01.jpg" alt="Stage decor" loading="lazy"><span class="cap">Stage</span></div>
+      <div class="mt" data-t="wedding"><img src="assets/real/real-wedding-photo-10.jpg" alt="Wedding moment" loading="lazy"><span class="cap">Wedding</span></div>
+      <div class="mt" data-t="haldi"><img src="assets/real/real-haldi-12.jpg" alt="Haldi moment" loading="lazy"><span class="cap">Haldi</span></div>
+      <div class="mt" data-t="sangeet"><img src="assets/real/real-sangeet-night-decore-10.jpg" alt="Sangeet night" loading="lazy"><span class="cap">Sangeet</span></div>
+      <div class="mt" data-t="wedding"><img src="assets/real/real-wedding-photo-05.jpg" alt="Wedding styling" loading="lazy"><span class="cap">Wedding</span></div>
+      <div class="mt" data-t="stage"><img src="assets/real/real-stage-decore-03.jpg" alt="Stage styling" loading="lazy"><span class="cap">Stage</span></div>
+      <div class="mt" data-t="haldi"><img src="assets/real/real-haldi-22.jpg" alt="Haldi celebration" loading="lazy"><span class="cap">Haldi</span></div>
     </div>
+    <p class="caption" style="margin-top:1rem;">Tap any frame to view it full size.</p>
     <nav class="pagination reveal" aria-label="Portfolio pages">
       <span class="current">1</span>
       <a href="portfolio-2.html">2</a>
@@ -112,7 +124,7 @@
         chips.forEach(function (c) { c.setAttribute('aria-pressed', 'false'); });
         chip.setAttribute('aria-pressed', 'true');
         var f = chip.getAttribute('data-f');
-        document.querySelectorAll('.pf').forEach(function (t) {
+        document.querySelectorAll('.mosaic .mt').forEach(function (t) {
           t.classList.toggle('hide', f !== 'all' && t.getAttribute('data-t') !== f);
         });
       });
