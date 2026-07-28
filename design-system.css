@@ -185,26 +185,29 @@ section > .shell { position: relative; z-index: 1; }
 .duotone-dusk::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(1,60,60,0) 40%, rgba(1,50,50,.55)); pointer-events: none; }
 
 /* ---------- animation blocks ---------- */
-/* Veil Lift — page-load curtain (element #veil added per page) */
-#veil {
+/* PROGRESSIVE ENHANCEMENT: content is visible by default; animations
+   only engage when ds.js confirms readiness by adding html.anim */
+#veil { display: none; }
+html.anim #veil {
+  display: block;
   position: fixed; inset: 0; z-index: 90; pointer-events: none;
   background: linear-gradient(180deg, var(--dusk-a), var(--bg));
   transform: translateY(0);
   transition: transform .9s var(--ease-drape), opacity .9s var(--ease-drape);
 }
-#veil.lift { transform: translateY(-100%); opacity: .2; }
-.rise { opacity: 0; transform: translateY(18px); animation: jvRise .9s var(--ease-drape) forwards; }
-.rise.d1 { animation-delay: .15s; } .rise.d2 { animation-delay: .3s; }
-.rise.d3 { animation-delay: .45s; } .rise.d4 { animation-delay: .6s; }
+html.anim #veil.lift { transform: translateY(-100%); opacity: .2; }
+html.anim .rise { opacity: 0; transform: translateY(18px); animation: jvRise .9s var(--ease-drape) forwards; }
+html.anim .rise.d1 { animation-delay: .15s; } html.anim .rise.d2 { animation-delay: .3s; }
+html.anim .rise.d3 { animation-delay: .45s; } html.anim .rise.d4 { animation-delay: .6s; }
 @keyframes jvRise { to { opacity: 1; transform: none; } }
 
-/* Curtain Reveal — scroll images */
-.cr { clip-path: inset(0 0 100% 0); transition: clip-path 1.2s var(--ease-drape); }
-.cr.in { clip-path: inset(0 0 0% 0); }
+/* Curtain Reveal — scroll images (gated) */
+html.anim .cr { clip-path: inset(0 0 100% 0); transition: clip-path 1.2s var(--ease-drape); }
+html.anim .cr.in { clip-path: inset(0 0 0% 0); }
 
-/* soft reveal for text/cards */
-.reveal { opacity: 0; transform: translateY(22px); transition: opacity .7s ease, transform .7s ease; }
-.reveal.in { opacity: 1; transform: none; }
+/* soft reveal for text/cards (gated) */
+html.anim .reveal { opacity: 0; transform: translateY(22px); transition: opacity .7s ease, transform .7s ease; }
+html.anim .reveal.in { opacity: 1; transform: none; }
 
 /* Gold Draw — ds.js sets dash values; this animates them */
 .draw path, .draw circle { transition: stroke-dashoffset 1.1s var(--ease-drape); }
@@ -287,14 +290,16 @@ section > .shell { position: relative; z-index: 1; }
 .foot-note { max-width: 1080px; margin: 0 auto; font-size: .72rem; letter-spacing: .04em; color: #6F8F89; border-top: 1px solid rgba(207, 170, 109, .18); padding-top: 1.3rem; }
 .foot-note a { color: #CFAA6D; text-decoration: none; }
 
-/* ---------- branded loader ---------- */
-#loader {
+/* ---------- branded loader (only when animations engaged) ---------- */
+#loader { display: none; }
+html.anim #loader {
+  display: flex;
   position: fixed; inset: 0; z-index: 100;
   background: linear-gradient(135deg, var(--dusk-a), var(--dusk-b));
   display: flex; align-items: center; justify-content: center;
   transition: opacity .55s var(--ease-drape), visibility .55s;
 }
-#loader.done { opacity: 0; visibility: hidden; }
+html.anim #loader.done { opacity: 0; visibility: hidden; }
 .loader-inner { text-align: center; color: var(--accent); }
 .loader-inner svg { width: 86px; height: 86px; }
 .loader-inner .wordmark { color: #fff; font-size: .95rem; margin-top: .9rem; opacity: 0; animation: jvRise .7s .25s var(--ease-drape) forwards; }

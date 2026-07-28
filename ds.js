@@ -3,6 +3,10 @@
   var root = document.documentElement;
   var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
+  /* engage the animation layer ONLY when JS is alive and motion is allowed;
+     without this class the site renders fully visible with zero animation */
+  if (!reduce) { root.classList.add('anim'); }
+
   /* ----- theme (Day/Dusk) ----- */
   function setTheme(t) {
     if (t === 'dusk') { root.setAttribute('data-theme', 'dusk'); } else { root.removeAttribute('data-theme'); }
@@ -171,6 +175,7 @@
   document.addEventListener('DOMContentLoaded', function () {
     /* ----- Branded loader (full on first visit, quick on navigation) ----- */
     var loader = document.getElementById('loader');
+    if (loader && reduce) { loader.remove(); loader = null; }
     if (loader) {
       var seen = false;
       try { seen = sessionStorage.getItem('jv-seen') === '1'; } catch (e) {}
@@ -244,6 +249,10 @@
         });
       }, { threshold: 0.15 });
       targets.forEach(function (el) { io.observe(el); });
+      /* rescue: whatever hasn't revealed within 3s becomes visible anyway */
+      setTimeout(function () {
+        targets.forEach(function (el) { el.classList.add('in'); finishDraw(el); });
+      }, 3000);
     }
     function finishDraw(el) {
       if (!el.classList.contains('draw')) { return; }
