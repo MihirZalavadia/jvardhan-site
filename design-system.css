@@ -104,8 +104,17 @@ summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
 .wordmark small { display: block; font-size: .5em; font-weight: 700; letter-spacing: .5em; color: var(--accent-deep); margin-top: .18em; }
 
 /* ---------- layout ---------- */
-section { padding: clamp(3rem, 6.5vw, 5.4rem) clamp(1.2rem, 6vw, 4rem); }
+section { padding: clamp(2.3rem, 5vw, 4.2rem) clamp(1.2rem, 6vw, 4rem); }
 .shell { max-width: 1080px; margin-inline: auto; }
+section > .shell { position: relative; z-index: 1; }
+
+/* faint side motifs — automatic whitespace fill (injected by ds.js) */
+.side-motif { position: absolute; top: 50%; transform: translateY(-50%); width: min(320px, 24vw); color: var(--accent); opacity: .13; pointer-events: none; z-index: 0; }
+.side-motif svg { width: 100%; height: auto; }
+.side-motif.sm-right { right: -36px; }
+.side-motif.sm-left { left: -36px; transform: translateY(-50%) scaleX(-1); }
+.band-dusk .side-motif { opacity: .1; }
+@media (max-width: 900px) { .side-motif { display: none; } }
 .band-dusk {
   background: linear-gradient(135deg, var(--dusk-a), var(--dusk-b));
   color: #E8E3D5;
@@ -346,6 +355,6 @@ body.leaving { opacity: 0; }
 
 /* ---------- desktop snap scrolling (hard page-turn mode via ds.js) ---------- */
 @media (min-width: 900px) {
-  html.snap section { min-height: 92svh; display: grid; align-content: center; }
-  html.snap header.snap-s { min-height: 96svh; display: grid; align-content: center; }
+  html.snap section { min-height: 86svh; display: grid; align-content: center; }
+  html.snap header.snap-s { min-height: 94svh; display: grid; align-content: center; }
 }

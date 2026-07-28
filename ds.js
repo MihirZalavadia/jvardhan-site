@@ -91,6 +91,40 @@
       }
     }
 
+    /* faint side motifs — fill section whitespace on every page (desktop) */
+    if (window.matchMedia && window.matchMedia('(min-width: 900px)').matches) {
+      var MOTIF_CYCLE = ['marigold', 'mogra', 'veil', 'birds', 'toran', 'diya'];
+      var motifCache = {};
+      function getMotif(name) {
+        if (!motifCache[name]) {
+          motifCache[name] = fetch('assets/motifs/' + name + '.svg').then(function (r) { return r.ok ? r.text() : null; }).catch(function () { return null; });
+        }
+        return motifCache[name];
+      }
+      var mio = null;
+      if (!reduce && 'IntersectionObserver' in window) {
+        mio = new IntersectionObserver(function (entries) {
+          entries.forEach(function (e) {
+            if (e.isIntersecting) { slowDraw(e.target, 1600, 60); mio.unobserve(e.target); }
+          });
+        }, { threshold: 0.2 });
+      }
+      document.querySelectorAll('section').forEach(function (sec, i) {
+        if (sec.classList.contains('video-band') || sec.querySelector('.side-motif')) { return; }
+        getMotif(MOTIF_CYCLE[i % MOTIF_CYCLE.length]).then(function (svg) {
+          if (!svg) { return; }
+          var d = document.createElement('div');
+          d.className = 'side-motif ' + (i % 2 ? 'sm-left' : 'sm-right');
+          d.setAttribute('aria-hidden', 'true');
+          d.innerHTML = svg;
+          var cs = window.getComputedStyle(sec);
+          if (cs.position === 'static') { sec.style.position = 'relative'; }
+          sec.appendChild(d);
+          if (mio) { mio.observe(d); }
+        });
+      });
+    }
+
     /* desktop HARD snap scrolling on the homepage: one wheel gesture = one section */
     if (/(\/$|index\.html$)/.test(path) && !reduce &&
         window.matchMedia && window.matchMedia('(min-width: 900px) and (pointer: fine)').matches) {
