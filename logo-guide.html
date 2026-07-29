@@ -3,218 +3,137 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>J.Vardhan — Logo Design Guide for the Designer</title>
+  <title>J.Vardhan — Logo Reference</title>
   <meta name="robots" content="noindex">
   <link rel="icon" type="image/png" href="assets/lion-guardian.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://api.fontshare.com/v2/css?f[]=boska@400,500,700&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Inter:wght@400;500;600&family=Pinyon+Script&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     :root { --teal: #0A5356; --deep: #013C3C; --gold: #CFAA6D; --dgold: #B08D52; --ivory: #F9F6EF; --line: rgba(1,60,60,.16); }
-    body { font-family: "Inter", "Segoe UI", sans-serif; background: #E8E4D8; color: #0A3F3B; line-height: 1.65; font-size: 14px; }
-    .page { width: 210mm; min-height: 292mm; margin: 10mm auto; background: var(--ivory); padding: 16mm 15mm; position: relative; box-shadow: 0 6px 30px rgba(1,50,50,.15); }
-    .page.dusk { background: linear-gradient(135deg, #013C3C, #024E4E); color: #E8E3D5; }
+    body { font-family: "Inter", "Segoe UI", sans-serif; background: #E8E4D8; color: #0A3F3B; line-height: 1.6; font-size: 14px; }
+    .page { width: 210mm; min-height: 292mm; margin: 10mm auto; background: var(--ivory); padding: 14mm 14mm; position: relative; box-shadow: 0 6px 30px rgba(1,50,50,.15); }
     @media print {
       body { background: none; font-size: 12.5px; }
       .page { width: auto; min-height: auto; margin: 0; box-shadow: none; page-break-after: always; }
       .page:last-child { page-break-after: auto; }
     }
-    h1, h2, h3 { font-family: "Boska", Georgia, serif; font-weight: 500; color: var(--teal); text-wrap: balance; }
-    .dusk h1, .dusk h2, .dusk h3 { color: #fff; }
-    .eyebrow { font-family: "Archivo", Arial, sans-serif; font-stretch: 110%; font-size: .68rem; font-weight: 700; letter-spacing: .24em; text-transform: uppercase; color: var(--dgold); }
-    .dusk .eyebrow { color: var(--gold); }
-    .rule { width: 64px; height: 2px; background: var(--gold); margin: .9rem 0; }
-    .wordmark { font-family: "Archivo", Arial, sans-serif; font-stretch: 122%; font-weight: 800; letter-spacing: .13em; }
+    h1, h2, h3 { font-family: "Boska", Georgia, serif; font-weight: 500; color: var(--teal); }
+    .eyebrow { font-family: "Archivo", Arial, sans-serif; font-stretch: 110%; font-size: .66rem; font-weight: 700; letter-spacing: .24em; text-transform: uppercase; color: var(--dgold); }
+    .rule { width: 60px; height: 2px; background: var(--gold); margin: .7rem 0; }
+    .wordmark { font-family: "Archivo", Arial, sans-serif; font-stretch: 122%; font-weight: 800; letter-spacing: .13em; color: var(--teal); }
     .wordmark small { display: block; font-size: .5em; letter-spacing: .5em; color: var(--gold); margin-top: .2em; }
-    p.muted { color: #4E6E69; } .dusk p.muted, .dusk p { color: #A9C3BD; }
-    .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 8mm; }
-    .grid3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6mm; }
-    .grid4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 5mm; }
-    .card { border: 1px solid var(--line); border-radius: 4px; padding: 5mm; background: #fff; }
-    .dusk .card { background: rgba(255,255,255,.05); border-color: rgba(207,170,109,.3); }
-    .card h3 { font-size: 1.05rem; margin-bottom: .3rem; }
-    .card p { font-size: .8rem; }
-    .stage { display: flex; align-items: center; justify-content: center; height: 46mm; border-radius: 4px; background: linear-gradient(105deg, #F9F6EF 50%, #013C3C 50%); border: 1px solid var(--line); margin-bottom: 3mm; }
-    .stage img { max-height: 38mm; max-width: 80%; }
-    .badge { display: inline-block; font-family: "Archivo", sans-serif; font-size: .6rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; padding: .2rem .6rem; border-radius: 999px; margin-bottom: .4rem; }
-    .b-win { background: #DDEDDF; color: #1F5E33; } .b-role { background: #FBEED3; color: #8A5A1D; } .b-old { background: #E7E2D5; color: #5D6660; }
-    .swatch { border-radius: 4px; overflow: hidden; border: 1px solid var(--line); }
-    .swatch .chip { height: 20mm; }
-    .swatch figcaption { padding: 2mm 3mm; font-size: .7rem; color: #4E6E69; background: #fff; }
-    .swatch strong { display: block; font-family: "Archivo", sans-serif; font-size: .62rem; letter-spacing: .1em; text-transform: uppercase; color: var(--teal); }
+    p.muted { color: #4E6E69; }
+    .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 6mm; }
+    .grid3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 5mm; }
+    .card { border: 1px solid var(--line); border-radius: 4px; padding: 4mm; background: #fff; }
+    .card h3 { font-size: 1rem; margin-bottom: .25rem; }
+    .card p { font-size: .78rem; color: #4E6E69; }
+    .stage { display: flex; align-items: center; justify-content: center; height: 42mm; border-radius: 4px; background: linear-gradient(105deg, #F9F6EF 50%, #013C3C 50%); border: 1px solid var(--line); margin-bottom: 3mm; }
+    .stage img { max-height: 34mm; max-width: 80%; }
+    .stage.big { height: 88mm; }
+    .stage.big img { max-height: 76mm; }
+    .badge { display: inline-block; font-family: "Archivo", sans-serif; font-size: .58rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; padding: .18rem .55rem; border-radius: 999px; margin-bottom: .35rem; }
+    .b-win { background: #DDEDDF; color: #1F5E33; } .b-old { background: #E7E2D5; color: #5D6660; }
     ul.tick { list-style: none; }
-    ul.tick li { padding-left: 1.4em; position: relative; margin-bottom: .45em; font-size: .85rem; }
-    ul.tick li::before { content: ""; position: absolute; left: 0; top: .5em; width: .8em; height: 2px; background: var(--gold); }
+    ul.tick li { padding-left: 1.3em; position: relative; margin-bottom: .4em; font-size: .8rem; }
+    ul.tick li::before { content: ""; position: absolute; left: 0; top: .55em; width: .75em; height: 2px; background: var(--gold); }
     ul.cross li::before { background: #B84A3A; }
-    table { width: 100%; border-collapse: collapse; font-size: .8rem; }
-    th, td { text-align: left; padding: 2.2mm 3mm; border-bottom: 1px solid var(--line); vertical-align: top; }
-    th { font-family: "Archivo", sans-serif; font-size: .62rem; letter-spacing: .12em; text-transform: uppercase; color: var(--dgold); }
-    .foot { position: absolute; bottom: 8mm; left: 15mm; right: 15mm; display: flex; justify-content: space-between; font-size: .62rem; letter-spacing: .1em; text-transform: uppercase; font-family: "Archivo", sans-serif; color: #7C8F8A; }
-    .dusk .foot { color: #6F8F89; }
-    .script { font-family: "Pinyon Script", cursive; font-size: 1.6rem; color: var(--dgold); }
+    .foot { position: absolute; bottom: 7mm; left: 14mm; right: 14mm; display: flex; justify-content: space-between; font-size: .6rem; letter-spacing: .1em; text-transform: uppercase; font-family: "Archivo", sans-serif; color: #7C8F8A; }
   </style>
 </head>
 <body>
 
-<!-- PAGE 1 · COVER -->
-<div class="page dusk" style="display:flex;flex-direction:column;justify-content:center;text-align:center;">
-  <img src="assets/lion-floral.png" alt="Floral-mane lion emblem" style="width:44mm;margin:0 auto;">
-  <div class="wordmark" style="font-size:1.7rem;color:#fff;margin-top:8mm;">J.VARDHAN<small>LUXE WEDDINGS &amp; EVENTS</small></div>
-  <p class="script" style="margin:7mm 0 2mm;color:#E0C08A;">with love, from Gujarat</p>
-  <h1 style="font-size:2.2rem;max-width:24ch;margin:4mm auto 0;">Logo Design Guide</h1>
-  <div class="rule" style="margin:6mm auto;"></div>
-  <p style="max-width:60ch;margin:0 auto;">A complete brief for the logo designer — everything explored so far, the brand system it must live in, what worked, what to avoid, and the deliverables we need.</p>
-  <p class="eyebrow" style="margin-top:10mm;">Prepared July 2026 · working draft — brand name architecture still provisional</p>
-  <div class="foot"><span>J.Vardhan Luxe Weddings &amp; Events</span><span>Logo Design Guide · 01</span></div>
+<!-- PAGE 1 · THE LION FACE (priority) -->
+<div class="page">
+  <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:5mm;">
+    <div>
+      <span class="eyebrow">Logo Reference · For the Designer</span>
+      <h1 style="font-size:1.9rem;margin-top:1mm;">The J.Vardhan Lion</h1>
+      <div class="rule"></div>
+    </div>
+    <div class="wordmark" style="font-size:1rem;text-align:right;">J.VARDHAN<small>LUXE WEDDINGS &amp; EVENTS</small></div>
+  </div>
+  <p class="muted" style="max-width:74ch;margin-bottom:5mm;">Theme, colours and full design system are being reworked separately — <strong>this brief is only about the lion.</strong> Mark drawn flat in gold <strong>#CFAA6D</strong>; must sit on both warm ivory and deep green (every specimen below is shown on the split ground).</p>
+
+  <span class="eyebrow">Priority Direction — The Lion Face</span>
+  <div class="grid2" style="margin-top:2.5mm;align-items:start;">
+    <div>
+      <div class="stage big"><img src="assets/lion-floral.png" alt="Floral-mane lion face emblem"></div>
+      <span class="badge b-win">Master emblem — refine this</span>
+    </div>
+    <div>
+      <h3 style="font-size:1.15rem;">Floral-mane face: keep the idea, refine the drawing</h3>
+      <ul class="tick" style="margin-top:2mm;">
+        <li>The mane made of <strong>marigolds + mogra buds</strong> is our most ownable idea — the family are flower people. Keep it.</li>
+        <li>Redraw as clean vector: <strong>max 8 large flower shapes</strong>, no tiny petals that clog when small.</li>
+        <li>Face calm and dignified, <strong>ear visible</strong> (Asiatic lions have short manes — the floral ruff stays contained, never a big round African mane).</li>
+        <li>Simple almond eye, clean nose wedge, closed mouth — no whisker dots.</li>
+      </ul>
+      <h3 style="font-size:1rem;margin-top:4mm;">Face variants worth sketching</h3>
+      <ul class="tick">
+        <li>Same face with a <strong>plain short mane</strong> (no flowers) — quieter corporate version</li>
+        <li>Face inside a <strong>plain double-ring roundel</strong> for stamps/avatars</li>
+        <li><strong>Line-art only</strong> version (no solid fills) for foil/embroidery</li>
+      </ul>
+    </div>
+  </div>
+  <div class="foot"><span>J.Vardhan — Logo Reference</span><span>1 of 2</span></div>
 </div>
 
-<!-- PAGE 2 · BRAND SYSTEM -->
+<!-- PAGE 2 · ALL FOUR + STANDING LIONS + RULES -->
 <div class="page">
-  <span class="eyebrow">01 · The System the Logo Must Live In</span>
-  <h2 style="font-size:1.7rem;margin:2mm 0 1mm;">Green, gold, ivory — and two hours of the day.</h2>
-  <div class="rule"></div>
-  <p class="muted" style="max-width:70ch;margin-bottom:6mm;">The website runs a two-theme system: <strong>Day</strong> (warm ivory) and <strong>Dusk</strong> (deep teal). Every logo candidate must work on BOTH grounds — that is the first test.</p>
-  <div class="grid4" style="margin-bottom:7mm;">
-    <figure class="swatch"><div class="chip" style="background:#CFAA6D;"></div><figcaption><strong>Brand Gold</strong>#CFAA6D — the mark itself</figcaption></figure>
-    <figure class="swatch"><div class="chip" style="background:#0A5356;"></div><figcaption><strong>Wordmark Teal</strong>#0A5356 — type on light</figcaption></figure>
-    <figure class="swatch"><div class="chip" style="background:linear-gradient(135deg,#013C3C,#024E4E);"></div><figcaption><strong>Dusk Teal</strong>#013C3C → #024E4E</figcaption></figure>
-    <figure class="swatch"><div class="chip" style="background:#F9F6EF;"></div><figcaption><strong>Ivory Day</strong>#F9F6EF — light ground</figcaption></figure>
+  <span class="eyebrow">Everything Explored So Far</span>
+  <div class="grid2" style="margin-top:3mm;margin-bottom:5mm;">
+    <div class="card">
+      <div class="stage"><img src="assets/lion-gold.png" alt="Walking monoline lion"></div>
+      <span class="badge b-old">V0 draft</span>
+      <h3>Walking Monoline</h3>
+      <p>Elegant line rhythm but generic pose and thin strokes. Useful only as a line-weight reference.</p>
+    </div>
+    <div class="card">
+      <div class="stage"><img src="assets/lion-floral.png" alt="Floral-mane lion face"></div>
+      <span class="badge b-win">Master — page 1</span>
+      <h3>Floral-Mane Face</h3>
+      <p>The keeper. Currently the website hero mark; needs the vector refinement described on page 1.</p>
+    </div>
+    <div class="card">
+      <div class="stage"><img src="assets/lion-guardian-v1.png" alt="Seated lion, flowing mane"></div>
+      <span class="badge b-old">Explored</span>
+      <h3>Guardian — Flowing Mane</h3>
+      <p>Right solidity, wrong mane (too African). Superseded by the short-mane version.</p>
+    </div>
+    <div class="card">
+      <div class="stage"><img src="assets/lion-guardian.png" alt="Seated lion, short mane"></div>
+      <span class="badge b-win">Small-size icon</span>
+      <h3>Guardian — Short Mane</h3>
+      <p>Cleanest at 32px; current favicon. Refine: calmer muzzle, 3-shape ruff, tail ending in a leaf-shaped tuft.</p>
+    </div>
   </div>
+
+  <span class="eyebrow">Standing Lions — poses to explore fresh</span>
+  <div class="grid3" style="margin-top:2.5mm;margin-bottom:5mm;">
+    <div class="card"><h3>Standing four-square</h3><p>All four feet planted, head high, side profile — steady guardian at a gateway. Solid-shape style like the seated icon.</p></div>
+    <div class="card"><h3>Walking, head high</h3><p>The V0 pose redrawn properly: bold monoline, Asiatic anatomy, strokes thick enough to embroider.</p></div>
+    <div class="card"><h3>Standing beneath a toran</h3><p>Small lion under a slender toran archway — we build wedding gateways; the lion guards ours.</p></div>
+  </div>
+
   <div class="grid2">
-    <div class="card">
-      <h3>The lockup</h3>
-      <p style="margin-bottom:3mm;">Mark above (or left of) the name. Spelling is exact:</p>
-      <div class="wordmark" style="font-size:1.15rem;color:var(--teal);">J.VARDHAN<small>LUXE WEDDINGS &amp; EVENTS</small></div>
-      <p style="margin-top:3mm;font-size:.75rem;" class="muted">Wordmark face: extended bold grotesque (Archivo Expanded on web; Monument Extended acceptable in print). Descriptor: small caps, wide letterspacing, gold. Tagline used separately: <em>"Promised. Planned. Delivered."</em></p>
-    </div>
-    <div class="card">
-      <h3>Voice of the brand</h3>
-      <p>Premium but locally grounded · warm, family-led, culturally fluent · operationally disciplined · visually rich, never gaudy. The stationery register: high-contrast serifs, fine gold line-work, quiet luxury — <strong>never</strong> black-and-gold glitter.</p>
-    </div>
-  </div>
-  <div class="foot"><span>J.Vardhan Luxe Weddings &amp; Events</span><span>Logo Design Guide · 02</span></div>
-</div>
-
-<!-- PAGE 3 · THE LION MANDATE -->
-<div class="page">
-  <span class="eyebrow">02 · The Lion — Non-Negotiables</span>
-  <h2 style="font-size:1.7rem;margin:2mm 0 1mm;">It must be a Gir lion, or no lion at all.</h2>
-  <div class="rule"></div>
-  <p class="muted" style="max-width:72ch;margin-bottom:5mm;">The brand is from Junagadh — the only home of the Asiatic lion on earth. A generic lion throws that away. Every lion drawing must carry authentic Asiatic field marks:</p>
-  <div class="grid2" style="margin-bottom:6mm;">
     <ul class="tick">
-      <li><strong>Short, sparse mane</strong> — a neck ruff, never a big flowing African mane</li>
-      <li><strong>Ears clearly visible</strong> above the mane</li>
-      <li><strong>Longitudinal belly fold</strong> — the skin fold unique to Asiatic lions (one line is enough)</li>
-      <li><strong>Lean, longer body; pronounced tail tuft</strong> — we like the tail ending in a leaf/bud shape as a quiet nod to the flower trade</li>
-      <li><strong>Calm, guardian bearing</strong> — dignified, watchful; never roaring, never hunting</li>
+      <li><strong>Asiatic (Gir) anatomy always:</strong> short sparse mane, ears visible, one belly-fold line, lean body, tail tuft (leaf-shaped tuft welcome)</li>
+      <li>Calm and dignified — never roaring, never hunting</li>
+      <li>Flat colour, consistent stroke logic, survives one-colour print and 24px</li>
     </ul>
     <ul class="tick cross">
-      <li>No crowns, shields, laurels or European heraldry</li>
-      <li>No jewellery-style diamonds or gems</li>
-      <li>No gold-foil textures, gradients or 3D shine — flat colour only</li>
-      <li>Must NOT resemble the Gujarat Tourism lion (orange block-print side profile)</li>
-      <li>No faux-Devanagari styling on Latin letters</li>
+      <li>No crowns, shields, laurels, heraldry</li>
+      <li>No gems, gradients, gold-foil shine, 3D</li>
+      <li>Not the Gujarat Tourism lion; run a trademark/reverse-image check before finalising</li>
     </ul>
   </div>
-  <div class="card" style="background:#FBEED3;border-color:#E0C08A;">
-    <p style="font-size:.8rem;"><strong>Also required before any final:</strong> reverse-image + trademark search (monoline lions are a crowded category), and a clear visual distance from other planners' marks.</p>
-  </div>
-  <div class="foot"><span>J.Vardhan Luxe Weddings &amp; Events</span><span>Logo Design Guide · 03</span></div>
-</div>
-
-<!-- PAGE 4 · WHAT WE'VE EXPLORED -->
-<div class="page">
-  <span class="eyebrow">03 · Everything Explored So Far</span>
-  <h2 style="font-size:1.7rem;margin:2mm 0 1mm;">Four lions, each shown on both grounds.</h2>
-  <div class="rule"></div>
-  <div class="grid2" style="margin-top:4mm;">
-    <div class="card">
-      <div class="stage"><img src="assets/lion-gold.png" alt="Walking monoline lion draft"></div>
-      <span class="badge b-old">V0 draft — superseded</span>
-      <h3>Walking Monoline Lion</h3>
-      <p>Elegant but generic (template-style pose, African mane hints); thin strokes fail at small sizes. Keep only as reference for line weight/colour.</p>
-    </div>
-    <div class="card">
-      <div class="stage"><img src="assets/lion-floral.png" alt="Floral-mane lion emblem"></div>
-      <span class="badge b-win">Current master emblem</span>
-      <h3>Floral-Mane Lion (Option A)</h3>
-      <p>The family's marigolds and mogra woven into the mane — the most OWNABLE idea we have. Currently the website hero mark. Needs a cleaner vector redraw; too detailed for tiny sizes (that's the icon's job, below).</p>
-    </div>
-    <div class="card">
-      <div class="stage"><img src="assets/lion-guardian-v1.png" alt="Seated guardian lion, flowing mane"></div>
-      <span class="badge b-old">Explored — mane too African</span>
-      <h3>Guardian, Flowing Mane (Option B)</h3>
-      <p>Right pose and solidity; wrong mane. Superseded by the short-mane version but shows the solid-shape language we like.</p>
-    </div>
-    <div class="card">
-      <div class="stage"><img src="assets/lion-guardian.png" alt="Seated guardian lion, short mane"></div>
-      <span class="badge b-win">Current small-size icon</span>
-      <h3>Guardian, Short Mane (Option C)</h3>
-      <p>Cleanest at 32px — currently the favicon, header icon and footer watermark. Needs refinement: calmer muzzle, tighter 3-shape ruff, leaf tail-tuft.</p>
-    </div>
-  </div>
-  <p class="muted" style="font-size:.78rem;margin-top:4mm;">Earlier rejected directions (from the first agency round): a champagne gate-and-stars arch on navy (elegant but generic hotel-luxury) and a pale mint "V" gem mark (read as jewellery/spa, not events).</p>
-  <div class="foot"><span>J.Vardhan Luxe Weddings &amp; Events</span><span>Logo Design Guide · 04</span></div>
-</div>
-
-<!-- PAGE 5 · THE SYSTEM WE WANT -->
-<div class="page">
-  <span class="eyebrow">04 · The Target: a Two-Tier Family</span>
-  <h2 style="font-size:1.7rem;margin:2mm 0 1mm;">One lion, four jobs.</h2>
-  <div class="rule"></div>
-  <p class="muted" style="max-width:70ch;margin-bottom:5mm;">We are not choosing one logo — we are commissioning a small family. Detailed emblem for big moments, reduced icon for small ones, same animal in both.</p>
-  <table style="margin-bottom:6mm;">
-    <tr><th>Piece</th><th>Base direction</th><th>Where it lives</th></tr>
-    <tr><td><strong>Master emblem</strong></td><td>Floral-mane lion, redrawn vector, max ~12 bold shapes</td><td>Website hero, deck covers, signage, invitations</td></tr>
-    <tr><td><strong>Small-size icon</strong></td><td>Seated short-mane guardian, ≤10 shapes, reads at 24px</td><td>Favicon, app icon, embroidery, stamps, watermark</td></tr>
-    <tr><td><strong>Roundel seal</strong></td><td>Guardian inside two plain rings, name arched around</td><td>Social avatars, wax-stamp print, packaging sticker</td></tr>
-    <tr><td><strong>Horizontal lockup</strong></td><td>Icon + thin gold rule + two-line name</td><td>Website navbar, letterhead, e-mail footer</td></tr>
-  </table>
-  <div class="grid3">
-    <div class="card"><h3>Alternate mark ideas</h3><p>Worth sketching: lion beneath a slender toran archway (we build gateways); a Girnar twin-peak horizon with a half-marigold sun (no lion) as a secondary crest.</p></div>
-    <div class="card"><h3>Style keywords</h3><p>Flat vector · single gold #CFAA6D · consistent stroke logic · hand-engraved warmth in monoline discipline · Indian miniature-painting curve rhythm · museum restraint.</p></div>
-    <div class="card"><h3>One-colour law</h3><p>Every piece must survive: one-colour gold, one-colour teal, reversed ivory-on-dusk, black-and-white photocopy, and embroidery thread.</p></div>
-  </div>
-  <div class="foot"><span>J.Vardhan Luxe Weddings &amp; Events</span><span>Logo Design Guide · 05</span></div>
-</div>
-
-<!-- PAGE 6 · DELIVERABLES & SCORECARD -->
-<div class="page">
-  <span class="eyebrow">05 · Deliverables &amp; How We'll Judge</span>
-  <h2 style="font-size:1.7rem;margin:2mm 0 1mm;">What we need back.</h2>
-  <div class="rule"></div>
-  <div class="grid2" style="margin-bottom:6mm;">
-    <div class="card">
-      <h3>Files</h3>
-      <ul class="tick">
-        <li>Vector source (AI / SVG / EPS) for every piece</li>
-        <li>Full lockup + mark-only, each in: gold, teal, ivory-reversed, single-black</li>
-        <li>Transparent PNGs @ 2048px and 512px; favicon 32px test export</li>
-        <li>Clear-space and minimum-size specification sheet</li>
-        <li>One embroidery-ready simplified version</li>
-      </ul>
-    </div>
-    <div class="card">
-      <h3>Scorecard (each candidate, 1–5)</h3>
-      <ul class="tick">
-        <li>Distinctive — could no other planner wear it?</li>
-        <li>Gir-true — anatomy + Junagadh soul</li>
-        <li>Small-size survival — honest 24px test</li>
-        <li>Both-grounds test — ivory Day and teal Dusk</li>
-        <li>Craft link — flowers / gateway / drape present?</li>
-        <li>Trademark-safe — search done, distance kept</li>
-      </ul>
-    </div>
-  </div>
-  <div class="card" style="background:#fff;">
-    <h3>See it in context</h3>
-    <p style="font-size:.82rem;">Live site (the logo's real home): <strong>mihirzalavadia.github.io/jvardhan-site</strong> · Design-system specimen: <strong>/style-preview.html</strong> · Questions → WhatsApp the family (number being finalised).</p>
-  </div>
-  <p class="muted" style="font-size:.75rem;margin-top:5mm;">Note: brand name architecture (J.Vardhan vs. legacy Mali Mukesh endorsement) is still provisional — design the marks so the wordmark could change without redrawing the lion.</p>
-  <div class="foot"><span>J.Vardhan Luxe Weddings &amp; Events</span><span>Logo Design Guide · 06</span></div>
+  <p class="muted" style="font-size:.72rem;margin-top:4mm;">Vector sources (AI/SVG) + gold, teal, reversed and single-black versions of each final. Live context: mihirzalavadia.github.io/jvardhan-site</p>
+  <div class="foot"><span>J.Vardhan — Logo Reference</span><span>2 of 2</span></div>
 </div>
 
 </body>
