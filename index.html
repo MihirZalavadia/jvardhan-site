@@ -17,9 +17,11 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://api.fontshare.com/v2/css?f[]=boska@400,401,500,501,700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=Inter:wght@400;500;600&family=Pinyon+Script&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="design-system.css?v=6">
+  <meta name="theme-color" content="#F7F2E7">
+  <script>(function(){try{var t=localStorage.getItem('jv-theme');if(t==='dusk'||(!t&&matchMedia('(prefers-color-scheme: dark)').matches)){document.documentElement.setAttribute('data-theme','dusk');var m=document.querySelector('meta[name="theme-color"]');if(m){m.setAttribute('content','#06403C');}}}catch(e){}})();</script>
+  <link rel="stylesheet" href="design-system.css?v=7">
   <link rel="preload" as="image" href="assets/real/real-wedding-photo-08.jpg">
-  <script src="ds.js?v=6" defer></script>
+  <script src="ds.js?v=7" defer></script>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -48,7 +50,13 @@
     .step p { font-size: .86rem; color: var(--muted); }
     .std-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 1rem; }
     .std-card { border: 1px solid rgba(207,170,109,.3); border-radius: var(--radius); padding: 1.5rem 1.3rem; background: rgba(255,255,255,.04); }
-    .std-card::before { content: ""; display: block; width: 26px; height: 2px; background: #CFAA6D; margin-bottom: 1rem; }
+    .std-card::before { content: ""; display: block; width: 26px; height: 2px; background: #CDAF78; margin-bottom: 1rem; }
+    .path-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.4rem; }
+    .path-card { display: block; text-decoration: none; color: inherit; }
+    .path-card .arch-img { aspect-ratio: 4 / 3; }
+    .path-card h3 { font-size: 1.35rem; margin: 1.1rem 0 .4rem; }
+    .path-card p { font-size: .9rem; color: var(--muted); margin-bottom: 1.1rem; }
+    .path-card .eyebrow { display: block; margin-top: 1.2rem; }
     .std-card h3 { font-size: 1.05rem; margin-bottom: .4rem; }
     .std-card p { font-size: .85rem; }
     .case .frame-img { aspect-ratio: 16 / 11; }
@@ -102,8 +110,47 @@
 
 <div class="venue-strip reveal">
   <span class="eyebrow">Venues We Produce At</span>
-  <p>Partner venues announced soon — introductions underway across Saurashtra and Gujarat.</p>
+  <div class="marquee" aria-label="Partner venues — announcements pending">
+    <div class="marquee-track">
+      <span class="m-tile">Partner venues <em>announced soon</em></span>
+      <span class="m-tile">Introductions underway · <em>Saurashtra</em></span>
+      <span class="m-tile">Resorts · Hotels · Party Plots · Farmhouses</span>
+      <span class="m-tile">Introductions underway · <em>Gujarat</em></span>
+      <span class="m-tile">Your property, <em>celebration-ready</em></span>
+      <span class="m-tile" aria-hidden="true">Partner venues <em>announced soon</em></span>
+      <span class="m-tile" aria-hidden="true">Introductions underway · <em>Saurashtra</em></span>
+      <span class="m-tile" aria-hidden="true">Resorts · Hotels · Party Plots · Farmhouses</span>
+      <span class="m-tile" aria-hidden="true">Introductions underway · <em>Gujarat</em></span>
+      <span class="m-tile" aria-hidden="true">Your property, <em>celebration-ready</em></span>
+    </div>
+  </div>
 </div>
+
+<section id="paths">
+  <div class="shell">
+    <div class="lockup reveal">
+      <span class="eyebrow">Two Doors, One House</span>
+      <h2 class="display-2">Families plan a wedding. Venues gain a <em>partner.</em></h2>
+      <div class="gold-rule"></div>
+    </div>
+    <div class="path-grid" style="margin-top:2rem;">
+      <a class="path-card reveal" href="weddings.html">
+        <div class="arch-img img-hover cr"><img src="assets/real/real-mandap-05.jpg" alt="Palace-lawn mandap with candle-lined mirror aisle at dusk, built by J.Vardhan" loading="lazy"></div>
+        <span class="eyebrow">For Families</span>
+        <h3>Your functions, one thread — haldi to reception.</h3>
+        <p>One design language carried across every function, delivered by the family's own hands and crews.</p>
+        <span class="btn btn-gold">Request a Consultation</span>
+      </a>
+      <a class="path-card reveal" href="venues.html">
+        <div class="arch-img img-hover cr"><img src="assets/real/real-sangeet-night-decore-04.jpg" alt="Golden arched night stage with fairy-light curtains, built by J.Vardhan" loading="lazy"></div>
+        <span class="eyebrow">For Venues</span>
+        <h3>A disciplined production partner for your property.</h3>
+        <p>Fixed windows, non-invasive builds, one named supervisor on site — working rules you can hold us to.</p>
+        <span class="btn btn-ghost">Book a Venue Walkthrough</span>
+      </a>
+    </div>
+  </div>
+</section>
 
 <section id="house">
   <div class="shell">
@@ -174,7 +221,7 @@
       <span class="eyebrow">Selected Work</span>
       <h2 class="display-2">Moments from the craft.</h2>
       <div class="gold-rule"></div>
-      <p>Licensed reference photography stands in while our verified event photography is prepared. <a href="portfolio.html" class="nav-link" style="font-size:.66rem;">View the full portfolio</a></p>
+      <p>Photography and film from our own events — haldi mornings to sangeet nights. <a href="portfolio.html" class="nav-link" style="font-size:.66rem;">View the full portfolio</a></p>
     </div>
     <div class="mosaic reveal" style="margin-top:2rem;">
       <div class="mt m-w2 m-t2"><img src="assets/real/real-wedding-photo-08.jpg" alt="Grand entrance gateway built by J.Vardhan" loading="lazy"><span class="cap">Wedding · the grand gateway</span></div>
@@ -182,7 +229,7 @@
       <div class="mt"><img src="assets/real/real-sangeet-night-decore-07.jpg" alt="Silver sangeet corridor" loading="lazy"><span class="cap">Sangeet · the silver walk</span></div>
       <div class="mt m-t2"><img src="assets/real/real-stage-decore-02.jpg" alt="Evening lounge with mirror-ball backdrop" loading="lazy"><span class="cap">Stage · evening lounge</span></div>
       <div class="mt"><img src="assets/real/real-haldi-18.jpg" alt="Haldi ceremony moment" loading="lazy"><span class="cap">Haldi · the morning</span></div>
-      <div class="mt"><img src="assets/real/real-sangeet-night-decore-12.jpg" alt="Sangeet night decor" loading="lazy"><span class="cap">Sangeet · night decor</span></div>
+      <div class="mt"><img src="assets/real/real-sangeet-night-decore-09.jpg" alt="Tiered candle wall glowing behind a cream sofa" loading="lazy"><span class="cap">Sangeet · by candlelight</span></div>
     </div>
     <div class="reveal" style="margin-top:1.6rem;">
       <a class="btn btn-gold" href="portfolio.html">Open the Full Portfolio</a>
@@ -197,6 +244,11 @@
       <h2 class="display-2">Fifty services. Seven disciplines. One house.</h2>
       <div class="gold-rule"></div>
       <p>From venue selection to the last send-off — the full master checklist, carried end to end.</p>
+    </div>
+    <div class="count-row reveal">
+      <div><span class="num"><span data-count="50">0</span></span><span class="lbl">Services</span></div>
+      <div><span class="num"><span data-count="7">0</span></span><span class="lbl">Disciplines</span></div>
+      <div><span class="num"><em>One</em></span><span class="lbl">House</span></div>
     </div>
     <div class="cat-grid" style="margin-top:2rem;">
       <div class="card reveal"><h3>Venue, Stay &amp; F&amp;B</h3><p>Venue &amp; hotel bookings · menu tasting · catering coordination · wedding-night room décor</p></div>
@@ -266,7 +318,7 @@
     </div>
   </div>
   <p class="foot-tag">Promised. Planned. Delivered.</p>
-  <p class="foot-note">&copy; 2026 J.Vardhan — Luxe Weddings &amp; Events · Gujarat, India · Draft site: copy pending claim verification; contact numbers are placeholders · Photography &amp; film: our own events, with supplementary licensed imagery (<a href="assets/photos/photos-credits.md">credits</a>).</p>
+  <p class="foot-note">&copy; 2026 J.Vardhan — Luxe Weddings &amp; Events · Gujarat, India · Draft site: copy pending claim verification; contact numbers are placeholders · Photography &amp; film: our own events.</p>
 </footer>
 
 <a class="float-wa" href="https://wa.me/910000000000" rel="noopener" aria-label="Chat on WhatsApp">WhatsApp</a>

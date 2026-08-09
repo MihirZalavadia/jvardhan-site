@@ -13,6 +13,10 @@
     var day = document.getElementById('btnDay'), dusk = document.getElementById('btnDusk');
     if (day) { day.setAttribute('aria-pressed', String(t !== 'dusk')); }
     if (dusk) { dusk.setAttribute('aria-pressed', String(t === 'dusk')); }
+    /* Android address bar follows the theme */
+    var tc = document.querySelector('meta[name="theme-color"]');
+    if (!tc) { tc = document.createElement('meta'); tc.setAttribute('name', 'theme-color'); document.head.appendChild(tc); }
+    tc.setAttribute('content', t === 'dusk' ? '#06403C' : '#F7F2E7');
     try { localStorage.setItem('jv-theme', t); } catch (e) {}
   }
   window.jvSetTheme = setTheme;
@@ -20,6 +24,7 @@
   try { saved = localStorage.getItem('jv-theme'); } catch (e) {}
   if (saved) { setTheme(saved); }
   else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) { setTheme('dusk'); }
+  else { setTheme('day'); }
   document.addEventListener('DOMContentLoaded', function () {
     var day = document.getElementById('btnDay'), dusk = document.getElementById('btnDusk');
     if (day) { day.addEventListener('click', function () { setTheme('day'); }); }
@@ -39,6 +44,69 @@
           requestAnimationFrame(function () { requestAnimationFrame(function () { s.style.strokeDashoffset = 0; }); });
         } catch (e) {}
       });
+    }
+
+    /* Header Veil — nav transparent over a full-bleed hero, frosts on scroll */
+    var veilNav = document.querySelector('.site-nav');
+    if (veilNav && document.querySelector('.hero-full')) {
+      document.body.classList.add('has-hero');
+      var navVeil = function () { veilNav.classList.toggle('clear', window.scrollY < 60 && !veilNav.classList.contains('open')); };
+      navVeil();
+      window.addEventListener('scroll', navVeil, { passive: true });
+      veilNav.addEventListener('click', function () { setTimeout(navVeil, 30); });
+    }
+
+    /* Heirloom Count — numbers count up once, on scroll into view */
+    var counters = document.querySelectorAll('[data-count]');
+    if (counters.length) {
+      var runCount = function (el) {
+        var target = parseInt(el.getAttribute('data-count'), 10) || 0;
+        if (reduce) { el.textContent = target; return; }
+        var t0 = null;
+        var step = function (ts) {
+          if (!t0) { t0 = ts; }
+          var p = Math.min((ts - t0) / 1200, 1);
+          el.textContent = Math.round(target * (1 - Math.pow(1 - p, 3)));
+          if (p < 1) { requestAnimationFrame(step); }
+        };
+        requestAnimationFrame(step);
+      };
+      if (reduce || !('IntersectionObserver' in window)) {
+        counters.forEach(function (el) { el.textContent = el.getAttribute('data-count'); });
+      } else {
+        var cio = new IntersectionObserver(function (entries) {
+          entries.forEach(function (e) {
+            if (e.isIntersecting) { runCount(e.target); cio.unobserve(e.target); }
+          });
+        }, { threshold: 0.4 });
+        counters.forEach(function (el) { cio.observe(el); });
+      }
+    }
+
+    /* mobile bottom action bar — appears past the hero, hides while scrolling down */
+    if (window.matchMedia && window.matchMedia('(max-width: 767px)').matches) {
+      var bar = document.createElement('nav');
+      bar.className = 'action-bar';
+      bar.setAttribute('aria-label', 'Quick actions');
+      bar.innerHTML =
+        '<a href="tel:+910000000000"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3A19.5 19.5 0 0 1 5.1 13 19.8 19.8 0 0 1 2 4.2 2 2 0 0 1 4 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 2.8a2 2 0 0 1-.4 2.1L8 10a16 16 0 0 0 6 6l1.4-1.3a2 2 0 0 1 2.1-.4c.9.3 1.9.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>Call</a>' +
+        '<a href="https://wa.me/910000000000" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.4 8.4 0 0 1-9 8.4 8.6 8.6 0 0 1-3.8-.9L3 20l1-5a8.4 8.4 0 1 1 17-3.5z"/></svg>WhatsApp</a>' +
+        '<a href="portfolio.html"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="9" cy="9" r="2"/><path d="M21 15l-5-5L5 21"/></svg>Portfolio</a>' +
+        '<a href="contact.html"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v12H7l-3 3z"/><path d="M8 9h8"/></svg>Enquire</a>';
+      document.body.appendChild(bar);
+      var lastY = window.scrollY;
+      var barTick = function () {
+        var y = window.scrollY;
+        var pastHero = y > window.innerHeight * 0.55;
+        var goingUp = y < lastY - 2;
+        var atEnd = y + window.innerHeight >= document.documentElement.scrollHeight - 60;
+        if (!pastHero) { bar.classList.remove('show'); }
+        else if (goingUp || atEnd) { bar.classList.add('show'); }
+        else if (y > lastY + 2) { bar.classList.remove('show'); }
+        lastY = y;
+      };
+      window.addEventListener('scroll', barTick, { passive: true });
+      barTick();
     }
 
     /* hamburger menu (injected — no per-page markup needed) */
@@ -306,7 +374,7 @@
           ctx.save();
           ctx.translate(x, y);
           ctx.rotate(p.rot + Math.sin(ts / 2100 + p.phase) * 0.6);
-          ctx.fillStyle = 'rgba(207,170,109,.5)';
+          ctx.fillStyle = 'rgba(201,162,99,.5)';
           ctx.beginPath();
           ctx.ellipse(0, 0, p.r, p.r * 0.55, 0, 0, Math.PI * 2);
           ctx.fill();
