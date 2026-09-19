@@ -1,5 +1,13 @@
 # J.Vardhan Luxe Events — V0 Website
 
+## Bilingual wedding checklist (September 2026)
+
+`checklist.html` provides Gujarati / English switching, 181 grouped choices, optional page 1–2 hospitality and dining, quantities, responsibilities, planning status, browser drafts, JSON import/export, shared text briefs and printing to PDF. It begins at Mandap Ropan. Entry links are on the home, weddings and contact pages.
+
+This is a static worksheet: no responses are submitted to a server or Google Sheet. Clients share or download their brief. Gujarati and English editable meeting decks are in `assets/decks/JVARDHAN-Wedding-Checklist-{Gujarati,English}.pptx`. The selected language determines the deck link. `?lang=gu` and `?lang=en` select the initial form language.
+
+Content and generation instructions: `../outputs/checklist/README.md`; source review: `../outputs/checklist/SOURCE-REVIEW.md`. No existing phone placeholders are used by the checklist. Publishing the updated `site` repository makes this page available on GitHub Pages.
+
 Day/Dusk two-theme site for J.Vardhan Luxe Events (Gujarat, India). Static HTML/CSS/JS — no build step, hosted on GitHub Pages.
 
 ## Structure

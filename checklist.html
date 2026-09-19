@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="gu">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Wedding Checklist · Gujarati & English | J.Vardhan</title>
+  <meta name="description" content="Plan your wedding together with a Gujarati and English checklist. Choose each function, record arrangements and create a client brief.">
+  <meta name="theme-color" content="#06403C">
+  <link rel="canonical" href="https://mihirzalavadia.github.io/jvardhan-site/checklist.html">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Your wedding, thoughtfully planned | J.Vardhan">
+  <meta property="og:description" content="A Gujarati and English wedding checklist for families. From Mandap Ropan to the final farewell.">
+  <meta property="og:url" content="https://mihirzalavadia.github.io/jvardhan-site/checklist.html">
+  <meta property="og:image" content="https://mihirzalavadia.github.io/jvardhan-site/assets/real/real-mandap-01.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="assets/lion-guardian.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=Inter:wght@400;500;600&family=Mukta+Vaani:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://api.fontshare.com/v2/css?f[]=boska@400,401,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="checklist.css?v=1">
+  <script src="checklist-data.js?v=1" defer></script>
+  <script src="checklist.js?v=1" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#workspace">ફોર્મ પર જાઓ / Skip to form</a>
+  <header class="topbar">
+    <a href="index.html" class="brand" aria-label="J.Vardhan home"><img src="assets/lion-guardian.png" alt="" width="40" height="48"><span>J.VARDHAN<small>LUXE WEDDINGS &amp; EVENTS</small></span></a>
+    <div class="top-actions"><a href="weddings.html" class="back-site" data-t="backSite">વેબસાઇટ પર પાછા</a><div class="language" role="group" aria-label="Language / ભાષા"><button type="button" data-lang="gu" lang="gu" aria-pressed="true">ગુજરાતી</button><button type="button" data-lang="en" lang="en" aria-pressed="false">English</button></div></div>
+  </header>
+  <main>
+    <section class="hero">
+      <div class="hero-copy"><p class="eyebrow" data-t="eyebrow">તમારા પ્રસંગનું આયોજન</p><h1 data-t="headline">તમારાં લગ્ન. દરેક વિગત, સાથે મળીને.</h1><p data-t="heroText">મંડપ રોપણથી વિદાય સુધી — તમારી પસંદગી, તમારી પરંપરા અને તમારી રીતે ઉજવણી.</p><div class="hero-foot"><span class="gold-line"></span><span data-t="heroFoot">પસંદ કરો · સાથે નક્કી કરો · યાદગાર બનાવો</span></div></div>
+      <div class="hero-photo"><img src="assets/real/real-mandap-01.jpg" alt="Floral wedding mandap / ફૂલોથી સજાવેલો લગ્નમંડપ" width="700" height="500"><span data-t="photoCaption">શુભ શરૂઆતથી સુંદર યાદો સુધી</span></div>
+    </section>
+    <div class="planner-layout">
+      <aside class="sidebar" aria-label="Planning sections / આયોજનના વિભાગો">
+        <div class="sidebar-heading"><span class="eyebrow" data-t="yourCelebration">તમારી ઉજવણી</span><span id="total-counter" class="count-pill">0</span></div>
+        <nav id="section-nav" aria-label="Functions / પ્રસંગો"></nav>
+        <button type="button" id="review-nav" class="review-nav" data-t="review">પસંદગીની સમીક્ષા</button>
+        <div class="save-note"><span class="save-dot" aria-hidden="true"></span><span id="save-status" role="status"></span><p data-t="localNotice">આ ડ્રાફ્ટ આ બ્રાઉઝરમાં રહે છે. આયોજકને મોકલવા માટે સારાંશ ડાઉનલોડ અથવા શેર કરો.</p></div>
+        <details class="draft-tools"><summary data-t="draftTools">ડ્રાફ્ટ અને પ્રેઝન્ટેશન</summary><button type="button" data-action="export" data-t="saveDraft">ફરી ખોલી શકાય એવો ડ્રાફ્ટ ડાઉનલોડ કરો</button><button type="button" data-action="import" data-t="openDraft">સાચવેલો ડ્રાફ્ટ ખોલો</button><input id="import-file" type="file" accept="application/json,.json" hidden><a id="deck-download" href="assets/decks/JVARDHAN-Wedding-Checklist-Gujarati.pptx" download data-t="deck">પ્રેઝન્ટેશન ડાઉનલોડ કરો</a><button type="button" data-action="reset" class="reset" data-t="newClient">નવા ક્લાયન્ટ માટે શરૂ કરો</button></details>
+      </aside>
+      <div class="workspace" id="workspace" tabindex="-1">
+        <details class="client-details" id="client-details"><summary><span data-t="clientDetails">પરિવાર અને પ્રસંગની વિગતો</span><small data-t="optional">વૈકલ્પિક</small></summary><div id="client-fields" class="field-grid"></div></details>
+        <div id="step-content"></div>
+      </div>
+    </div>
+  </main>
+  <footer class="footer"><span>J.VARDHAN <span class="footer-divider">/</span> <span data-t="footer">સાથે મળીને, સુંદર આયોજન.</span></span><a href="portfolio.html" data-t="portfolio">અમારું કામ જુઓ</a></footer>
+  <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+  <div id="print-content"></div>
+  <noscript><div class="noscript">આ ફોર્મ માટે JavaScript ચાલુ કરો. / Please enable JavaScript to use the checklist.</div></noscript>
+</body>
+</html>
