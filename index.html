@@ -1,333 +1,604 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>J.Vardhan — Luxe Weddings &amp; Events | Wedding Production, Gujarat</title>
-  <meta name="description" content="A family house of flowers, mandaps, lighting and end-to-end wedding production across Gujarat — and a disciplined partner for the venues that host them.">
-  <link rel="canonical" href="https://mihirzalavadia.github.io/jvardhan-site/">
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="J.Vardhan — Luxe Weddings &amp; Events">
-  <meta property="og:description" content="Celebrations built like heirlooms. Flowers, mandaps, lighting and planning — one family, one house. Gujarat, India.">
-  <meta property="og:image" content="https://mihirzalavadia.github.io/jvardhan-site/assets/real/real-wedding-photo-08.jpg">
-  <meta property="og:url" content="https://mihirzalavadia.github.io/jvardhan-site/">
-  <meta name="twitter:card" content="summary_large_image">
-  <link rel="icon" type="image/png" href="assets/lion-guardian.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://api.fontshare.com/v2/css?f[]=boska@400,401,500,501,700&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=Inter:wght@400;500;600&family=Pinyon+Script&display=swap" rel="stylesheet">
-  <meta name="theme-color" content="#F7F2E7">
-  <script>(function(){try{var t=localStorage.getItem('jv-theme');if(t==='dusk'||(!t&&matchMedia('(prefers-color-scheme: dark)').matches)){document.documentElement.setAttribute('data-theme','dusk');var m=document.querySelector('meta[name="theme-color"]');if(m){m.setAttribute('content','#06403C');}}}catch(e){}})();</script>
-  <link rel="stylesheet" href="design-system.css?v=7">
-  <link rel="preload" as="image" href="assets/real/real-wedding-photo-08.jpg">
-  <script src="ds.js?v=7" defer></script>
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "name": "J.Vardhan - Luxe Weddings & Events",
-    "description": "Wedding and event production house: floral design, mandaps, lighting and end-to-end planning across Gujarat, India.",
-    "url": "https://mihirzalavadia.github.io/jvardhan-site/",
-    "image": "https://mihirzalavadia.github.io/jvardhan-site/assets/lion-floral.png",
-    "areaServed": "Gujarat, India",
-    "slogan": "Promised. Planned. Delivered."
-  }
-  </script>
-  <style>
-    .hero-home { position: relative; text-align: center; overflow: hidden; padding: clamp(3.2rem, 8vw, 5.6rem) 1.5rem clamp(2.6rem, 6vw, 4rem); }
-    .hero-home .lion-emblem { width: clamp(130px, 16vw, 175px); margin-inline: auto; }
-    .hero-home h1 { max-width: 17ch; margin: 1rem auto 0; }
-    .hero-strip { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.1rem; max-width: 1080px; margin: 0 auto; padding: 0 clamp(1.2rem, 6vw, 4rem) 1rem; }
-    .hero-strip .arch-img { aspect-ratio: 3 / 4; }
-    .venue-strip { border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); padding: 1.3rem clamp(1.2rem, 6vw, 4rem); text-align: center; }
-    .venue-strip p { font-size: .85rem; color: var(--muted); margin-top: .2rem; }
-    .pillars, .cat-grid, .case-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.1rem; }
-    .method { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; counter-reset: step; }
-    .step { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 1.6rem 1.4rem; counter-increment: step; }
-    .step::before { content: "0" counter(step); font-family: var(--font-display); font-size: 2rem; color: var(--accent); display: block; margin-bottom: .6rem; font-variant-numeric: tabular-nums; }
-    .step h3 { font-family: var(--font-label); font-stretch: 115%; font-weight: 800; font-size: .82rem; letter-spacing: .2em; text-transform: uppercase; margin-bottom: .45rem; }
-    .step p { font-size: .86rem; color: var(--muted); }
-    .std-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 1rem; }
-    .std-card { border: 1px solid rgba(207,170,109,.3); border-radius: var(--radius); padding: 1.5rem 1.3rem; background: rgba(255,255,255,.04); }
-    .std-card::before { content: ""; display: block; width: 26px; height: 2px; background: #CDAF78; margin-bottom: 1rem; }
-    .path-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.4rem; }
-    .path-card { display: block; text-decoration: none; color: inherit; }
-    .path-card .arch-img { aspect-ratio: 4 / 3; }
-    .path-card h3 { font-size: 1.35rem; margin: 1.1rem 0 .4rem; }
-    .path-card p { font-size: .9rem; color: var(--muted); margin-bottom: 1.1rem; }
-    .path-card .eyebrow { display: block; margin-top: 1.2rem; }
-    .std-card h3 { font-size: 1.05rem; margin-bottom: .4rem; }
-    .std-card p { font-size: .85rem; }
-    .case .frame-img { aspect-ratio: 16 / 11; }
-    .case figcaption { padding: 1rem 1.2rem 1.2rem; background: var(--surface); border: 1px solid var(--line); border-top: 0; border-radius: 0 0 var(--radius) var(--radius); }
-    .case figcaption strong { display: block; font-family: var(--font-display); font-weight: 500; color: var(--heading); font-size: 1.08rem; margin: .15rem 0 .2rem; }
-    .case .frame-img { border-radius: var(--radius) var(--radius) 0 0; }
-    .deck-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.1rem; }
-    .deck-card { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 1.6rem; }
-    .deck-card h3 { font-size: 1.1rem; margin: .5rem 0 .6rem; }
-    .deck-card p { font-size: .88rem; color: var(--muted); margin-bottom: 1.1rem; }
-    .deck-actions { display: flex; gap: .7rem; flex-wrap: wrap; margin-bottom: 1.1rem; }
-    .embed-slot iframe { width: 100%; aspect-ratio: 16 / 9; border: 0; border-radius: var(--radius); display: block; }
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>J.Vardhan | Wedding Planning &amp; Décor in Gujarat</title>
+<meta name="description" content="Wedding design, florals and planning in Gujarat. Explore real event décor, Gujarati wedding functions and our bilingual planning checklist.">
+<meta name="theme-color" content="#F7F2E7">
+<link rel="canonical" href="https://mihirzalavadia.github.io/jvardhan-site/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="J.Vardhan | Wedding Planning &amp; Décor in Gujarat">
+<meta property="og:description" content="Wedding design, florals and planning in Gujarat. Explore real event décor, Gujarati wedding functions and our bilingual planning checklist.">
+<meta property="og:url" content="https://mihirzalavadia.github.io/jvardhan-site/">
+<meta property="og:image" content="https://mihirzalavadia.github.io/jvardhan-site/assets/real/real-mandap-01.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="assets/lion-guardian.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://api.fontshare.com/v2/css?f[]=boska@400,401,500,501,700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&family=Inter:wght@400;500;600&family=Mukta+Vaani:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="design-system.css?v=8">
+<link rel="stylesheet" href="experience.css?v=1">
+<script src="site-config.js?v=1" defer>
+</script>
+<script src="ds.js?v=8" defer>
+</script>
+<link rel="preload" as="image" href="assets/real/real-mandap-01.jpg">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "J.Vardhan Luxe Weddings & Events", "url": "https://mihirzalavadia.github.io/jvardhan-site/", "logo": "https://mihirzalavadia.github.io/jvardhan-site/assets/lion-guardian.png"}</script>
 </head>
-<body>
-<div id="loader" aria-hidden="true">
-  <div class="loader-inner">
-    <svg viewBox="0 0 400 320" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="width:180px;height:auto;"><path d="M60 290 V120"/><path d="M74 290 V130"/><path d="M340 290 V120"/><path d="M326 290 V130"/><path d="M60 118 Q200 22 340 118"/><path d="M74 130 Q200 44 326 130"/><path d="M182 38 Q200 14 218 38"/><path d="M193 12 Q200 2 207 12"/><path d="M160 88 V142"/><circle cx="160" cy="149" r="4"/><path d="M200 82 V150"/><circle cx="200" cy="157" r="4"/><path d="M240 88 V142"/><circle cx="240" cy="149" r="4"/><path d="M40 292 H360"/><path d="M52 302 H348"/></svg>
-    <div class="wordmark">J.VARDHAN<small>LUXE WEDDINGS &amp; EVENTS</small></div>
-    <div class="loader-bar"></div>
-  </div>
-</div>
-
-<nav class="site-nav">
-  <a class="brand" href="index.html" aria-label="J.Vardhan home"><span class="lion-icon"></span><span class="wordmark">J.VARDHAN<small>LUXE WEDDINGS &amp; EVENTS</small></span></a>
-  <div class="nav-links">
-    <a class="nav-link active" href="index.html">Home</a>
-    <a class="nav-link" href="weddings.html">Weddings</a>
-    <a class="nav-link" href="venues.html">Venues</a>
-    <a class="nav-link" href="portfolio.html">Portfolio</a>
-    <a class="nav-link" href="story.html">Story</a>
-    <a class="nav-link" href="contact.html">Contact</a>
-    <div class="toggle" role="group" aria-label="Theme"><button type="button" id="btnDay" aria-pressed="true">Day</button><button type="button" id="btnDusk" aria-pressed="false">Dusk</button></div>
-  </div>
+<body class="experience">
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="main-nav">
+<a class="brand-lockup" href="index.html" aria-label="J.Vardhan home">
+<img src="assets/lion-guardian.png" width="36" height="44" alt="">
+<span>J.VARDHAN<small>LUXE WEDDINGS &amp; EVENTS</small>
+</span>
+</a>
+<nav id="main-menu" class="main-menu" aria-label="Main navigation">
+<a href="index.html" aria-current="page">Home</a>
+<a href="weddings.html">Weddings</a>
+<a href="portfolio.html">Portfolio</a>
+<a href="story.html">Our story</a>
+<a href="venues.html">For venues</a>
+<a class="menu-enquire" href="contact.html">Let’s plan <span aria-hidden="true">↗</span>
+</a>
 </nav>
-
-<header class="hero-full">
-  <img class="bg" src="assets/real/real-wedding-photo-08.jpg" alt="Grand entrance gateway with elephant statues and drapes, built by J.Vardhan">
-  <div class="scrim" aria-hidden="true"></div>
-  <div class="hf-content">
-    <img class="rise" src="assets/lion-floral.png" alt="J.Vardhan lion emblem" style="width:clamp(76px,8vw,108px);">
-    <p class="script-accent rise d1" style="margin:.6rem 0 .2rem;">with love, from Gujarat</p>
-    <h1 class="rise d2">Celebrations built like <em>heirlooms.</em></h1>
-    <p class="rise d3" style="margin:1rem 0 1.7rem;">Flowers, mandaps, lighting and planning — one family, one house. This gateway is our work; so is everything below.</p>
-    <div class="rise d4" style="display:flex;gap:.9rem;flex-wrap:wrap;">
-      <a class="btn btn-gold" href="portfolio.html">See Our Work</a>
-      <a class="btn btn-ghost" href="venues.html" style="color:#fff;border-color:rgba(255,255,255,.45);">Partner Your Venue</a>
-    </div>
-  </div>
-</header>
-
-<section style="padding-block:2rem;">
-  <div class="shell" style="display:flex;align-items:center;justify-content:space-between;gap:1.5rem;flex-wrap:wrap;">
-    <div><span class="eyebrow">Plan your celebration</span><h2 class="display-2" style="margin:.5rem 0;">Every detail, together.</h2><p>Our wedding checklist, in Gujarati and English. Choose your functions and create a brief for your family.</p></div>
-    <a class="btn btn-gold" href="checklist.html">Open the Wedding Checklist</a>
-  </div>
-</section>
-
-<div class="venue-strip reveal">
-  <span class="eyebrow">Venues We Produce At</span>
-  <div class="marquee" aria-label="Partner venues — announcements pending">
-    <div class="marquee-track">
-      <span class="m-tile">Partner venues <em>announced soon</em></span>
-      <span class="m-tile">Introductions underway · <em>Saurashtra</em></span>
-      <span class="m-tile">Resorts · Hotels · Party Plots · Farmhouses</span>
-      <span class="m-tile">Introductions underway · <em>Gujarat</em></span>
-      <span class="m-tile">Your property, <em>celebration-ready</em></span>
-      <span class="m-tile" aria-hidden="true">Partner venues <em>announced soon</em></span>
-      <span class="m-tile" aria-hidden="true">Introductions underway · <em>Saurashtra</em></span>
-      <span class="m-tile" aria-hidden="true">Resorts · Hotels · Party Plots · Farmhouses</span>
-      <span class="m-tile" aria-hidden="true">Introductions underway · <em>Gujarat</em></span>
-      <span class="m-tile" aria-hidden="true">Your property, <em>celebration-ready</em></span>
-    </div>
-  </div>
+<div class="nav-tools">
+<div class="theme-switch" role="group" aria-label="Colour theme">
+<button type="button" data-theme="day" aria-pressed="true" aria-label="Day theme">Day</button>
+<button type="button" data-theme="dusk" aria-pressed="false" aria-label="Dusk theme">Dusk</button>
 </div>
-
-<section id="paths">
-  <div class="shell">
-    <div class="lockup reveal">
-      <span class="eyebrow">Two Doors, One House</span>
-      <h2 class="display-2">Families plan a wedding. Venues gain a <em>partner.</em></h2>
-      <div class="gold-rule"></div>
-    </div>
-    <div class="path-grid" style="margin-top:2rem;">
-      <a class="path-card reveal" href="weddings.html">
-        <div class="arch-img img-hover cr"><img src="assets/real/real-mandap-05.jpg" alt="Palace-lawn mandap with candle-lined mirror aisle at dusk, built by J.Vardhan" loading="lazy"></div>
-        <span class="eyebrow">For Families</span>
-        <h3>Your functions, one thread — haldi to reception.</h3>
-        <p>One design language carried across every function, delivered by the family's own hands and crews.</p>
-        <span class="btn btn-gold">Request a Consultation</span>
-      </a>
-      <a class="path-card reveal" href="venues.html">
-        <div class="arch-img img-hover cr"><img src="assets/real/real-sangeet-night-decore-04.jpg" alt="Golden arched night stage with fairy-light curtains, built by J.Vardhan" loading="lazy"></div>
-        <span class="eyebrow">For Venues</span>
-        <h3>A disciplined production partner for your property.</h3>
-        <p>Fixed windows, non-invasive builds, one named supervisor on site — working rules you can hold us to.</p>
-        <span class="btn btn-ghost">Book a Venue Walkthrough</span>
-      </a>
-    </div>
-  </div>
+<button class="menu-toggle" type="button" aria-controls="main-menu" aria-expanded="false" aria-label="Open menu">
+<span>
+</span>
+<span>
+</span>
+</button>
+</div>
+<div class="reading-progress" aria-hidden="true">
+</div>
+</header>
+<div class="menu-scrim" hidden>
+</div>
+<main id="main" tabindex="-1">
+<section class="editorial-hero is-dark">
+<div class="hero-grain" aria-hidden="true">
+</div>
+<div class="wrap hero-grid">
+<div class="hero-story">
+<span class="eyebrow hero-enter">Weddings, thoughtfully brought together</span>
+<h1 class="hero-enter">Rooted in tradition.<br>Made for <em>your story.</em>
+</h1>
+<p class="hero-enter">The flowers. The family. The feeling of it all.<br> Wedding design and planning, from the first ritual to the last goodbye.</p>
+<div class="button-row hero-enter">
+<a class="button primary" href="checklist.html">Plan your wedding<span aria-hidden="true">↗</span>
+</a>
+<a class="button light" href="portfolio.html">Explore the work<span aria-hidden="true">↗</span>
+</a>
+</div>
+<div class="hero-signoff hero-enter">
+<span class="fine-rule">
+</span>
+<span>With love, from Gujarat.</span>
+</div>
+</div>
+<div class="hero-art">
+<div class="hero-arch">
+<img src="assets/real/real-mandap-01.jpg" alt="Ivory floral mandap with carved jaali and cascading jasmine" class="hero-scene-image" width="1200" height="900" fetchpriority="high" loading="eager" decoding="async">
+</div>
+<div class="hero-image-note">
+<span id="hero-scene-number">01 / 03</span>
+<span id="hero-scene-caption">Jasmine, jaali &amp; a beautiful beginning</span>
+</div>
+<div class="hero-scene-controls" role="group" aria-label="Explore decoration styles" hidden>
+<button type="button" data-scene="0" data-src="assets/real/real-mandap-01.jpg" data-alt="Ivory floral mandap with carved jaali and cascading jasmine" data-caption="Jasmine, jaali & a beautiful beginning" aria-pressed="true">The rituals</button>
+<button type="button" data-scene="1" data-src="assets/real/real-haldi-10.jpg" data-alt="Marigold haldi setting with a floral backdrop" data-caption="Marigold mornings & family moments" aria-pressed="false">The colour</button>
+<button type="button" data-scene="2" data-src="assets/real/real-sangeet-night-decore-09.jpg" data-alt="Tiered candle wall and cream lounge seating" data-caption="Candlelight & the evening ahead" aria-pressed="false">The evening</button>
+</div>
+</div>
+</div>
+<a class="hero-scroll" href="#celebration">Explore your celebration <span aria-hidden="true">↓</span>
+</a>
 </section>
-
-<section id="house">
-  <div class="shell">
-    <div class="lockup reveal">
-      <span class="eyebrow">The House</span>
-      <h2 class="display-2">Flowers we source. Structures we own. Craft we deliver ourselves.</h2>
-      <div class="gold-rule"></div>
-    </div>
-    <div class="pillars" style="margin-top:2.2rem;">
-      <div class="card reveal"><span class="motif draw"><svg viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="2.5" style="color:var(--accent);width:44px;height:44px;"><circle cx="60" cy="60" r="10"/><circle cx="84" cy="60" r="13"/><circle cx="77" cy="77" r="13"/><circle cx="60" cy="84" r="13"/><circle cx="43" cy="77" r="13"/><circle cx="36" cy="60" r="13"/><circle cx="43" cy="43" r="13"/><circle cx="60" cy="36" r="13"/><circle cx="77" cy="43" r="13"/></svg></span><h3>Fresh Flowers, Our Hands</h3><p>Floral design and supply handled by the family — garlands, installations, mandap florals, pathway petals.</p></div>
-      <div class="card reveal"><span class="motif draw"><svg viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="color:var(--accent);width:44px;height:44px;"><path d="M20 100 V55"/><path d="M100 100 V55"/><path d="M20 55 Q22 25 60 22 Q98 25 100 55"/><path d="M40 44 l6 10 l6 -10"/><path d="M68 44 l6 10 l6 -10"/></svg></span><h3>Mandaps &amp; Gateways</h3><p>Custom mandaps, entrance gates, stages and backdrops from an owned inventory, built by our own crews.</p></div>
-      <div class="card reveal"><span class="motif draw"><svg viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" style="color:var(--accent);width:44px;height:44px;"><path d="M28 68 Q60 90 92 68"/><path d="M36 82 H84"/><path d="M60 62 C52 50 56 36 60 26 C64 36 68 50 60 62 Z"/></svg></span><h3>Lighting &amp; Planning</h3><p>Lighting, coordination and full event production — one team, one point of contact, start to finish.</p></div>
-      <div class="arch-img img-hover cr reveal"><img src="assets/real/real-stage-decore-02.jpg" alt="Evening lounge built by J.Vardhan — greenery and mirror-ball backdrop" loading="lazy" style="height:100%;min-height:260px;object-fit:cover;"></div>
-    </div>
-  </div>
+<div class="occasion-ribbon">
+<span>Mandap Ropan</span>
+<i aria-hidden="true">✧</i>
+<span>Mameru</span>
+<i aria-hidden="true">✧</i>
+<span>Pithi &amp; Mehndi</span>
+<i aria-hidden="true">✧</i>
+<span>Sangeet &amp; Garba</span>
+<i aria-hidden="true">✧</i>
+<span>Wedding &amp; Reception</span>
+</div>
+<section class="section welcome-section" id="celebration">
+<div class="wrap editorial-intro">
+<div class="section-heading reveal">
+<span class="eyebrow">Considered in every detail</span>
+<h2>Beautiful to look at.<br>Wonderful to <em>be part of.</em>
+</h2>
+</div>
+<div class="intro-note reveal">
+<p>A wedding is more than a beautiful mandap. It is the welcome your guests receive, the music before an entrance and a quiet place for grandparents to sit.</p>
+<p>We bring design and planning into the same conversation, so your celebration feels connected from one function to the next.</p>
+<a class="text-link" href="weddings.html">Find your kind of celebration ↗</a>
+</div>
+</div>
 </section>
-
-<section class="band-dusk" id="standard">
-  <div class="shell">
-    <div class="lockup reveal">
-      <span class="eyebrow">The J.Vardhan Standard</span>
-      <h2 class="display-2">What every venue can hold us to.</h2>
-      <div class="gold-rule"></div>
-      <p>Not promises made in a meeting — working rules we bring to every property, every event.</p>
-    </div>
-    <div class="std-grid" style="margin-top:2rem;">
-      <div class="std-card reveal"><h3>Venue rules first</h3><p>Your property's guidelines, safety requirements and vendor policies lead every plan we make.</p></div>
-      <div class="std-card reveal"><h3>Non-invasive build</h3><p>Setup methods that protect floors, lawns and fixtures — nothing nailed, drilled or dragged.</p></div>
-      <div class="std-card reveal"><h3>Agreed windows</h3><p>Setup and dismantle timings fixed in writing — your next booking stays safe.</p></div>
-      <div class="std-card reveal"><h3>A named supervisor</h3><p>One accountable person on-site, known to your team by name, reachable through the event.</p></div>
-      <div class="std-card reveal"><h3>Clean handover</h3><p>The space returns to you complete, clean and inspection-ready after every function.</p></div>
-    </div>
-  </div>
+<section class="section ceremony-section">
+<div class="wrap">
+<div class="section-heading reveal">
+<span class="eyebrow">Every function has a feeling</span>
+<h2>Many moments.<br>One <em>beautiful story.</em>
+</h2>
+<p>Explore the celebrations you have in mind. Family traditions vary, and every part of the plan can be adapted.</p>
+</div>
+<div class="ceremony-explorer">
+<div class="ceremony-tabs" role="tablist" aria-label="Explore wedding functions" hidden>
+<button type="button" role="tab" id="tab-mandap" aria-controls="panel-mandap" aria-selected="true" tabindex="0">
+<span>01</span> Mandap Ropan</button>
+<button type="button" role="tab" id="tab-mameru" aria-controls="panel-mameru" aria-selected="false" tabindex="-1">
+<span>02</span> Mameru</button>
+<button type="button" role="tab" id="tab-haldi" aria-controls="panel-haldi" aria-selected="false" tabindex="-1">
+<span>03</span> Pithi / Haldi</button>
+<button type="button" role="tab" id="tab-mehndi" aria-controls="panel-mehndi" aria-selected="false" tabindex="-1">
+<span>04</span> Mehndi</button>
+<button type="button" role="tab" id="tab-sangeet" aria-controls="panel-sangeet" aria-selected="false" tabindex="-1">
+<span>05</span> Sangeet & Garba</button>
+<button type="button" role="tab" id="tab-wedding" aria-controls="panel-wedding" aria-selected="false" tabindex="-1">
+<span>06</span> Wedding & Varmala</button>
+<button type="button" role="tab" id="tab-reception" aria-controls="panel-reception" aria-selected="false" tabindex="-1">
+<span>07</span> Reception</button>
+<button type="button" role="tab" id="tab-vidaai" aria-controls="panel-vidaai" aria-selected="false" tabindex="-1">
+<span>08</span> Vidaai</button>
+</div>
+<article class="ceremony-panel" id="panel-mandap" role="tabpanel" aria-labelledby="tab-mandap" tabindex="0">
+<div class="ceremony-image">
+<img src="assets/real/real-mandap-muhurat-10.jpg" alt="Mandap Ropan styling inspiration" class="" width="1200" height="900" loading="lazy" decoding="async">
+<span class="image-caption">Mandap Ropan · styling inspiration</span>
+</div>
+<div class="ceremony-copy">
+<span class="eyebrow">01 / Mandap Ropan</span>
+<h3>The first, auspicious beginning.</h3>
+<p>Set the tone with a welcoming mandap, familiar rituals and a place for the whole family to gather.</p>
+<ul>
+<li>Priest, muhurat and ritual materials</li>
+<li>Bajoth, family seating and floral backdrop</li>
+<li>Welcome music and refreshments</li>
+</ul>
+<a class="text-link" href="checklist.html">Plan your celebration ↗</a>
+</div>
+</article>
+<article class="ceremony-panel" id="panel-mameru" role="tabpanel" aria-labelledby="tab-mameru" tabindex="0">
+<div class="ceremony-image">
+<img src="assets/real/real-mandap-muhurat-09.jpg" alt="Mameru styling inspiration" class="" width="1200" height="900" loading="lazy" decoding="async">
+<span class="image-caption">Mameru · styling inspiration</span>
+</div>
+<div class="ceremony-copy">
+<span class="eyebrow">02 / Mameru</span>
+<h3>A celebration of family ties.</h3>
+<p>Give the family welcome and ceremonial gifts their own thoughtful setting.</p>
+<ul>
+<li>Gift-display tables and name labels</li>
+<li>Khes, welcome music and family photographs</li>
+<li>Comfortable seating and refreshments</li>
+</ul>
+<a class="text-link" href="checklist.html">Plan your celebration ↗</a>
+</div>
+</article>
+<article class="ceremony-panel" id="panel-haldi" role="tabpanel" aria-labelledby="tab-haldi" tabindex="0">
+<div class="ceremony-image">
+<img src="assets/real/real-haldi-10.jpg" alt="Pithi / Haldi styling inspiration" class="" width="1200" height="900" loading="lazy" decoding="async">
+<span class="image-caption">Pithi / Haldi · styling inspiration</span>
+</div>
+<div class="ceremony-copy">
+<span class="eyebrow">03 / Pithi / Haldi</span>
+<h3>A little sunshine. A lot of joy.</h3>
+<p>Marigold, turmeric and laughter, with room for the joyful mess that makes a haldi yours.</p>
+<ul>
+<li>Haldi seating, urli and flower petals</li>
+<li>Music, entrance ideas and family games</li>
+<li>Changing space, towels and cleanup</li>
+</ul>
+<a class="text-link" href="checklist.html">Plan your celebration ↗</a>
+</div>
+</article>
+<article class="ceremony-panel" id="panel-mehndi" role="tabpanel" aria-labelledby="tab-mehndi" tabindex="0">
+<div class="ceremony-image">
+<img src="assets/real/real-haldi-12.jpg" alt="Mehndi styling inspiration" class="" width="1200" height="900" loading="lazy" decoding="async">
+<span class="image-caption">Mehndi · styling inspiration</span>
+</div>
+<div class="ceremony-copy">
+<span class="eyebrow">04 / Mehndi</span>
+<h3>An afternoon to slow down.</h3>
+<p>Easy conversation, intricate patterns and a relaxed setting for everyone waiting their turn.</p>
+<ul>
+<li>Bridal and guest mehndi appointments</li>
+<li>Comfortable seating and task lighting</li>
+<li>Floral jewellery, music and snacks</li>
+</ul>
+<a class="text-link" href="checklist.html">Plan your celebration ↗</a>
+</div>
+</article>
+<article class="ceremony-panel" id="panel-sangeet" role="tabpanel" aria-labelledby="tab-sangeet" tabindex="0">
+<div class="ceremony-image">
+<img src="assets/real/real-sangeet-night-decore-07.jpg" alt="Sangeet &amp; Garba styling inspiration" class="" width="1200" height="900" loading="lazy" decoding="async">
+<span class="image-caption">Sangeet & Garba · styling inspiration</span>
+</div>
+<div class="ceremony-copy">
+<span class="eyebrow">05 / Sangeet & Garba</span>
+<h3>Let the evening find its rhythm.</h3>
+<p>Bring the performances, family dances and garba together in one carefully timed evening.</p>
+<ul>
+<li>Stage, sound, lighting and dance floor</li>
+<li>Choreography, rehearsals and running order</li>
+<li>Emcee, couple’s entry and refreshments</li>
+</ul>
+<a class="text-link" href="checklist.html">Plan your celebration ↗</a>
+</div>
+</article>
+<article class="ceremony-panel" id="panel-wedding" role="tabpanel" aria-labelledby="tab-wedding" tabindex="0">
+<div class="ceremony-image">
+<img src="assets/real/real-mandap-01.jpg" alt="Wedding &amp; Varmala styling inspiration" class="" width="1200" height="900" loading="lazy" decoding="async">
+<span class="image-caption">Wedding & Varmala · styling inspiration</span>
+</div>
+<div class="ceremony-copy">
+<span class="eyebrow">06 / Wedding & Varmala</span>
+<h3>The moment everything leads to.</h3>
+<p>A mandap that frames the ceremony beautifully, with the family’s rituals at its heart.</p>
+<ul>
+<li>Mandap, antarpat, puja and varmala</li>
+<li>Baraat welcome, bridal entry and seating</li>
+<li>Ceremony sound, guest flow and photography</li>
+</ul>
+<a class="text-link" href="checklist.html">Plan your celebration ↗</a>
+</div>
+</article>
+<article class="ceremony-panel" id="panel-reception" role="tabpanel" aria-labelledby="tab-reception" tabindex="0">
+<div class="ceremony-image">
+<img src="assets/real/real-stage-decore-02.jpg" alt="Reception styling inspiration" class="" width="1200" height="900" loading="lazy" decoding="async">
+<span class="image-caption">Reception · styling inspiration</span>
+</div>
+<div class="ceremony-copy">
+<span class="eyebrow">07 / Reception</span>
+<h3>Stay a little longer. Celebrate a little more.</h3>
+<p>A welcoming evening for introductions, photographs and the people you are happy to see.</p>
+<ul>
+<li>Couple’s stage and guest welcome</li>
+<li>Dining layout, music and photo coordination</li>
+<li>Gift desk, return gifts and departures</li>
+</ul>
+<a class="text-link" href="checklist.html">Plan your celebration ↗</a>
+</div>
+</article>
+<article class="ceremony-panel" id="panel-vidaai" role="tabpanel" aria-labelledby="tab-vidaai" tabindex="0">
+<div class="ceremony-image">
+<img src="assets/real/real-wedding-photo-25.jpg" alt="Vidaai styling inspiration" class="" width="1200" height="900" loading="lazy" decoding="async">
+<span class="image-caption">Vidaai · styling inspiration</span>
+</div>
+<div class="ceremony-copy">
+<span class="eyebrow">08 / Vidaai</span>
+<h3>A farewell full of feeling.</h3>
+<p>Make space for an unhurried goodbye, with the practical details already considered.</p>
+<ul>
+<li>Family coordination and departure timing</li>
+<li>Vehicle decoration and luggage handling</li>
+<li>Keepsakes, final photographs and handover</li>
+</ul>
+<a class="text-link" href="checklist.html">Plan your celebration ↗</a>
+</div>
+</article>
+</div>
+</div>
 </section>
-
-<section id="method">
-  <div class="shell">
-    <div class="lockup reveal">
-      <span class="eyebrow">How We Work</span>
-      <h2 class="display-2">Walk. Design. Build. <em>Handover.</em></h2>
-      <div class="gold-rule"></div>
-    </div>
-    <div class="method" style="margin-top:2rem;">
-      <div class="step reveal"><h3>Walk</h3><p>We walk your property or venue with you — spaces, access, power, rules, possibilities.</p></div>
-      <div class="step reveal"><h3>Design</h3><p>A written proposal with designs, scope and timings. Nothing vague, nothing verbal.</p></div>
-      <div class="step reveal"><h3>Build</h3><p>Our own crew executes to the agreed window, supervised and accountable.</p></div>
-      <div class="step reveal"><h3>Handover</h3><p>The celebration delivered, the space returned clean, a review together after.</p></div>
-    </div>
-  </div>
+<section class="section selected-work">
+<div class="wrap">
+<div class="section-heading-row">
+<div class="section-heading reveal">
+<span class="eyebrow">From the portfolio</span>
+<h2>Let the details<br>do the <em>talking.</em>
+</h2>
+</div>
+<a class="text-link reveal" href="portfolio.html">Explore the full collection ↗</a>
+</div>
+<div class="work-triptych">
+<a class="work-card reveal" href="portfolio.html?category=mandaps">
+<div class="work-image">
+<img src="assets/real/real-mandap-04.jpg" alt="Rose-domed mandap beneath a pavilion" class="" width="1200" height="900" loading="lazy" decoding="async">
+</div>
+<span class="eyebrow">The ceremony</span>
+<h3>A place for promises<span aria-hidden="true">↗</span>
+</h3>
+<p>Florals, proportion and a frame for the moments that matter.</p>
+</a>
+<a class="work-card reveal" href="portfolio.html?category=haldi">
+<div class="work-image">
+<img src="assets/real/real-haldi-13.jpg" alt="Carved urli setup with floral decoration" class="" width="1200" height="900" loading="lazy" decoding="async">
+</div>
+<span class="eyebrow">The colour</span>
+<h3>Marigold mornings<span aria-hidden="true">↗</span>
+</h3>
+<p>Warm colour and playful details for a joyful gathering.</p>
+</a>
+<a class="work-card reveal" href="portfolio.html?category=sangeet">
+<div class="work-image">
+<img src="assets/real/real-sangeet-night-decore-28.jpg" alt="Candles and florals on mirrored plinths" class="" width="1200" height="900" loading="lazy" decoding="async">
+</div>
+<span class="eyebrow">The evening</span>
+<h3>When the lights come on<span aria-hidden="true">↗</span>
+</h3>
+<p>Candlelight, texture and a little evening theatre.</p>
+</a>
+</div>
+</div>
 </section>
-
-<section class="video-band" style="background-image:url('assets/video/real-sangeet-night-decore-video-425-poster.jpg');">
-  <video autoplay muted loop playsinline preload="metadata" poster="assets/video/real-sangeet-night-decore-video-425-poster.jpg" aria-hidden="true">
-    <source src="assets/video/real-sangeet-night-decore-video-425.mp4" type="video/mp4">
-  </video>
-  <div class="vb-overlay" aria-hidden="true"></div>
-  <div class="vb-content">
-    <span class="eyebrow">Our Own Events · In Motion</span>
-    <h2 class="display-2">Walk into the work.</h2>
-    <p>A sangeet night we built — the way your guests will actually see it.</p>
-    <a class="btn btn-gold" href="portfolio.html" style="margin-top:1rem;">See the Portfolio</a>
-  </div>
+<section class="section planning-feature is-dark">
+<div class="wrap planning-grid">
+<div>
+<div class="section-heading reveal">
+<span class="eyebrow">A little clarity, a lovely beginning</span>
+<h2>Your wedding.<br>Your choices.<br>
+<em>All in one place.</em>
+</h2>
+<p>Sit down together and work through your celebration. Our Gujarati and English checklist keeps the details in one place.</p>
+</div>
+<div class="button-row reveal">
+<a class="button primary" href="checklist.html">Open your checklist<span aria-hidden="true">↗</span>
+</a>
+</div>
+<p class="small-note">Choose your functions · Assign responsibilities · Save or share your brief</p>
+</div>
+<a class="planning-paper reveal" href="checklist.html" aria-label="Open the bilingual wedding checklist">
+<span class="paper-brand">J.VARDHAN</span>
+<span class="paper-subtitle">YOUR CELEBRATION, CONSIDERED</span>
+<h3>Let’s make it<br>
+<em>yours.</em>
+</h3>
+<ul>
+<li>
+<span aria-hidden="true">✓</span> Mandap Ropan</li>
+<li>
+<span aria-hidden="true">✓</span> Pithi &amp; Haldi</li>
+<li>
+<span aria-hidden="true">✓</span> Sangeet &amp; Garba</li>
+<li>
+<span aria-hidden="true">□</span> Your family’s special touches</li>
+</ul>
+<div class="paper-bottom">
+<span lang="gu">ગુજરાતી</span>
+<span>English</span>
+<span aria-hidden="true">↗</span>
+</div>
+</a>
+</div>
 </section>
-
-<section id="work">
-  <div class="shell">
-    <div class="lockup reveal">
-      <span class="eyebrow">Selected Work</span>
-      <h2 class="display-2">Moments from the craft.</h2>
-      <div class="gold-rule"></div>
-      <p>Photography and film from our own events — haldi mornings to sangeet nights. <a href="portfolio.html" class="nav-link" style="font-size:.66rem;">View the full portfolio</a></p>
-    </div>
-    <div class="mosaic reveal" style="margin-top:2rem;">
-      <div class="mt m-w2 m-t2"><img src="assets/real/real-wedding-photo-08.jpg" alt="Grand entrance gateway built by J.Vardhan" loading="lazy"><span class="cap">Wedding · the grand gateway</span></div>
-      <div class="mt"><img src="assets/real/real-haldi-10.jpg" alt="Marigold haldi stage" loading="lazy"><span class="cap">Haldi · marigold stage</span></div>
-      <div class="mt"><img src="assets/real/real-sangeet-night-decore-07.jpg" alt="Silver sangeet corridor" loading="lazy"><span class="cap">Sangeet · the silver walk</span></div>
-      <div class="mt m-t2"><img src="assets/real/real-stage-decore-02.jpg" alt="Evening lounge with mirror-ball backdrop" loading="lazy"><span class="cap">Stage · evening lounge</span></div>
-      <div class="mt"><img src="assets/real/real-haldi-18.jpg" alt="Haldi ceremony moment" loading="lazy"><span class="cap">Haldi · the morning</span></div>
-      <div class="mt"><img src="assets/real/real-sangeet-night-decore-09.jpg" alt="Tiered candle wall glowing behind a cream sofa" loading="lazy"><span class="cap">Sangeet · by candlelight</span></div>
-    </div>
-    <div class="reveal" style="margin-top:1.6rem;">
-      <a class="btn btn-gold" href="portfolio.html">Open the Full Portfolio</a>
-    </div>
-  </div>
+<section class="section">
+<div class="wrap services-grid">
+<div class="section-heading reveal">
+<span class="eyebrow">The details behind the day</span>
+<h2>A little magic.<br>A lot of <em>thought.</em>
+</h2>
+<p>Choose the support you need, from a single function’s décor to planning the wider celebration.</p>
+</div>
+<div class="service-list">
+<details class="service-row reveal" open>
+<summary>
+<span class="service-number">01</span>
+<span>Wedding design & décor</span>
+<span class="disclosure" aria-hidden="true">+</span>
+</summary>
+<div class="service-detail">
+<h3>From a moodboard to a mandap.</h3>
+<p>Colour palettes, floral choices, entrance gates, backdrops, tablescapes and seating, considered as one connected design.</p>
+<p class="service-tags">Moodboards · Mandaps · Florals · Stage & entrance</p>
+<a class="text-link" href="contact.html">Discuss your requirements ↗</a>
+</div>
+</details>
+<details class="service-row reveal">
+<summary>
+<span class="service-number">02</span>
+<span>Rituals & family traditions</span>
+<span class="disclosure" aria-hidden="true">+</span>
+</summary>
+<div class="service-detail">
+<h3>Space for the way your family celebrates.</h3>
+<p>Coordinate your ceremony list, muhurat, priest’s requirements, ritual materials, baraat welcome and bridal entry. Choose only the customs your family wants.</p>
+<p class="service-tags">Mandap Ropan · Mameru · Pithi · Pheras · Vidaai</p>
+<a class="text-link" href="contact.html">Discuss your requirements ↗</a>
+</div>
+</details>
+<details class="service-row reveal">
+<summary>
+<span class="service-number">03</span>
+<span>Hospitality & guest journeys</span>
+<span class="disclosure" aria-hidden="true">+</span>
+</summary>
+<div class="service-detail">
+<h3>A warm welcome is in the details.</h3>
+<p>Arrival information, room allocations, welcome hampers, itinerary cards, transport and the small comforts that help guests feel looked after.</p>
+<p class="service-tags">RSVP · Accommodation · Transfers · Welcome desks</p>
+<a class="text-link" href="contact.html">Discuss your requirements ↗</a>
+</div>
+</details>
+<details class="service-row reveal">
+<summary>
+<span class="service-number">04</span>
+<span>Entertainment & production</span>
+<span class="disclosure" aria-hidden="true">+</span>
+</summary>
+<div class="service-detail">
+<h3>Give every moment its own atmosphere.</h3>
+<p>Discuss music, artists, choreography, sound, stage lighting and entry concepts around your programme, budget and venue requirements.</p>
+<p class="service-tags">Sangeet · Garba · DJ & emcee · Sound & lighting</p>
+<a class="text-link" href="contact.html">Discuss your requirements ↗</a>
+</div>
+</details>
+<details class="service-row reveal">
+<summary>
+<span class="service-number">05</span>
+<span>Planning & coordination</span>
+<span class="disclosure" aria-hidden="true">+</span>
+</summary>
+<div class="service-detail">
+<h3>A clear plan everyone can work from.</h3>
+<p>Agree the functions, guest counts, responsibilities, vendor contacts and setup schedule. Keep changes and decisions together as the celebration takes shape.</p>
+<p class="service-tags">Budget brief · Vendor coordination · Running order · Handover</p>
+<a class="text-link" href="contact.html">Discuss your requirements ↗</a>
+</div>
+</details>
+</div>
+</div>
 </section>
-
-<section id="services">
-  <div class="shell">
-    <div class="lockup reveal">
-      <span class="eyebrow">Complete Services</span>
-      <h2 class="display-2">Fifty services. Seven disciplines. One house.</h2>
-      <div class="gold-rule"></div>
-      <p>From venue selection to the last send-off — the full master checklist, carried end to end.</p>
-    </div>
-    <div class="count-row reveal">
-      <div><span class="num"><span data-count="50">0</span></span><span class="lbl">Services</span></div>
-      <div><span class="num"><span data-count="7">0</span></span><span class="lbl">Disciplines</span></div>
-      <div><span class="num"><em>One</em></span><span class="lbl">House</span></div>
-    </div>
-    <div class="cat-grid" style="margin-top:2rem;">
-      <div class="card reveal"><h3>Venue, Stay &amp; F&amp;B</h3><p>Venue &amp; hotel bookings · menu tasting · catering coordination · wedding-night room décor</p></div>
-      <div class="card reveal"><h3>Design, Décor &amp; Technical</h3><p>Theme design · décor execution · flower work · lights &amp; sound · power backup · LED &amp; VJ</p></div>
-      <div class="card reveal"><h3>Entertainment &amp; Artists</h3><p>DJ · artists &amp; celebrities · band &amp; dhol · choreographers · emcees · sangeet SFX</p></div>
-      <div class="card reveal"><h3>Rituals &amp; Traditions</h3><p>Entry concepts · varmala effects · baraat &amp; doli · safa · pandit &amp; pooja samagri · bride-groom shadowing</p></div>
-      <div class="card reveal"><h3>Logistics &amp; Security</h3><p>Travel &amp; transport · pickups · valet &amp; VIP handling · security · licenses &amp; NOCs</p></div>
-      <div class="card reveal"><h3>Hospitality &amp; Gifting</h3><p>RSVP &amp; guest management · invitations · favours &amp; hampers · room welcome placements</p></div>
-      <div class="card reveal"><h3>Media &amp; Planning</h3><p>Photo &amp; film · pre-wedding shoots · fireworks &amp; petal showers · send-offs · run-sheet execution</p></div>
-    </div>
-  </div>
+<section class="section process-section">
+<div class="wrap services-grid">
+<div class="section-heading reveal">
+<span class="eyebrow">How it comes together</span>
+<h2>From an idea<br>to <em>“it’s time.”</em>
+</h2>
+</div>
+<div class="process-list">
+<article class="process-step reveal">
+<span>01</span>
+<div>
+<span class="eyebrow">Listen</span>
+<h3>Your people. Your traditions. Your priorities.</h3>
+<p>Share the dates, functions, venue and what matters most to your family.</p>
+</div>
+</article>
+<article class="process-step reveal">
+<span>02</span>
+<div>
+<span class="eyebrow">Imagine</span>
+<h3>Give the celebration a visual direction.</h3>
+<p>Bring together the palette, flowers, reference images and setting for each function.</p>
+</div>
+</article>
+<article class="process-step reveal">
+<span>03</span>
+<div>
+<span class="eyebrow">Plan</span>
+<h3>Make the details clear.</h3>
+<p>Agree the scope, quantities, vendor responsibilities, timings and budget.</p>
+</div>
+</article>
+<article class="process-step reveal">
+<span>04</span>
+<div>
+<span class="eyebrow">Celebrate</span>
+<h3>Keep the day moving thoughtfully.</h3>
+<p>Work from the agreed running order, family contacts and function-by-function plan.</p>
+</div>
+</article>
+</div>
+</div>
 </section>
-
-<section id="decks">
-  <div class="shell">
-    <div class="lockup reveal">
-      <span class="eyebrow">Presentations</span>
-      <h2 class="display-2">Our decks, ready to share.</h2>
-      <div class="gold-rule"></div>
-    </div>
-    <div class="deck-grid" style="margin-top:2rem;">
-      <div class="deck-card reveal">
-        <span class="eyebrow" style="font-size:.6rem;">For Venues</span>
-        <h3>Venue Partnership Profile</h3>
-        <div class="deck-actions">
-          <a class="btn btn-gold" href="https://gamma.app/docs/e8l4s66mb99wnsn" target="_blank" rel="noopener">Open Gamma</a>
-          <a class="btn btn-ghost" href="assets/decks/JVARDHAN-B2B-VENUE-TRUST-DECK.pptx">Download PPTX</a>
-        </div>
-        <div class="embed-slot"><iframe src="https://gamma.app/embed/e8l4s66mb99wnsn" allow="fullscreen" title="Venue Partnership Trust Deck" loading="lazy"></iframe></div>
-      </div>
-      <div class="deck-card reveal">
-        <span class="eyebrow" style="font-size:.6rem;">For Couples</span>
-        <h3>Wedding Experience Deck</h3>
-        <div class="deck-actions">
-          <a class="btn btn-gold" href="https://gamma.app/docs/vffu0vihvejfh9n" target="_blank" rel="noopener">Open Gamma</a>
-          <a class="btn btn-ghost" href="assets/decks/JVARDHAN-CUSTOMER-TRUST-DECK.pptx">Download PPTX</a>
-        </div>
-        <div class="embed-slot"><iframe src="https://gamma.app/embed/vffu0vihvejfh9n" allow="fullscreen" title="Wedding Experience Trust Deck" loading="lazy"></iframe></div>
-      </div>
-    </div>
-  </div>
+<section class="section film-section">
+<div class="wrap">
+<div class="section-heading-row">
+<div class="section-heading reveal">
+<span class="eyebrow">A glimpse in motion</span>
+<h2>Some moments need<br>more than a <em>photograph.</em>
+</h2>
+</div>
+<p class="section-side-note">A look at an evening setup from our event portfolio.</p>
+</div>
+<div class="film-frame reveal">
+<video controls playsinline preload="none" poster="assets/video/real-sangeet-night-decore-video-425-poster.jpg" aria-label="Silent walkthrough of sangeet decoration">
+<source src="assets/video/real-sangeet-night-decore-video-425.mp4" type="video/mp4">Your browser does not support video. <a href="assets/video/real-sangeet-night-decore-video-425.mp4">Download the event film.</a>
+</video>
+<p class="film-caption">Sangeet after dark · Floral details, lighting and a decorated walkway. This visual walkthrough does not require sound.</p>
+</div>
+</div>
 </section>
-
-<section class="band-dusk">
-  <div class="shell" style="text-align:center;">
-    <div class="lockup center reveal">
-      <span class="eyebrow">Next Step</span>
-      <h2 class="display-2">One message starts it.</h2>
-      <div class="gold-rule"></div>
-      <p>Venue owners: invite us to walk your property. Families: tell us your dates.</p>
-    </div>
-    <div class="reveal" style="display:flex;gap:.9rem;justify-content:center;flex-wrap:wrap;margin-top:1.6rem;">
-      <a class="btn btn-gold" href="contact.html">Book a Venue Walkthrough</a>
-      <a class="btn btn-ghost" href="contact.html">Request a Consultation</a>
-    </div>
-  </div>
+<section class="section">
+<div class="wrap services-grid">
+<div class="section-heading reveal">
+<span class="eyebrow">Good questions, thoughtful answers</span>
+<h2>Before we<br>
+<em>begin.</em>
+</h2>
+</div>
+<div class="faq-list">
+<details class="reveal">
+<summary>Can we book décor without full wedding planning?<span aria-hidden="true">+</span>
+</summary>
+<p>Tell us which parts you want support with: décor, selected functions, guest coordination or the full celebration. The agreed proposal should make those responsibilities clear.</p>
+</details>
+<details class="reveal">
+<summary>How do we work out a wedding budget?<span aria-hidden="true">+</span>
+</summary>
+<p>Start with your dates, venue, expected guests and functions. Add reference images and your priorities. These details make it possible to discuss scope and quotations; there is no single price that fits every celebration.</p>
+</details>
+<details class="reveal">
+<summary>Can our Gujarati family use the checklist?<span aria-hidden="true">+</span>
+</summary>
+<p>Yes. Our checklist switches between Gujarati and English without losing your selections. It begins with Mandap Ropan and lets you include only the functions and services you need.</p>
+</details>
+<details class="reveal">
+<summary>Can you work with vendors we have already chosen?<span aria-hidden="true">+</span>
+</summary>
+<p>List your booked vendors and their responsibilities in the enquiry or checklist. We can then discuss where additional support and coordination would be useful.</p>
+</details>
+<details class="reveal">
+<summary>What should we prepare before a consultation?<span aria-hidden="true">+</span>
+</summary>
+<p>Your approximate dates, city or venue, number of guests, function list and budget range are a helpful start. A few photographs of styles you like are useful too.</p>
+</details>
+<details class="reveal">
+<summary>What about outdoor functions and weather?<span aria-hidden="true">+</span>
+</summary>
+<p>Include a covered alternative, guest movement, power needs and the time required to change the setup in the venue discussion. The final arrangements depend on the location and agreed scope.</p>
+</details>
+</div>
+</div>
 </section>
-
-<footer class="site-footer">
-  <img class="ghost" src="assets/lion-guardian.png" alt="" aria-hidden="true">
-  <div class="foot-row">
-    <span class="wordmark">J.VARDHAN<small>LUXE WEDDINGS &amp; EVENTS</small></span>
-    <div class="foot-links">
-      <a href="connect.html">Digital Card</a>
-      <a href="style-preview.html">Design Review</a>
-      <a href="https://wa.me/910000000000" rel="noopener">WhatsApp</a>
-    </div>
-  </div>
-  <p class="foot-tag">Promised. Planned. Delivered.</p>
-  <p class="foot-note">&copy; 2026 J.Vardhan — Luxe Weddings &amp; Events · Gujarat, India · Draft site: copy pending claim verification; contact numbers are placeholders · Photography &amp; film: our own events.</p>
+<section class="section final-invitation">
+<div class="wrap">
+<div class="section-heading reveal">
+<span class="eyebrow">Your story begins here</span>
+<h2>A celebration that feels<br>like <em>you.</em>
+</h2>
+<p>Bring your dates, your traditions and that folder full of ideas. Let’s give them a place to begin.</p>
+</div>
+<div class="button-row reveal">
+<a class="button primary" href="checklist.html">Start your checklist<span aria-hidden="true">↗</span>
+</a>
+<a class="button outline" href="contact.html">Create an enquiry<span aria-hidden="true">↗</span>
+</a>
+</div>
+</div>
+</section>
+</main>
+<footer class="event-footer">
+<div class="wrap">
+<div class="footer-top">
+<a class="brand-lockup" href="index.html">
+<img src="assets/lion-guardian.png" width="40" height="50" alt="">
+<span>J.VARDHAN<small>LUXE WEDDINGS &amp; EVENTS</small>
+</span>
+</a>
+<p>From the first idea<br>to the final farewell.</p>
+<a class="text-link" href="checklist.html">Start your wedding checklist ↗</a>
+</div>
+<div class="footer-links">
+<nav aria-label="Footer">
+<a href="weddings.html">Weddings</a>
+<a href="portfolio.html">Portfolio</a>
+<a href="story.html">Our story</a>
+<a href="venues.html">Venue partnerships</a>
+<a href="contact.html">Enquiries</a>
+<a href="connect.html">Share our details</a>
+</nav>
+<div class="verified-contacts" data-contact-links>
+</div>
+</div>
+<div class="footer-base">
+<p>© 2026 J.Vardhan · Gujarat, India</p>
+<p>Promised. Planned. Delivered.</p>
+<a href="checklist.html?lang=gu" lang="gu">ગુજરાતીમાં આયોજન ↗</a>
+</div>
+</div>
 </footer>
-
-<a class="float-wa" href="https://wa.me/910000000000" rel="noopener" aria-label="Chat on WhatsApp">WhatsApp</a>
 </body>
 </html>

@@ -1,10 +1,9 @@
 BEGIN:VCARD
 VERSION:3.0
-N:;J.Vardhan Luxe Events;;;
-FN:J.Vardhan Luxe Events
-ORG:J.Vardhan Luxe Events
-TITLE:Wedding & Event Production
-TEL;TYPE=CELL:+910000000000
+FN:J.Vardhan Luxe Weddings & Events
+ORG:J.Vardhan Luxe Weddings & Events
 URL:https://mihirzalavadia.github.io/jvardhan-site/
-NOTE:Promised. Planned. Delivered. Floral design, mandap craft, lighting and end-to-end event production — Gujarat, India.
+TEL;TYPE=WORK,CELL:+918488888415
+EMAIL;TYPE=WORK:mihir.bharadiya9@gmail.com
+NOTE:Wedding design and planning in Gujarat.
 END:VCARD

@@ -1,66 +1,44 @@
-# J.Vardhan Luxe Events — V0 Website
+﻿# J.Vardhan Luxe Weddings & Events
 
-## Bilingual wedding checklist (September 2026)
+Live: https://mihirzalavadia.github.io/jvardhan-site/
 
-`checklist.html` provides Gujarati / English switching, 181 grouped choices, optional page 1–2 hospitality and dining, quantities, responsibilities, planning status, browser drafts, JSON import/export, shared text briefs and printing to PDF. It begins at Mandap Ropan. Entry links are on the home, weddings and contact pages.
+Static HTML, CSS and JavaScript, published from `main` at the repository root through GitHub Pages. No installation or build step is required to serve the site.
 
-This is a static worksheet: no responses are submitted to a server or Google Sheet. Clients share or download their brief. Gujarati and English editable meeting decks are in `assets/decks/JVARDHAN-Wedding-Checklist-{Gujarati,English}.pptx`. The selected language determines the deck link. `?lang=gu` and `?lang=en` select the initial form language.
+## Public pages
 
-Content and generation instructions: `../outputs/checklist/README.md`; source review: `../outputs/checklist/SOURCE-REVIEW.md`. No existing phone placeholders are used by the checklist. Publishing the updated `site` repository makes this page available on GitHub Pages.
+- `index.html`: green, ivory and gold introduction, selectable hero photographs, ceremony explorer, portfolio, services, planning process, event film and FAQs.
+- `weddings.html`: eight wedding functions, planning scope and guest details.
+- `portfolio.html`, `portfolio-2.html`, `portfolio-3.html`: 36 approved photographs, 12 per page. Filters search the full collection; the lightbox supports keyboard navigation.
+- `story.html`, `venues.html`: planning approach and venue partnership information.
+- `contact.html`: enquiry preview with WhatsApp, copy, share and download actions.
+- `connect.html`: contact details, vCard and useful planning links.
+- `checklist.html`: independent Gujarati/English wedding worksheet.
 
-Day/Dusk two-theme site for J.Vardhan Luxe Events (Gujarat, India). Static HTML/CSS/JS — no build step, hosted on GitHub Pages.
+`design-system.css` supplies the existing brand tokens. `experience.css` and `ds.js` implement the current public pages, accessible mobile navigation, Day/Dusk themes and reduced-motion support. Older preview/deck HTML files are retained as archived material and are not part of the current navigation.
 
-## Structure
+## Contact details
 
-- `index.html` — the whole site (styles and scripts inline for V0)
-- `venue-partnership-deck.html` — local 30-slide B2B web deck for venue partners
-- `assets/lion-gold.png` — transparent gold lion mark (draft; replace with final vectorized logo)
-- `.nojekyll` — tells GitHub Pages to serve files as-is
+`site-config.js` contains the public phone, WhatsApp number, email and website URL supplied by the owner. It contains no credentials. If these details change, update both this file and `assets/jvardhan.vcf` (or regenerate pages from the workspace script).
 
-## Deploy (GitHub Pages)
+The enquiry form prepares a brief locally. It does not submit to a server or Google Sheet. The client reviews the brief and chooses a sharing action; opening WhatsApp still requires the client to send the message.
 
-1. Create a GitHub repo (e.g. `jvardhan-site`), push this folder to `main`.
-2. Repo → **Settings → Pages** → Source: **Deploy from a branch** → Branch: `main`, folder `/ (root)` → Save.
-3. Site goes live at `https://<username>.github.io/jvardhan-site/` in ~1–2 minutes.
+## Bilingual checklist and PowerPoints
 
-## B2B Web Deck
+`checklist.html` provides Gujarati/English switching, 181 grouped choices, optional hospitality and dining, quantities, responsibilities, planning status, browser drafts, JSON import/export, shared text briefs and printing to PDF. It begins at Mandap Ropan; original PDF pages 1-2 are optional. Use `?lang=gu` or `?lang=en` for the initial language.
 
-Open `venue-partnership-deck.html` directly, or use the **Open Web Deck** button in the site's Presentations section. The deck is proof-safe and preserves `[VERIFY]` / `[VERIFIED COPY HERE]` placeholders.
+Editable client-meeting presentations:
 
-Generated Gamma trust decks (current, validated):
+- `assets/decks/JVARDHAN-Wedding-Checklist-Gujarati.pptx`
+- `assets/decks/JVARDHAN-Wedding-Checklist-English.pptx`
 
-- Venue partnership (13 cards): https://gamma.app/docs/e8l4s66mb99wnsn
-- Customer experience (15 cards): https://gamma.app/docs/vffu0vihvejfh9n
+Checklist documentation in the parent project: `outputs/checklist/README.md` and `SOURCE-REVIEW.md`. Responses stay in the browser until the client exports or shares them; there is no central response database.
 
-Downloaded PPTX files for website sharing:
+## Local preview and maintenance
 
-- `assets/decks/JVARDHAN-B2B-VENUE-TRUST-DECK.pptx`
-- `assets/decks/JVARDHAN-CUSTOMER-TRUST-DECK.pptx`
+Run `python -m http.server` in this repository and open http://localhost:8000.
 
-Deck source inputs: `../outputs/gamma/b2b-venue-trust-deck-input.md`, `../outputs/gamma/customer-trust-deck-input.md`, shared design rules in `../outputs/gamma/trust-deck-design-instructions.md`.
+The parent project contains the page generator `tools/build_event_site.py`, its gallery source `outputs/site-upgrade/gallery-source.json`, and browser checks `tools/test_event_site.py`. The generator updates the nine public pages, gallery data, vCard and sitemap; it preserves the independent checklist and PowerPoints. CSS and JavaScript are maintained directly in this repository.
 
-## Embedding the Gamma decks
+Validation covers internal links, layouts from 320-1440px, mobile navigation, theme persistence, keyboard controls, gallery history/filtering, enquiry sharing targets, checklist continuity, JavaScript-free content and reduced motion. `tools/verify_event_release.py` checks deployed file contents and critical live interactions.
 
-1. Create the deck at [gamma.app](https://gamma.app) using the brand prompts in `../Lion Identity & Two-Theme Website.md` (section 5).
-2. In Gamma: **Share → Embed → copy code**.
-3. In `index.html`, find `GAMMA-EMBED-VENUE:START` / `GAMMA-EMBED-WEDDING:START` and replace the `<div class="embed-slot">…</div>` between the markers with the copied `<iframe …>`.
-4. Commit and push — Pages redeploys automatically.
-
-## Gamma API PPTX Export
-
-From the workspace root, make sure `.env` contains `GAMMA_API_KEY=...`, then run:
-
-```powershell
-powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\tools\gamma_generate_olive_gold.ps1 -InputPath outputs\gamma\long-venue-partnership-deck-input.md -ExportAs pptx
-```
-
-## Before sharing publicly
-
-- Replace WhatsApp/phone placeholder numbers in the footer.
-- All business claims must pass the claim-verification register (`../.claude/skills/claim-check/SKILL.md`) — the current copy is deliberately claim-free sample text.
-- Portfolio tiles are colour placeholders; replace with verified photography.
-- Brand name architecture (Mali Mukesh vs J.Vardhan) is still provisional.
-
-## Local preview
-
-Double-click `index.html`, or run `python -m http.server` in this folder and open http://localhost:8000.
+Commit and push to `main` to publish. Verify the GitHub Pages build and the live release after deployment. Keep client-approved photography, factual business copy and verified contact details; do not add unsupported experience, venue or client claims.
