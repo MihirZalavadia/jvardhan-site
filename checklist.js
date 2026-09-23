@@ -2,6 +2,7 @@
 (() => {
   'use strict';
   const DATA = window.JV_CHECKLIST.sections;
+  const LEGACY = window.JV_LEGACY_CHECKLIST.sections;
   const KEY = 'jvardhan-wedding-checklist-v1';
   const $ = (selector) => document.querySelector(selector);
   const esc = (v) => String(v ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
@@ -9,7 +10,31 @@
     backSite:['વેબસાઇટ પર પાછા','Back to website'],eyebrow:['તમારા પ્રસંગનું આયોજન','THE WEDDING PLANNER'],headline:['તમારાં લગ્ન. દરેક વિગત, સાથે મળીને.','Your wedding. Every detail, together.'],heroText:['મંડપ રોપણથી વિદાય સુધી — તમારી પસંદગી, તમારી પરંપરા અને તમારી રીતે ઉજવણી.','From Mandap Ropan to the final farewell. Your choices, your traditions, your kind of celebration.'],heroFoot:['પસંદ કરો · સાથે નક્કી કરો · યાદગાર બનાવો','CHOOSE · PLAN TOGETHER · CELEBRATE'],photoCaption:['શુભ શરૂઆતથી સુંદર યાદો સુધી','From meaningful beginnings to beautiful memories'],yourCelebration:['તમારી ઉજવણી','YOUR CELEBRATION'],review:['પસંદગીની સમીક્ષા','Review your choices'],localNotice:['આ ડ્રાફ્ટ આ બ્રાઉઝરમાં રહે છે. આયોજકને મોકલવા માટે સારાંશ ડાઉનલોડ અથવા શેર કરો.','Your draft stays in this browser. Download or share the brief to send it to your planner.'],draftTools:['ડ્રાફ્ટ અને પ્રેઝન્ટેશન','Drafts & presentation'],saveDraft:['ફરી ખોલી શકાય એવો ડ્રાફ્ટ ડાઉનલોડ કરો','Download a draft to reopen later'],openDraft:['સાચવેલો ડ્રાફ્ટ ખોલો','Open a saved draft'],deck:['પ્રેઝન્ટેશન ડાઉનલોડ કરો','Download meeting PowerPoint'],newClient:['નવા ક્લાયન્ટ માટે શરૂ કરો','Start for a new client'],clientDetails:['પરિવાર અને પ્રસંગની વિગતો','Family & celebration details'],optional:['વૈકલ્પિક','Optional'],footer:['સાથે મળીને, સુંદર આયોજન.','Thoughtfully planned. Together.'],portfolio:['અમારું કામ જુઓ','Explore our work'],saved:['આ બ્રાઉઝરમાં સાચવ્યું','Saved in this browser'],saveFailed:['બ્રાઉઝરમાં સાચવી શકાતું નથી — ડ્રાફ્ટ ડાઉનલોડ કરો.','Browser saving is unavailable. Download your draft.'],step:['વિભાગ','SECTION'],of:['માંથી','of'],functionState:['આ વિભાગને આયોજનમાં રાખવો છે?','Include this in your celebration?'],functionHint:['પછીથી પણ બદલી શકો છો.','You can always change this later.'],considering:['હજુ નક્કી કરવાનું છે','Still deciding'],include:['હા, આયોજનમાં રાખો','Yes, include it'],skip:['હાલ જરૂરી નથી','Not needed for now'],selectionHint:['જરૂરી વસ્તુ પસંદ કરો, પછી સંખ્યા, જવાબદારી અને સ્થિતિ નોંધો. પસંદ કરેલું એટલે બુક થઈ ગયું એવું નથી.','Tick what you would like, then add quantities, responsibility and progress. A tick is a request, not a booking.'],sourceNote:['વિગત નક્કી કરવાની છે','Detail to confirm'],quantity:['સંખ્યા / માપ','Quantity / size'],owner:['જવાબદારી','Responsible'],status:['આયોજનની સ્થિતિ','Planning status'],itemNotes:['વિગત / ડિઝાઇન / વેન્ડર','Details / design / vendor'],tbd:['નક્કી કરવાનું બાકી','To be decided'],planner:['આયોજક','Planner'],family:['પરિવાર','Family'],venue:['વેન્યુ','Venue'],vendor:['વેન્ડર','Vendor'],discuss:['ચર્ચા બાકી','To discuss'],confirmed:['વ્યવસ્થા નક્કી','Arrangement confirmed'],done:['પૂર્ણ થયું','Completed'],date:['તારીખ','Date'],time:['સમય / મુહૂર્ત','Time / muhurat'],guests:['અંદાજિત મહેમાનો','Expected guests'],budget:['અંદાજિત બજેટ (₹)','Budget estimate (₹)'],location:['સ્થળ / વેન્યુ','Location / venue'],sectionNotes:['બીજી જરૂરિયાતો, પરિવારની પરંપરા અથવા ખાસ નોંધ','Anything else? Family traditions, additional items or special requests'],notesPlaceholder:['અહીં લખો…','Write your notes here…'],previous:['પાછળ','Back'],next:['આગળ','Next function'],inactiveTitle:['જરૂર હોય ત્યારે ઉમેરો.','Here if you need it.'],inactiveText:['આ વિભાગ હાલ સારાંશમાં સામેલ નથી. અગાઉની વિગતો ડ્રાફ્ટમાં સચવાયેલી રહેશે.','This section is excluded from the brief. Any earlier choices remain in your draft.'],addSection:['આ વિભાગ ઉમેરો','Include this section'],briefTitle:['તમારા પ્રસંગનો સારાંશ','Your celebration brief'],briefEyebrow:['સાથે બેસીને નક્કી કરીએ','READY TO PLAN TOGETHER'],briefText:['આ પસંદગીઓ પર ચર્ચા કરીને ડિઝાઇન, ખર્ચ અને ઉપલબ્ધતા નક્કી કરીશું. આ બુકિંગ કે કોટેશન નથી.','Use these choices to discuss designs, costs and availability together. This is a planning brief, not a booking or quotation.'],requested:['પસંદ કરેલી વસ્તુઓ','items requested'],confirmedCount:['નક્કી કરેલી વ્યવસ્થા','arrangements confirmed'],doneCount:['પૂર્ણ થયેલાં કામ','completed'],print:['પ્રિન્ટ / PDF સાચવો','Print / save PDF'],download:['સારાંશ ડાઉનલોડ કરો','Download brief'],share:['સારાંશ શેર કરો','Share brief'],edit:['બદલો','Edit'],emptyTitle:['તમારી ઉજવણી અહીંથી શરૂ થાય છે.','Your celebration starts here.'],emptyText:['કોઈ વસ્તુ પસંદ કરો અથવા પ્રસંગની વિગતો ભરો, પછી અહીં સારાંશ જુઓ.','Choose some items or add function details, then review your brief here.'],start:['મંડપ રોપણથી શરૂ કરો','Start with Mandap Ropan'],noItems:['વસ્તુઓની પસંદગી હજુ બાકી છે.','Individual items are still to be chosen.'],notIncluded:['હાલ સામેલ નથી','Not included for now'],excluded:['જરૂરી નથી એવા વિભાગો','Sections marked not needed'],clientName:['ક્લાયન્ટ / પરિવારનું નામ','Client / family name'],couple:['વર-વધૂનાં નામ','Couple’s names'],contact:['સંપર્ક વ્યક્તિ','Contact person'],phone:['મોબાઇલ નંબર','Phone number'],city:['શહેર','City'],overallBudget:['કુલ અંદાજિત બજેટ (₹)','Overall budget estimate (₹)'],preferences:['થીમ, રંગો અને ખાસ પસંદગી','Theme, colours & priorities'],vendors:['વેન્ડરના સંપર્કો અને નોંધ','Vendor contacts & notes'],vendorHelp:['પૂજારી, ફોટોગ્રાફર, ઢોલી, ડીજે, ઓર્કેસ્ટ્રા, બેન્ડ, સાફાવાળા, ટ્રાવેલ્સ, ડ્રાઇવર, હોટેલ અને અન્ય.','Priest, photographer, dhol players, DJ, orchestra, band, turban service, travel agency, driver, hotel and others.'],resetConfirm:['આ બ્રાઉઝરનો હાલનો ડ્રાફ્ટ સાફ કરીને નવા ક્લાયન્ટ માટે શરૂ કરવું છે? જરૂરી હોય તો પહેલાં ડ્રાફ્ટ ડાઉનલોડ કરો.','Clear this browser’s draft and start for a new client? Download the current draft first if you want to keep it.'],importConfirm:['સાચવેલી ફાઇલથી હાલનો ડ્રાફ્ટ બદલવો છે?','Replace the current draft with this saved file?'],importBad:['આ માન્ય ચેકલિસ્ટ ડ્રાફ્ટ નથી. યોગ્ય JSON ફાઇલ પસંદ કરો.','This is not a valid checklist draft. Choose a checklist JSON file.'],imported:['ડ્રાફ્ટ ખોલ્યો.','Draft opened.'],downloaded:['ફાઇલ ડાઉનલોડ માટે તૈયાર છે.','Your download is ready.'],shareFallback:['આ ઉપકરણ પર શેર ઉપલબ્ધ નથી. સારાંશ ડાઉનલોડ કર્યો છે.','Sharing is unavailable here. Your brief has been downloaded instead.'],shared:['શેર કરવાની પ્રક્રિયા પૂર્ણ થઈ.','Sharing completed.'],datePrepared:['સારાંશ તૈયાર કર્યાની તારીખ','Brief prepared on'],allOptional:['બધી વિગતો વૈકલ્પિક છે.','All details are optional.'],printNote:['આ સારાંશ આયોજકને આપમેળે મોકલાયો નથી.','This brief has not been automatically sent to the planner.']
   };
   Object.assign(COPY, {
-    heroText:['દરેક પ્રસંગ માટે જરૂરી વસ્તુઓ પસંદ કરો. જરૂર હોય તો માત્ર ટૂંકી નોંધ ઉમેરો.','Choose what you need for each event. Add a short note wherever you need one.'],
+    eyebrow:['માસ્ટર વેડિંગ ચેકલિસ્ટ','THE MASTER WEDDING CHECKLIST'],
+    headline:['તમારાં લગ્ન. તમારી પસંદગી.','Your wedding. Your kind of celebration.'],
+    heroText:['વેન્યુથી વિદાય સુધીની ૫૦ સેવાઓ. જરૂરી સેવા પસંદ કરો અને ઇચ્છો તો ટૂંકી નોંધ ઉમેરો.','From the venue to the final farewell. Explore 50 services, tick what you need and add a short note.'],
+    heroFoot:['૭ વિભાગો · ૫૦ સેવાઓ · તમારી પસંદગી','7 CATEGORIES · 50 SERVICES · YOUR CHOICES'],
+    masterCount:['૫૦ સેવાઓ · ૭ વિભાગો','50 SERVICES · 7 CATEGORIES'],
+    yourCelebration:['સેવાઓના વિભાગો','SERVICE CATEGORIES'],
+    chooseCategory:['વિભાગ પસંદ કરો','Choose a category'],
+    searchLabel:['બધી ૫૦ સેવાઓમાં શોધો','Search all 50 services'],
+    searchPlaceholder:['ફૂલો, હોટેલ, ડીજે…','Flowers, hotel, DJ…'],
+    selectedOnly:['પસંદ કરેલી','Selected'],
+    selectedTotal:['પસંદ કરેલી સેવાઓ','services selected'],
+    results:['મળેલી સેવાઓ','matching services'],
+    showing:['સેવાઓ','services'],
+    noResults:['કોઈ સેવા મળી નથી.','No services found.'],
+    noResultsHint:['બીજો શબ્દ શોધો અથવા ફિલ્ટર દૂર કરો.','Try another search or clear the filter.'],
+    clearFilters:['બધી સેવાઓ જુઓ','Clear filters'],
+    selectedTitle:['તમારી પસંદ કરેલી સેવાઓ','Your selected services'],
+    searchTitle:['તમારી શોધનાં પરિણામો','Your search results'],
+    next:['આગળનો વિભાગ','Next category'],start:['સેવાઓ પસંદ કરો','Choose your services'],
+    sectionNotes:['આ વિભાગ માટે નોંધ (વૈકલ્પિક)','Category note (optional)'],
+    moreClient:['બીજી વિગતો (વૈકલ્પિક)','More details (optional)'],
+    legacyTitle:['અગાઉના ચેકલિસ્ટની પસંદગી','Previous checklist selections'],
+    legacyNotice:['અગાઉની પસંદગી તમારા સારાંશમાં સાચવેલી છે.','Your earlier checklist selections are saved in your brief.'],
+    legacyDeck:['અગાઉનું પ્રસંગવાર પ્રેઝન્ટેશન','Previous event worksheet (PowerPoint)'],
+    draftTools:['ડ્રાફ્ટ અને ડાઉનલોડ','Drafts & downloads'],
     selectionHint:['જરૂરી વસ્તુ પર ટિક કરો. ખાસ જરૂરિયાત હોય તો ટૂંકી નોંધ ઉમેરો. બધી નોંધો વૈકલ્પિક છે.','Tick what you need. Add a short note for any special request. All notes are optional.'],
     itemNotes:['ટૂંકી નોંધ (વૈકલ્પિક)','Short note (optional)'],
     itemPlaceholder:['કોઈ ખાસ જરૂરિયાત હોય તો અહીં લખો…','Add a preference or special request…'],
@@ -22,12 +47,12 @@
     editBrief:['યાદીમાં પાછા જાઓ','Back to your checklist']
   });
   const SERVICES = ['decor','stage','sound','photo','food','guestHelp','entertainment','rituals'];
-  const CLIENT_FIELDS = ['clientName','couple','contact','phone','date','city','guests','overallBudget','preferences','vendors'];
+  const CLIENT_FIELDS = ['clientName','date','location','phone','couple','contact','city','guests','overallBudget','preferences','vendors'];
   const META_FIELDS = ['date','time','guests','budget','location','notes'];
   const OWNERS = ['tbd','planner','family','venue','vendor'];
   const STATUSES = ['discuss','confirmed','done'];
   const ITEMS = new Map(DATA.flatMap(s => s.groups.flatMap(g => g.items.map(i => [i.id,i]))));
-  const fresh = () => ({version:1,lang:'gu',view:'detailed',services:[],client:{},sections:{},items:{}});
+  const fresh = () => ({version:2,source:'premium-master-2026',lang:'gu',view:'detailed',services:[],client:{},sections:{},items:{},legacy:{sections:{},items:{}}});
   const cleanText = (v, max=2000) => typeof v === 'string' ? v.slice(0,max) : '';
   function savedItemNote(old,lang) {
     // Fold previously entered fields into the editable note once, without losing answers.
@@ -39,27 +64,31 @@
       cleanText(old.notes,3000)].filter(Boolean).join('\n').slice(0,3000);
   }
   function sanitize(raw) {
-    if (!raw || typeof raw !== 'object' || raw.version !== 1 || !raw.items || typeof raw.items !== 'object' || !raw.sections || typeof raw.sections !== 'object') throw new Error('Invalid draft');
+    if (!raw || typeof raw !== 'object' || ![1,2].includes(raw.version) || !raw.items || typeof raw.items !== 'object' || !raw.sections || typeof raw.sections !== 'object') throw new Error('Invalid draft');
     const value = fresh();
     value.lang = raw.lang === 'en' ? 'en' : 'gu';
     value.services = SERVICES.filter(id => Array.isArray(raw.services) && raw.services.includes(id));
     for (const f of CLIENT_FIELDS) value.client[f] = cleanText(raw.client?.[f], f === 'vendors' ? 6000 : 2000);
-    for (const section of DATA) {
-      const old = raw.sections[section.id];
+    function restore(sections,source,target) {
+    for (const section of sections) {
+      const old = source.sections?.[section.id];
       if (!old || typeof old !== 'object') continue;
       const s = {};
       if (['considering','include','skip'].includes(old.inclusion)) s.inclusion = old.inclusion;
       for (const f of META_FIELDS) s[f] = cleanText(old[f]);
-      value.sections[section.id] = s;
+      target.sections[section.id] = s;
     }
-    for (const id of ITEMS.keys()) {
-      const old = raw.items[id];
+    for (const id of sections.flatMap(s=>s.groups.flatMap(g=>g.items.map(i=>i.id)))) {
+      const old = source.items?.[id];
       if (!old || typeof old !== 'object') continue;
-      value.items[id] = {selected:old.selected === true, notes:savedItemNote(old,value.lang)};
+      target.items[id] = {selected:old.selected === true, notes:savedItemNote(old,value.lang)};
     }
+    }
+    restore(DATA,raw,value);
+    restore(LEGACY,raw.version===1?raw:(raw.legacy||{}),value.legacy);
     return value;
   }
-  let state = fresh(), storageOK = true, active = 0, reviewing = false, toastTimer;
+  let state = fresh(), storageOK = true, active = 0, reviewing = false, toastTimer, search='', onlySelected=false;
   try { const saved = localStorage.getItem(KEY); if (saved) state = sanitize(JSON.parse(saved)); } catch (_) { storageOK = false; }
   const queryLang = new URLSearchParams(location.search).get('lang');
   if (['gu','en'].includes(queryLang)) state.lang = queryLang;
@@ -82,24 +111,37 @@
   }
   function renderClient() {
     const render = key => field(key,state.client[key],`data-client="${key}"`,key==='date'?'date':key==='phone'?'tel':['preferences','vendors'].includes(key)?'textarea':['overallBudget','guests'].includes(key)?'number':'text',['preferences','vendors'].includes(key),key==='vendors'?t('vendorHelp'):'');
-    $('#client-fields').innerHTML = CLIENT_FIELDS.map(render).join('');
+    const basics=['clientName','date','location','phone'];
+    $('#client-fields').innerHTML = basics.map(render).join('')+`<details class="more-client"><summary>${esc(t('moreClient'))}</summary><div class="field-grid">${CLIENT_FIELDS.filter(k=>!basics.includes(k)).map(render).join('')}</div></details>`;
     $('#client-details').hidden = reviewing;
   }
   function chosenEvents() { return DATA.filter(relevant); }
   function renderNav() {
-    $('#section-nav').innerHTML = DATA.map((s,index) => `<button type="button" class="section-link" data-step="${index}"${active===index&&!reviewing?' aria-current="step"':''}><span class="step-number">${String(index+1).padStart(2,'0')}</span><span class="step-label">${esc(tr(s.title))}${s.optional?`<small>${esc(t('optional'))}</small>`:''}</span>${selected(s).length?`<span class="step-count">${selected(s).length}</span>`:''}</button>`).join('');
+    $('#section-nav').innerHTML = DATA.map((s,index) => `<button type="button" class="section-link" data-step="${index}"${active===index&&!reviewing&&!search&&!onlySelected?' aria-current="step"':''}><span class="step-number">${String(index+1).padStart(2,'0')}</span><span class="step-label">${esc(tr(s.shortTitle))}</span><span class="step-count">${selected(s).length}/${s.groups[0].items.length}</span></button>`).join('');
+    $('#category-select').innerHTML = DATA.map((s,index)=>`<option value="${index}"${index===active?' selected':''}>${index+1}. ${esc(tr(s.shortTitle))}</option>`).join('');
     $('#total-counter').textContent = allSelected().length;
+    $('#filter-count').textContent = allSelected().length;
     $('#total-counter').setAttribute('aria-label', `${allSelected().length} ${t('requested')}`);
     if (reviewing) $('#review-nav').setAttribute('aria-current','step'); else $('#review-nav').removeAttribute('aria-current');
+    $('#selected-filter').setAttribute('aria-pressed',String(onlySelected));
   }
   function renderItem(i) {
     const v = state.items[i.id] || {selected:false,notes:''};
     const id = i.id;
-    return `<div class="item${v.selected?' selected':''}" data-item-box="${id}"><label class="item-choice" for="check-${id}"><input type="checkbox" id="check-${id}" data-item="${id}" data-prop="selected"${v.selected?' checked':''}><span>${esc(tr(i.label))}</span></label>${i.note?`<details class="item-note"><summary>${esc(t('sourceNote'))}</summary><p>${esc(tr(i.note))}</p></details>`:''}${v.selected?`<div class="item-controls"><label class="field" for="notes-${id}">${esc(t('itemNotes'))}<textarea id="notes-${id}" data-item="${id}" data-prop="notes" rows="2" maxlength="3000" placeholder="${esc(t('itemPlaceholder'))}">${esc(v.notes)}</textarea></label></div>`:''}</div>`;
+    return `<div class="item${v.selected?' selected':''}" data-item-box="${id}"><label class="item-choice" for="check-${id}"><input type="checkbox" id="check-${id}" data-item="${id}" data-prop="selected"${v.selected?' checked':''}><span><small class="service-number">${String(i.number).padStart(2,'0')}</small>${esc(tr(i.label))}</span></label>${v.selected?`<div class="item-controls"><label class="field" for="notes-${id}">${esc(t('itemNotes'))}<textarea id="notes-${id}" data-item="${id}" data-prop="notes" rows="2" maxlength="3000" placeholder="${esc(t('itemPlaceholder'))}">${esc(v.notes)}</textarea></label></div>`:''}</div>`;
+  }
+  function matches(item,section) {
+    const words=search.toLocaleLowerCase().trim().split(/\s+/).filter(Boolean).map(word=>/^[a-z]{4,}s$/.test(word)?word.slice(0,-1):word);
+    const content=[item.label.en,item.label.gu,section.title.en,section.title.gu,String(item.number).padStart(2,'0')].join(' ').toLocaleLowerCase();
+    return (!onlySelected||state.items[item.id]?.selected)&&words.every(word=>content.includes(word));
   }
   function renderStep() {
-    const s = DATA[active], v = sectionState(s), mode = inclusion(s);
-    $('#step-content').innerHTML = `<div class="step-header"><div><span class="eyebrow">${esc(t('step'))} ${String(active+1).padStart(2,'0')} / ${String(DATA.length).padStart(2,'0')}</span><h2 id="step-title" tabindex="-1">${esc(tr(s.title))}</h2><p>${esc(tr(s.intro))}</p></div><img class="step-icon" src="assets/motifs/mandap-gate.svg" alt="" aria-hidden="true"></div><div class="function-state"><div><label for="inclusion">${esc(t('functionState'))}</label><p>${esc(t('functionHint'))}</p></div><select id="inclusion" data-section="inclusion">${choice(['considering','include','skip'],mode)}</select></div>${mode==='skip'?`<div class="inactive-panel"><h3>${esc(t('inactiveTitle'))}</h3><p>${esc(t('inactiveText'))}</p><button class="btn primary" type="button" data-action="include">${esc(t('addSection'))}</button></div>`:`<div class="section-meta"><div class="field-grid">${['date','time','guests','budget','location'].map(k=>field(k,v[k],`data-section="${k}"`,k==='date'?'date':k==='time'?'time':['guests','budget'].includes(k)?'number':'text')).join('')}</div></div><p class="hint">${esc(t('selectionHint'))}</p>${s.groups.map(g=>`<fieldset class="group"><legend>${esc(tr(g.title))}</legend><div class="items">${g.items.map(renderItem).join('')}</div></fieldset>`).join('')}<div class="section-notes"><label for="section-notes">${esc(t('sectionNotes'))}</label><textarea id="section-notes" data-section="notes" maxlength="2000" placeholder="${esc(t('notesPlaceholder'))}">${esc(v.notes)}</textarea></div>`}<div class="step-footer"><button type="button" class="btn" data-action="previous"${active===0?' disabled':''}>← ${esc(t('previous'))}</button><span class="position">${active+1} / ${DATA.length}</span><button type="button" class="btn primary" data-action="next">${esc(t(active===DATA.length-1?'review':'next'))} →</button></div>`;
+    const filtering=Boolean(search.trim()||onlySelected), section=DATA[active];
+    const groups=(filtering?DATA:[section]).map(s=>({section:s,items:s.groups.flatMap(g=>g.items).filter(i=>matches(i,s))})).filter(g=>g.items.length);
+    const total=groups.reduce((n,g)=>n+g.items.length,0);
+    $('#result-count').textContent=`${total} ${t(filtering?'results':'showing')} / 50`;
+    const header=filtering?t(onlySelected&&!search.trim()?'selectedTitle':'searchTitle'):tr(section.title);
+    $('#step-content').innerHTML=`<div class="category-panel${filtering?'':' step-enter'}"><div class="step-header"><div><span class="eyebrow">${filtering?esc(t('masterCount')):`${esc(t('step'))} ${active+1} / ${DATA.length}`}</span><h2 id="step-title" tabindex="-1">${esc(header)}</h2><p>${esc(filtering?t('selectionHint'):tr(section.intro))}</p></div></div>${groups.length?groups.map(g=>`<section class="service-group">${filtering?`<h3>${esc(tr(g.section.title))}</h3>`:''}<div class="items">${g.items.map(renderItem).join('')}</div></section>`).join(''):`<div class="review-empty"><h3>${esc(t('noResults'))}</h3><p>${esc(t('noResultsHint'))}</p><button type="button" class="btn" data-action="clear-filters">${esc(t('clearFilters'))}</button></div>`}</div>${filtering?`<div class="step-footer"><button type="button" class="btn" data-action="clear-filters">${esc(t('clearFilters'))}</button><button type="button" class="btn primary" data-action="review">${esc(t('review'))}</button></div>`:`<details class="category-notes"><summary>${esc(t('sectionNotes'))}</summary><label class="field" for="section-notes"><span class="sr-only">${esc(t('sectionNotes'))}</span><textarea id="section-notes" data-section="notes" maxlength="2000" placeholder="${esc(t('notesPlaceholder'))}">${esc(sectionState(section).notes)}</textarea></label></details><div class="step-footer"><button type="button" class="btn" data-action="previous"${active===0?' disabled':''}>&#8592; ${esc(t('previous'))}</button><span class="position">${active+1} / ${DATA.length}</span><button type="button" class="btn primary" data-action="next">${esc(t(active===DATA.length-1?'review':'next'))} &#8594;</button></div>`}`;
   }
   function relevant(s) { const v = sectionState(s); return inclusion(s)!=='skip' && (selected(s).length || v.inclusion === 'include' || META_FIELDS.some(k=>v[k])); }
   function formattedDate(value) {
@@ -109,6 +151,20 @@
   }
   function displayValue(key,value) { return key==='date' ? formattedDate(value) : value; }
   function metadata(s) { const v = sectionState(s); return META_FIELDS.filter(k=>k!=='notes'&&v[k]).map(k=>`${t(k)}: ${displayValue(k,v[k])}`).join(' · '); }
+  function legacyEntries() {
+    return LEGACY.map(s=>{
+      const v=state.legacy.sections[s.id]||{};
+      const mode=v.inclusion||(s.optional?'skip':'considering');
+      const items=mode==='skip'?[]:s.groups.flatMap(g=>g.items).filter(i=>state.legacy.items[i.id]?.selected);
+      const meta=META_FIELDS.filter(k=>k!=='notes'&&v[k]).map(k=>`${t(k)}: ${displayValue(k,v[k])}`).join(' · ');
+      return {section:s,value:v,mode,items,meta};
+    }).filter(e=>e.mode!=='skip'&&(e.items.length||e.value.inclusion==='include'||META_FIELDS.some(k=>e.value[k])));
+  }
+  function legacyHTML() {
+    const entries=legacyEntries();
+    if(!entries.length)return '';
+    return `<section class="review-section legacy-review"><h3>${esc(t('legacyTitle'))}</h3>${entries.map(e=>`<div class="legacy-section"><h4>${esc(tr(e.section.title))}</h4>${e.meta?`<p class="review-meta">${esc(e.meta)}</p>`:''}<ul>${e.items.map(i=>`<li><strong>${esc(tr(i.label))}</strong>${state.legacy.items[i.id].notes?`<small>${esc(state.legacy.items[i.id].notes)}</small>`:''}</li>`).join('')}</ul>${e.value.notes?`<p class="review-note">${esc(e.value.notes)}</p>`:''}</div>`).join('')}</section>`;
+  }
   function briefHTML(editable=false) {
     let result = '';
     const clients = CLIENT_FIELDS.filter(k=>state.client[k]);
@@ -124,7 +180,7 @@
     });
     const skipped = DATA.filter(s=>inclusion(s)==='skip');
     if (skipped.length) result += `<section class="review-section"><h3>${esc(t('excluded'))}</h3><p class="review-meta">${esc(skipped.map(s=>tr(s.title)).join(' · '))}</p></section>`;
-    return result;
+    return result+legacyHTML();
   }
   function briefText() {
     const lines = ['J.VARDHAN | '+t('briefTitle'),`${t('datePrepared')}: ${new Date().toLocaleDateString(state.lang==='gu'?'gu-IN':'en-IN')}`,t('briefText'),''];
@@ -137,14 +193,20 @@
       list.forEach(i=>{lines.push(`• ${tr(i.label)}`);if(state.items[i.id].notes)lines.push(`  ${state.items[i.id].notes}`);if(i.note)lines.push(`  ${t('sourceNote')}: ${tr(i.note)}`);});
       if (sectionState(s).notes) lines.push(sectionState(s).notes);
     });
-    lines.push('',t('excluded')+': '+DATA.filter(s=>inclusion(s)==='skip').map(s=>tr(s.title)).join(', '));
+    const previous=legacyEntries();
+    if(previous.length)lines.push('',t('legacyTitle'));
+    previous.forEach(e=>{
+      lines.push('',tr(e.section.title),e.meta);
+      e.items.forEach(i=>{lines.push(`• ${tr(i.label)}`);if(state.legacy.items[i.id].notes)lines.push(state.legacy.items[i.id].notes);});
+      if(e.value.notes)lines.push(e.value.notes);
+    });
     lines.push('',t('printNote'));
     return lines.join('\n');
   }
   function printHTML() { return `<p class="eyebrow">J.VARDHAN · LUXE WEDDINGS &amp; EVENTS</p><h1>${esc(t('briefTitle'))}</h1><p>${esc(t('datePrepared'))}: ${esc(new Date().toLocaleDateString(state.lang==='gu'?'gu-IN':'en-IN'))}<br>${esc(t('briefText'))}<br>${esc(t('printNote'))}</p>${briefHTML()}`; }
   function renderReview() {
     const list = allSelected();
-    const hasContent = list.length || state.services.length || DATA.some(relevant) || CLIENT_FIELDS.some(k=>state.client[k]);
+    const hasContent = list.length || state.services.length || legacyEntries().length || DATA.some(relevant) || CLIENT_FIELDS.some(k=>state.client[k]);
     $('#step-content').innerHTML = `<div class="review-intro"><span class="eyebrow">${esc(t('briefEyebrow'))}</span><h2 id="step-title" tabindex="-1">${esc(t('briefTitle'))}</h2><p>${esc(t('briefText'))}</p><div class="review-stats"><div><strong>${list.length}</strong><span>${esc(t('requested'))}</span></div></div><div class="button-row"><button type="button" class="btn gold" data-action="print">${esc(t('print'))}</button><button type="button" class="btn gold" data-action="download">${esc(t('download'))}</button><button type="button" class="btn gold" data-action="share">${esc(t('share'))}</button></div></div>${hasContent?briefHTML(true):`<div class="review-empty"><h3>${esc(t('emptyTitle'))}</h3><p>${esc(t('emptyText'))}</p><button type="button" class="btn primary" data-step="0">${esc(t('start'))}</button></div>`}`;
     $('#step-content').insertAdjacentHTML('afterbegin',`<button type="button" class="back-brief" data-action="edit-brief">← ${esc(t('editBrief'))}</button>`);
     $('#print-content').innerHTML = printHTML();
@@ -152,18 +214,23 @@
   function renderAll() {
     document.documentElement.lang = state.lang;
     document.body.dataset.view = state.view;
-    document.title = state.lang==='gu'?'લગ્ન આયોજન ચેકલિસ્ટ | J.Vardhan':'Wedding Planning Checklist | J.Vardhan';
+    document.title = state.lang==='gu'?'માસ્ટર વેડિંગ ચેકલિસ્ટ | J.Vardhan':'Master Wedding Checklist | J.Vardhan';
     document.querySelectorAll('[data-t]').forEach(el=>{el.textContent=t(el.dataset.t);});
     document.querySelectorAll('[data-lang]').forEach(el=>el.setAttribute('aria-pressed',String(el.dataset.lang===state.lang)));
     $('#deck-download').href = `assets/decks/JVARDHAN-Wedding-Checklist-${state.lang==='gu'?'Gujarati':'English'}.pptx`;
+    $('#deck-download').textContent=t('legacyDeck');
+    $('#service-search').placeholder=t('searchPlaceholder');
     renderClient(); renderNav(); renderContent(); save();
   }
   function renderContent() {
     $('#client-details').hidden=reviewing;
+    $('#browse-controls').hidden=reviewing;
+    $('#legacy-notice').hidden=reviewing||(!legacyEntries().length&&!state.services.length);
     if(reviewing)renderReview();else renderStep();
   }
   function navigate(index,isReview=false) {
     active = Math.max(0,Math.min(DATA.length-1,index)); reviewing = isReview;
+    if(!isReview){search='';onlySelected=false;$('#service-search').value='';}
     renderNav();renderContent();
     $('#workspace').scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth',block:'start'});
     $('#step-title').focus({preventScroll:true});
@@ -190,7 +257,11 @@
       state.items[id] ||= {selected:false,notes:''};
       state.items[id][key] = key==='selected'?el.checked:el.value;
       save();
-      if(key==='selected') { const box=document.querySelector(`[data-item-box="${id}"]`);box.outerHTML=renderItem(ITEMS.get(id));renderNav();$(`#check-${id}`).focus({preventScroll:true}); }
+      if(key==='selected') {
+        if(onlySelected){renderStep();$('#selected-filter').focus({preventScroll:true});}
+        else{const box=document.querySelector(`[data-item-box="${id}"]`);box.outerHTML=renderItem(ITEMS.get(id));$(`#check-${id}`).focus({preventScroll:true});}
+        renderNav();
+      }
     }
   }
   document.addEventListener('input',e=>{if(!['checkbox','select-one','file'].includes(e.target.type))updateInput(e.target);});
@@ -203,6 +274,7 @@
     if(lang){state.lang=lang.dataset.lang;renderAll();return;}
     const step=e.target.closest('[data-step]');if(step){navigate(Number(step.dataset.step));return;}
     const action=e.target.closest('[data-action]')?.dataset.action;if(!action)return;
+    if(action==='clear-filters'){search='';onlySelected=false;$('#service-search').value='';renderNav();renderContent();$('#service-search').focus({preventScroll:true});}
     if(action==='review')navigate(active,true);
     if(action==='edit-brief'){reviewing=false;renderAll();$('#workspace').scrollIntoView({block:'start'});$('#step-title').focus({preventScroll:true});}
     if(action==='previous')navigate(active-1);
@@ -212,7 +284,7 @@
     if(action==='download'){downloadBrief();toast(t('downloaded'));}
     if(action==='export'){download(JSON.stringify(state,null,2),'J-Vardhan-checklist-draft.json','application/json');toast(t('downloaded'));}
     if(action==='import')$('#import-file').click();
-    if(action==='reset'&&confirm(t('resetConfirm'))){const lang=state.lang;state=fresh();state.lang=lang;active=0;reviewing=false;$('#client-details').open=false;renderAll();}
+    if(action==='reset'&&confirm(t('resetConfirm'))){const lang=state.lang;state=fresh();state.lang=lang;active=0;reviewing=false;search='';onlySelected=false;$('#service-search').value='';$('#client-details').open=false;renderAll();}
     if(action==='share'){
       try{
         const text=briefText();
@@ -225,12 +297,15 @@
     }
   });
   $('#review-nav').addEventListener('click',()=>navigate(active,true));
+  $('#category-select').addEventListener('change',e=>navigate(Number(e.target.value)));
+  $('#service-search').addEventListener('input',e=>{search=e.target.value;renderNav();renderStep();});
+  $('#selected-filter').addEventListener('click',()=>{onlySelected=!onlySelected;renderNav();renderStep();});
   $('#import-file').addEventListener('change',async e=>{
     const file=e.target.files[0];if(!file)return;
     try{
       if(file.size>1000000)throw new Error('Oversized');
       const imported=sanitize(JSON.parse(await file.text()));
-      if(confirm(t('importConfirm'))){state=imported;active=0;reviewing=false;renderAll();toast(t('imported'));}
+      if(confirm(t('importConfirm'))){state=imported;active=0;reviewing=false;search='';onlySelected=false;$('#service-search').value='';renderAll();toast(t('imported'));}
     }catch(_){toast(t('importBad'));}finally{e.target.value='';}
   });
   window.addEventListener('beforeprint',()=>{$('#print-content').innerHTML=printHTML();});
