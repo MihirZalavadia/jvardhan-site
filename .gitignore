@@ -1,0 +1,5 @@
+# Pricing work belongs outside this public GitHub Pages repository.
+/admin/
+/admin-staging/
+/assets/documents/*Price*.xlsx
+/assets/documents/*Price*.csv

@@ -3,13 +3,13 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Complete Wedding Checklist &amp; Package Estimate | J.Vardhan</title>
-  <meta name="description" content="One complete wedding checklist: 200 items in 11 sections. Plan in Gujarati or English, load your own rates and calculate a package estimate.">
+  <title>Complete Wedding Checklist | J.Vardhan</title>
+  <meta name="description" content="One complete wedding checklist: 200 items in 11 sections. Choose services, add notes and share your plans in Gujarati or English.">
   <meta name="theme-color" content="#06403C">
   <link rel="canonical" href="https://mihirzalavadia.github.io/jvardhan-site/checklist.html">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Complete Wedding Checklist | J.Vardhan">
-  <meta property="og:description" content="200 items, one checklist. Plan your celebration and review a package estimate using your own prices.">
+  <meta property="og:description" content="200 items, one checklist. Choose your services, add notes and share your celebration plans.">
   <meta property="og:url" content="https://mihirzalavadia.github.io/jvardhan-site/checklist.html">
   <meta property="og:image" content="https://mihirzalavadia.github.io/jvardhan-site/assets/real/real-mandap-01.jpg">
   <meta name="twitter:card" content="summary_large_image">
@@ -19,10 +19,9 @@
   <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=Inter:wght@400;500;600&family=Mukta+Vaani:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link href="https://api.fontshare.com/v2/css?f[]=boska@400,401,500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="checklist.css?v=6">
-  <link rel="stylesheet" href="checklist-unified.css?v=1">
+  <link rel="stylesheet" href="checklist-unified.css?v=2">
   <script src="checklist-data.js?v=6" defer></script>
-  <script src="checklist-pricing.js?v=1" defer></script>
-  <script src="checklist-unified.js?v=1" defer></script>
+  <script src="checklist-unified.js?v=2" defer></script>
 </head>
 <body data-view="detailed" class="master-checklist unified-checklist">
   <a class="skip-link" href="#workspace">ફોર્મ પર જાઓ / Skip to form</a>
@@ -37,7 +36,7 @@
     </section>
     <div class="planner-toolbar">
       <span class="eyebrow" data-t="masterCount">૨૦૦ વસ્તુઓ · ૧૧ વિભાગો</span>
-      <button type="button" class="btn" data-action="rate-tools" data-t="rateTools">ભાવપત્રક અને ડાઉનલોડ</button>
+      <button type="button" class="btn" data-action="downloads" data-t="downloads">ચેકલિસ્ટ PDF</button>
       <span id="save-status" class="draft-status" role="status"></span>
     </div>
     <div class="planner-layout">
@@ -46,8 +45,8 @@
         <nav id="section-nav" aria-label="Service categories / સેવાઓના વિભાગો"></nav>
         <button type="button" id="review-nav" class="review-nav" data-t="review">પસંદગીની સમીક્ષા</button>
         <div class="save-note"><p data-t="localNotice">આ ડ્રાફ્ટ આ બ્રાઉઝરમાં રહે છે. આયોજકને મોકલવા માટે સારાંશ ડાઉનલોડ અથવા શેર કરો.</p></div>
-        <details class="draft-tools" id="rate-tools"><summary data-t="rateTools">ભાવપત્રક અને ડાઉનલોડ</summary><p data-t="rateHelp">તમારા સામાન્ય ક્લાયન્ટ ભાવ ભરો.</p><p id="rate-status" role="status"></p><a href="assets/documents/JVARDHAN-Ceiling-Price-Template.xlsx" download data-t="rateTemplate">ભાવ ભરવા માટે Excel ડાઉનલોડ કરો</a><button type="button" data-action="load-rates" data-t="loadRates">ભરેલું Excel / CSV ખોલો</button><input id="rates-file" type="file" accept=".xlsx,.csv" aria-label="Completed pricing workbook" hidden><div id="rate-preview" hidden></div><a href="assets/documents/JVARDHAN-Full-Client-Checklist-English-A4.pdf" download data-t="pdfEn">અંગ્રેજી A4 ચેકલિસ્ટ</a><a href="assets/documents/JVARDHAN-Full-Client-Checklist-Gujarati-A4.pdf" download data-t="pdfGu">ગુજરાતી A4 ચેકલિસ્ટ</a></details>
-        <details class="draft-tools"><summary data-t="draftTools">ડ્રાફ્ટ સાચવો / ખોલો</summary><button type="button" data-action="export" data-t="saveDraft">ભાવ સાથે ડ્રાફ્ટ ડાઉનલોડ કરો</button><button type="button" data-action="import" data-t="openDraft">સાચવેલો ડ્રાફ્ટ ખોલો</button><input id="import-file" type="file" accept="application/json,.json" aria-label="Saved client draft" hidden><button type="button" data-action="reset" class="reset" data-t="newClient">નવો ક્લાયન્ટ</button></details>
+        <details class="draft-tools" id="checklist-downloads"><summary data-t="downloads">ચેકલિસ્ટ PDF</summary><a href="assets/documents/JVARDHAN-Full-Client-Checklist-English-A4.pdf" download data-t="pdfEn">અંગ્રેજી A4 ચેકલિસ્ટ</a><a href="assets/documents/JVARDHAN-Full-Client-Checklist-Gujarati-A4.pdf" download data-t="pdfGu">ગુજરાતી A4 ચેકલિસ્ટ</a></details>
+        <details class="draft-tools"><summary data-t="draftTools">ડ્રાફ્ટ સાચવો / ખોલો</summary><button type="button" data-action="export" data-t="saveDraft">સંપાદનયોગ્ય ડ્રાફ્ટ ડાઉનલોડ કરો</button><button type="button" data-action="import" data-t="openDraft">સાચવેલો ડ્રાફ્ટ ખોલો</button><input id="import-file" type="file" accept="application/json,.json" aria-label="Saved client draft" hidden><button type="button" data-action="reset" class="reset" data-t="newClient">નવો ક્લાયન્ટ</button></details>
         <details class="draft-tools" id="older-drafts" hidden><summary data-t="olderDrafts">અગાઉના સાચવેલા ડ્રાફ્ટ</summary><div id="older-options"></div></details>
       </aside>
       <div class="workspace" id="workspace" tabindex="-1">
